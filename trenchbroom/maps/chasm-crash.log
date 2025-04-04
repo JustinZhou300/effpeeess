@@ -1,0 +1,42 @@
+Renderer info: NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2 version 4.6.0 NVIDIA 561.09 from NVIDIA Corporation
+Depth buffer bits: 24
+Multisampling enabled
+Adding file system path "C:/Users/zacha/OneDrive/Desktop/prog/TrenchBroom\\defaults\\assets"
+Adding file system path "C:/Godot/effpeeess\\."
+Loading document from C:\Godot\effpeeess\trenchbroom\maps\chasm.map
+Loaded entity definition file fps.fgd
+Loaded texture collection '"assets\\textures\\mansion"'
+Loaded texture collection '"assets\\textures\\mansion\\sprites"'
+Loaded texture collection '"assets\\textures\\particles"'
+Loaded texture collection '"assets\\textures\\space_station"'
+Loaded texture collection '"assets\\textures\\space_station\\special"'
+Loaded texture collection '"assets\\textures\\special"'
+Loaded texture collection '"assets\\textures\\sprites"'
+Loaded texture collection '"assets\\textures\\world"'
+Loaded texture collection '"assets\\textures\\world\\128"'
+Loaded texture collection '"assets\\textures\\world\\64"'
+Loaded "C:\\Godot\\effpeeess\\trenchbroom\\maps\\chasm.map" in 148ms
+Saved "C:\\Godot\\effpeeess\\trenchbroom\\maps\\chasm.map" in 11ms
+Reloading texture collections
+Loaded texture collection '"assets\\textures\\mansion"'
+Loaded texture collection '"assets\\textures\\mansion\\sprites"'
+Loaded texture collection '"assets\\textures\\particles"'
+Loaded texture collection '"assets\\textures\\space_station"'
+Loaded texture collection '"assets\\textures\\space_station\\special"'
+Loaded texture collection '"assets\\textures\\special"'
+Loaded texture collection '"assets\\textures\\sprites"'
+Loaded texture collection '"assets\\textures\\world"'
+Loaded texture collection '"assets\\textures\\world\\128"'
+Loaded texture collection '"assets\\textures\\world\\64"'
+Reloading texture collections
+Loaded texture collection '"assets\\textures\\mansion"'
+Loaded texture collection '"assets\\textures\\mansion\\sprites"'
+Loaded texture collection '"assets\\textures\\particles"'
+Loaded texture collection '"assets\\textures\\space_station"'
+Loaded texture collection '"assets\\textures\\space_station\\special"'
+Loaded texture collection '"assets\\textures\\special"'
+Loaded texture collection '"assets\\textures\\sprites"'
+Loaded texture collection '"assets\\textures\\world"'
+Loaded texture collection '"assets\\textures\\world\\128"'
+Loaded texture collection '"assets\\textures\\world\\64"'
+Reloading entity definitions

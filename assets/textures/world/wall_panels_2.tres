@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d3pwrlbw05x5j"]
+
+[ext_resource type="Texture2D" uid="uid://dp3pn1c21jhuy" path="res://assets/textures/world/wall_panels_2.png" id="1_evtb3"]
+
+[resource]
+albedo_texture = ExtResource("1_evtb3")
+metallic_specular = 0.0
+texture_filter = 2

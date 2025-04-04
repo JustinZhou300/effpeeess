@@ -1,0 +1,169 @@
+[gd_scene load_steps=33 format=3 uid="uid://b02y476eyowno"]
+
+[ext_resource type="Script" path="res://scenes/biped/animation_handler.gd" id="1_du36q"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_3l8g3"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ty50v"]
+animation = &"torso_OH_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nmief"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeSub2" id="AnimationNodeSub2_0sc86"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_jkgmh"]
+filter_enabled = true
+filters = ["Node/hip2/torso", "Node/hip2/torso/arm_l2", "Node/hip2/torso/arm_l2/forearm_l2", "Node/hip2/torso/arm_l2/forearm_l2/hand_l2", "Node/hip2/torso/arm_r2", "Node/hip2/torso/arm_r2/forearm_r2", "Node/hip2/torso/arm_r2/forearm_r2/hand_r2"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_wroby"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fihua"]
+animation = &"crouch_walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3sbrm"]
+animation = &"crouch_walk"
+play_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7bo6l"]
+animation = &"crouch"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_2p0tb"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_fihua")
+blend_point_0/pos = 1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_3sbrm")
+blend_point_1/pos = -1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_7bo6l")
+blend_point_2/pos = 0.0
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_sk0ua"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p14h3"]
+animation = &"falling"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k1xnu"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_y0rnd"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_p14h3")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_k1xnu")
+blend_point_1/pos = 1.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7qlch"]
+animation = &"leg_turn_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_61uid"]
+animation = &"leg_turn_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vy404"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_0cokg"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_7qlch")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_61uid")
+blend_point_1/pos = 1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_vy404")
+blend_point_2/pos = 0.0
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_0c24l"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wyxrc"]
+animation = &"slide_2"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_5bqc1"]
+filters = ["Node/hip2", "Node/hip2/leg_l", "Node/hip2/leg_l/calf_l", "Node/hip2/leg_l/calf_l/foot_l", "Node/hip2/leg_r", "Node/hip2/leg_r/calf_r", "Node/hip2/leg_r/calf_r/foot_r"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1aju0"]
+animation = &"torso_look_up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_skwd1"]
+animation = &"torso_look_down"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_x4tal"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_1aju0")
+blend_point_0/pos = 1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_skwd1")
+blend_point_1/pos = -1.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5rj0l"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_70v78"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dlfq3"]
+animation = &"walk"
+play_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ow6nk"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_m1fpw"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_5rj0l")
+blend_point_0/pos = 0.3
+blend_point_1/node = SubResource("AnimationNodeAnimation_70v78")
+blend_point_1/pos = 1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_dlfq3")
+blend_point_2/pos = -0.5
+blend_point_3/node = SubResource("AnimationNodeAnimation_ow6nk")
+blend_point_3/pos = 0.0
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_7jieo"]
+filter_enabled = true
+filters = ["Node/hip2/torso", "Node/hip2/torso/arm_l2", "Node/hip2/torso/arm_l2/forearm_l2", "Node/hip2/torso/arm_l2/forearm_l2/hand_l2", "Node/hip2/torso/arm_r2", "Node/hip2/torso/arm_r2/forearm_r2", "Node/hip2/torso/arm_r2/forearm_r2/hand_r2"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_26uy8"]
+graph_offset = Vector2(-340.252, 34.1624)
+nodes/Add2/node = SubResource("AnimationNodeAdd2_3l8g3")
+nodes/Add2/position = Vector2(1260, 200)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_nmief")
+nodes/Animation/position = Vector2(1180, 760)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_ty50v")
+"nodes/Animation 2/position" = Vector2(140, 500)
+nodes/Sub2/node = SubResource("AnimationNodeSub2_0sc86")
+nodes/Sub2/position = Vector2(1340, 580)
+nodes/add_torso_rot/node = SubResource("AnimationNodeAdd2_jkgmh")
+nodes/add_torso_rot/position = Vector2(960, 120)
+nodes/crouch_blend/node = SubResource("AnimationNodeBlend2_wroby")
+nodes/crouch_blend/position = Vector2(-240, 40)
+nodes/crouch_speed/node = SubResource("AnimationNodeBlendSpace1D_2p0tb")
+nodes/crouch_speed/position = Vector2(-473.384, 252.725)
+nodes/jump_blend/node = SubResource("AnimationNodeBlend2_sk0ua")
+nodes/jump_blend/position = Vector2(320, 100)
+nodes/jump_space/node = SubResource("AnimationNodeBlendSpace1D_y0rnd")
+nodes/jump_space/position = Vector2(40, 280)
+nodes/legs_turn/node = SubResource("AnimationNodeBlendSpace1D_0cokg")
+nodes/legs_turn/position = Vector2(1100, 580)
+nodes/output/position = Vector2(1360, 60)
+nodes/run_scale/node = SubResource("AnimationNodeTimeScale_0c24l")
+nodes/run_scale/position = Vector2(-480, 40)
+nodes/slide_anim/node = SubResource("AnimationNodeAnimation_wyxrc")
+nodes/slide_anim/position = Vector2(-500, 480)
+nodes/slide_blend/node = SubResource("AnimationNodeBlend2_5bqc1")
+nodes/slide_blend/position = Vector2(20, -20)
+nodes/torso_pos/node = SubResource("AnimationNodeBlendSpace1D_x4tal")
+nodes/torso_pos/position = Vector2(660, 400)
+nodes/walk_speed/node = SubResource("AnimationNodeBlendSpace1D_m1fpw")
+nodes/walk_speed/position = Vector2(-740, 40)
+nodes/weapon_blend/node = SubResource("AnimationNodeBlend2_7jieo")
+nodes/weapon_blend/position = Vector2(700, 20)
+node_connections = [&"Add2", 0, &"add_torso_rot", &"Add2", 1, &"Sub2", &"Sub2", 0, &"legs_turn", &"Sub2", 1, &"Animation", &"add_torso_rot", 0, &"weapon_blend", &"add_torso_rot", 1, &"torso_pos", &"crouch_blend", 0, &"run_scale", &"crouch_blend", 1, &"crouch_speed", &"jump_blend", 0, &"slide_blend", &"jump_blend", 1, &"jump_space", &"output", 0, &"Add2", &"run_scale", 0, &"walk_speed", &"slide_blend", 0, &"crouch_blend", &"slide_blend", 1, &"slide_anim", &"weapon_blend", 0, &"jump_blend", &"weapon_blend", 1, &"Animation 2"]
+
+[node name="AnimationTree" type="AnimationTree"]
+tree_root = SubResource("AnimationNodeBlendTree_26uy8")
+parameters/Add2/add_amount = 1.0
+parameters/Sub2/sub_amount = 1.0
+parameters/add_torso_rot/add_amount = 1.0
+parameters/crouch_blend/blend_amount = 0.0
+parameters/crouch_speed/blend_position = 1.0
+parameters/jump_blend/blend_amount = 0.0
+parameters/jump_space/blend_position = 0.0
+parameters/legs_turn/blend_position = -0.075
+parameters/run_scale/scale = 1.0
+parameters/slide_blend/blend_amount = 0.0
+parameters/torso_pos/blend_position = -0.071
+parameters/walk_speed/blend_position = 1.0
+parameters/weapon_blend/blend_amount = 1.0
+script = ExtResource("1_du36q")

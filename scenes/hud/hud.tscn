@@ -1,0 +1,337 @@
+[gd_scene load_steps=4 format=3 uid="uid://diyk5squwtwu1"]
+
+[ext_resource type="Script" path="res://scripts/hud/hud.gd" id="1_tdtnc"]
+[ext_resource type="FontFile" uid="uid://drbwae8ucdd2a" path="res://assets/misc/font/PublicPixel-rv0pA.ttf" id="2_bk22i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8h2s"]
+bg_color = Color(0, 1, 0, 1)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tdtnc")
+ammo = 0
+
+[node name="overlay" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(1, 1, 1, 0)
+
+[node name="black_overlay" type="ColorRect" parent="overlay"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Slots_Indicator" type="HBoxContainer" parent="MarginContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="slot_0" type="VBoxContainer" parent="MarginContainer/VBoxContainer3/Slots_Indicator"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+alignment = 1
+
+[node name="slot_0_label" type="Label" parent="MarginContainer/VBoxContainer3/Slots_Indicator/slot_0"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_bk22i")
+theme_override_font_sizes/font_size = 10
+text = "LEFT"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="slot_0_name" type="Label" parent="MarginContainer/VBoxContainer3/Slots_Indicator/slot_0"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_bk22i")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="slot_1" type="VBoxContainer" parent="MarginContainer/VBoxContainer3/Slots_Indicator"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+alignment = 1
+
+[node name="slot_1_label" type="Label" parent="MarginContainer/VBoxContainer3/Slots_Indicator/slot_1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_bk22i")
+theme_override_font_sizes/font_size = 10
+text = "BACK"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="slot_1_name" type="Label" parent="MarginContainer/VBoxContainer3/Slots_Indicator/slot_1"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_bk22i")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="slot_2" type="VBoxContainer" parent="MarginContainer/VBoxContainer3/Slots_Indicator"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+alignment = 1
+
+[node name="slot_2_label" type="Label" parent="MarginContainer/VBoxContainer3/Slots_Indicator/slot_2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_bk22i")
+theme_override_font_sizes/font_size = 10
+text = "RIGHT"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="slot_2_name" type="Label" parent="MarginContainer/VBoxContainer3/Slots_Indicator/slot_2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_bk22i")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="equipped_indicator" type="VBoxContainer" parent="MarginContainer/VBoxContainer3"]
+layout_mode = 2
+
+[node name="ammo_indicator" type="HBoxContainer" parent="MarginContainer/VBoxContainer3/equipped_indicator"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="ammo_label" type="Label" parent="MarginContainer/VBoxContainer3/equipped_indicator/ammo_indicator"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_bk22i")
+text = "AMMO: "
+
+[node name="ammo" type="Label" parent="MarginContainer/VBoxContainer3/equipped_indicator/ammo_indicator"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_bk22i")
+
+[node name="HUDUpdate" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Crosshair" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Crosshair"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 1, 0, 1)
+
+[node name="Crosshair_shoot" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Crosshair_shoot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -8.0
+offset_right = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 1, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Crosshair_shoot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 1, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Crosshair_shoot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -1.0
+offset_right = -2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 1, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Crosshair_shoot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 8.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 1, 0, 1)
+
+[node name="Reset" type="Button" parent="."]
+process_mode = 2
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -27.0
+offset_right = 41.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You Died!
+Reset
+"
+
+[node name="ITEM_EQUIP_SET2" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -400.0
+offset_bottom = 200.0
+grow_horizontal = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="health_bar" type="ProgressBar" parent="MarginContainer2/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_f8h2s")
+
+[node name="DebugDisplay" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2

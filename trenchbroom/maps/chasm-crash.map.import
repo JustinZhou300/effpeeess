@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dtkrp6r6vhda5"
+path="res://.godot/imported/chasm-crash.map-e6c9a0c4ed243b07c1f95f231d5cb47b.tres"
+
+[deps]
+
+source_file="res://trenchbroom/maps/chasm-crash.map"
+dest_files=["res://.godot/imported/chasm-crash.map-e6c9a0c4ed243b07c1f95f231d5cb47b.tres"]
+
+[params]
+

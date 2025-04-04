@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://dp7p816k66vft"]
+
+[ext_resource type="Texture2D" uid="uid://2l1iy3g07b2t" path="res://assets/textures/particles/flash_test.png" id="1_ftde4"]
+
+[sub_resource type="Curve" id="Curve_eov7s"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.471429, 0.98105), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_u6s1p"]
+curve = SubResource("Curve_eov7s")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5ebq1"]
+angle_min = 1.07288e-05
+angle_max = 360.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_u6s1p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flwlh"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.196078)
+albedo_texture = ExtResource("1_ftde4")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 3.0
+texture_filter = 0
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_usl3f"]
+material = SubResource("StandardMaterial3D_flwlh")
+size = Vector2(0.4, 0.4)
+
+[node name="muzzle_flash" type="GPUParticles3D"]
+emitting = false
+amount = 4
+lifetime = 0.05
+one_shot = true
+fixed_fps = 60
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_5ebq1")
+draw_pass_1 = SubResource("QuadMesh_usl3f")

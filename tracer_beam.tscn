@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpbrjao2ufxjt"]
+
+[ext_resource type="Script" path="res://scripts/effects/tracer.gd" id="1_pk6e6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5qbp7"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 0, 1)
+emission_enabled = true
+emission = Color(1, 1, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xsmsd"]
+material = SubResource("StandardMaterial3D_5qbp7")
+top_radius = 0.01
+bottom_radius = 0.01
+
+[node name="tracer_beam" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 1)
+mesh = SubResource("CylinderMesh_xsmsd")
+script = ExtResource("1_pk6e6")

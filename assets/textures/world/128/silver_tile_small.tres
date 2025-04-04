@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bfyacupi2v87r"]
+
+[ext_resource type="Texture2D" uid="uid://bn1pjgrk4wbog" path="res://assets/textures/world/128/silver_tile_small.png" id="1_mkpwx"]
+
+[resource]
+albedo_texture = ExtResource("1_mkpwx")
+metallic_specular = 0.0
+texture_filter = 2

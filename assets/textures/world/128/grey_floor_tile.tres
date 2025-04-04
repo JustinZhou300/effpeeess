@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dj8u8pex61hkx"]
+
+[ext_resource type="Texture2D" uid="uid://d4dh2ecdajpj7" path="res://assets/textures/world/128/grey_floor_tile.png" id="1_otcls"]
+
+[resource]
+albedo_texture = ExtResource("1_otcls")
+metallic_specular = 0.0
+texture_filter = 2

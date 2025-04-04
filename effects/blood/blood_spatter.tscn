@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://dsd3pe2rgt73o"]
+
+[ext_resource type="Texture2D" uid="uid://cb27wdvvhwxbw" path="res://assets/textures/particles/bloodspritesheet2.png" id="1_5qbxi"]
+[ext_resource type="Script" path="res://scripts/effects/blood.gd" id="2_fo8y4"]
+
+[sub_resource type="Gradient" id="Gradient_8mp06"]
+offsets = PackedFloat32Array(0, 0.337302, 0.68254)
+colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gfqup"]
+gradient = SubResource("Gradient_8mp06")
+
+[sub_resource type="Curve" id="Curve_bp1b5"]
+_data = [Vector2(0, 0.497813), 0.0, 0.0, 0, 0, Vector2(0.492857, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_id3hu"]
+curve = SubResource("Curve_bp1b5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tqd5h"]
+angle_min = 1.07288e-05
+angle_max = 360.0
+direction = Vector3(0, 1, 0)
+spread = 15.0
+initial_velocity_min = 1.0
+initial_velocity_max = 3.0
+scale_min = 0.0
+scale_curve = SubResource("CurveTexture_id3hu")
+color = Color(1, 0, 0, 1)
+color_ramp = SubResource("GradientTexture1D_gfqup")
+anim_speed_min = 1.0
+anim_speed_max = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c533l"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_5qbxi")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 0.5
+texture_filter = 0
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_y6csu"]
+material = SubResource("StandardMaterial3D_c533l")
+size = Vector2(0.5, 0.5)
+
+[node name="blood_spatter" type="GPUParticles3D"]
+transform = Transform3D(0.999975, -0.00559346, -0.0042855, 0.00425245, -0.00590822, 0.999973, -0.00561863, -0.999967, -0.0058843, 0, 0, 0)
+amount = 4
+explosiveness = 1.0
+randomness = 1.0
+trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_tqd5h")
+draw_pass_1 = SubResource("QuadMesh_y6csu")
+script = ExtResource("2_fo8y4")

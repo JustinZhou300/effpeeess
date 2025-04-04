@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cdf1tl6et8rha"]
+
+[ext_resource type="Texture2D" uid="uid://ddcfdpiq0vn5e" path="res://assets/textures/world/128/blue_panel.png" id="1_6k8nt"]
+
+[resource]
+albedo_texture = ExtResource("1_6k8nt")
+metallic_specular = 0.0
+texture_filter = 2

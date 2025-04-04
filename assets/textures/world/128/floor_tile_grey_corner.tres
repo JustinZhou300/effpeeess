@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d1y088ppdujqf"]
+
+[ext_resource type="Texture2D" uid="uid://0urj866mv0m1" path="res://assets/textures/world/128/floor_tile_grey_corner.png" id="1_5by51"]
+
+[resource]
+albedo_texture = ExtResource("1_5by51")
+metallic_specular = 0.0
+texture_filter = 2

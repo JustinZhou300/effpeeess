@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bdrrxaa4iicjy"]
+
+[ext_resource type="Texture2D" uid="uid://m1tdr8nal03a" path="res://assets/textures/world/floor_carpet_red_trim.png" id="1_yxvco"]
+
+[resource]
+albedo_texture = ExtResource("1_yxvco")
+metallic_specular = 0.0
+texture_filter = 2

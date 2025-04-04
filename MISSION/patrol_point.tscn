@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bqeqfrlqvo2nh"]
+
+[node name="patrol_point" type="Node3D"]

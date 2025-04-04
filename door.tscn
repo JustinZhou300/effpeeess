@@ -1,0 +1,84 @@
+[gd_scene load_steps=14 format=3 uid="uid://bkec0cvtiraio"]
+
+[ext_resource type="Script" path="res://door.gd" id="1_ig1s2"]
+[ext_resource type="ArrayMesh" uid="uid://cw6tb5objuwip" path="res://assets/models/scenery/door/mesh/blockbench_export_mesh.res" id="2_qn0c6"]
+[ext_resource type="ArrayMesh" uid="uid://dt2njkdxw13ka" path="res://assets/models/scenery/door/mesh/blockbench_export_mesh2.res" id="3_r0qup"]
+[ext_resource type="ArrayMesh" uid="uid://lpv4uyyegg3t" path="res://assets/models/scenery/door/mesh/blockbench_export_mesh3.res" id="4_2kms8"]
+[ext_resource type="ArrayMesh" uid="uid://cu1g7wdtac1ou" path="res://assets/models/scenery/door/mesh/blockbench_export_mesh4.res" id="5_bhxsv"]
+[ext_resource type="ArrayMesh" uid="uid://b74mfwu40trev" path="res://assets/models/scenery/door/mesh/blockbench_export_mesh5.res" id="6_juoey"]
+[ext_resource type="ArrayMesh" uid="uid://bfi1kkfplxo3t" path="res://assets/models/scenery/door/mesh/blockbench_export_mesh6.res" id="7_2yvhq"]
+[ext_resource type="ArrayMesh" uid="uid://c7ech5o8po6eu" path="res://assets/models/scenery/door/mesh/blockbench_export_mesh7.res" id="8_acfv7"]
+[ext_resource type="ArrayMesh" uid="uid://cy1td8tn0e8pe" path="res://assets/models/scenery/door/mesh/blockbench_export_mesh8.res" id="9_kdpje"]
+[ext_resource type="Animation" uid="uid://cco5ji0xjm27c" path="res://assets/models/scenery/door/anim/door_close.res" id="10_c2l7s"]
+[ext_resource type="Animation" uid="uid://c3dxpywu1qvsw" path="res://assets/models/scenery/door/anim/door_opening.res" id="11_2htp3"]
+[ext_resource type="Animation" uid="uid://b1bor3uklmqpy" path="res://assets/models/scenery/door/anim/door_open.res" id="12_3f4s4"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8cmf5"]
+_data = {
+"door_close": ExtResource("10_c2l7s"),
+"door_open": ExtResource("12_3f4s4"),
+"door_opening": ExtResource("11_2htp3")
+}
+
+[node name="door" type="Node3D"]
+script = ExtResource("1_ig1s2")
+
+[node name="model" type="Node3D" parent="."]
+
+[node name="Node" type="Node3D" parent="model"]
+
+[node name="door" type="Node3D" parent="model/Node"]
+
+[node name="left_door" type="Node3D" parent="model/Node/door"]
+
+[node name="cuboid" type="MeshInstance3D" parent="model/Node/door/left_door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0.125)
+mesh = ExtResource("2_qn0c6")
+skeleton = NodePath("")
+
+[node name="right_door" type="Node3D" parent="model/Node/door"]
+
+[node name="cuboid2" type="MeshInstance3D" parent="model/Node/door/right_door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -0.125)
+mesh = ExtResource("3_r0qup")
+skeleton = NodePath("")
+
+[node name="top_door" type="Node3D" parent="model/Node/door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
+
+[node name="cuboid3" type="MeshInstance3D" parent="model/Node/door/top_door"]
+mesh = ExtResource("4_2kms8")
+skeleton = NodePath("")
+
+[node name="bottom_door" type="Node3D" parent="model/Node/door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3125, 0)
+
+[node name="cuboid4" type="MeshInstance3D" parent="model/Node/door/bottom_door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1875, 0)
+mesh = ExtResource("5_bhxsv")
+skeleton = NodePath("")
+
+[node name="screen_dead" type="MeshInstance3D" parent="model/Node/door/bottom_door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025, 0)
+mesh = ExtResource("6_juoey")
+skeleton = NodePath("")
+
+[node name="screen_functional" type="MeshInstance3D" parent="model/Node/door/bottom_door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025, 0)
+mesh = ExtResource("7_2yvhq")
+skeleton = NodePath("")
+
+[node name="screen_locked" type="MeshInstance3D" parent="model/Node/door/bottom_door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025, 0)
+mesh = ExtResource("8_acfv7")
+skeleton = NodePath("")
+
+[node name="screen_broken" type="MeshInstance3D" parent="model/Node/door/bottom_door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025, 0)
+mesh = ExtResource("9_kdpje")
+skeleton = NodePath("")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="model"]
+libraries = {
+"": SubResource("AnimationLibrary_8cmf5")
+}

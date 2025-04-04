@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://4mhmh8xwlwb2"]
+
+[ext_resource type="Texture2D" uid="uid://dnomrmttgjja5" path="res://assets/textures/mansion/sprites/tree_1.png" id="1_yhvxk"]
+
+[node name="scenery_object" type="Node3D"]
+
+[node name="sprite" type="Sprite3D" parent="."]
+centered = false
+offset = Vector2(-64, 0)
+billboard = 2
+double_sided = false
+texture_filter = 0
+texture = ExtResource("1_yhvxk")

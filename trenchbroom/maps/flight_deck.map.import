@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dk51pxtd30k8d"
+path="res://.godot/imported/flight_deck.map-bf27d2ac85eb8657e3e4c9bd467c61b7.tres"
+
+[deps]
+
+source_file="res://trenchbroom/maps/flight_deck.map"
+dest_files=["res://.godot/imported/flight_deck.map-bf27d2ac85eb8657e3e4c9bd467c61b7.tres"]
+
+[params]
+

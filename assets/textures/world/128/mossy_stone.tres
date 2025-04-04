@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dv0ixqa5etccv"]
+
+[ext_resource type="Texture2D" uid="uid://bttke1nbn8jar" path="res://assets/textures/world/128/mossy_stone.png" id="1_ene8u"]
+
+[resource]
+albedo_texture = ExtResource("1_ene8u")
+metallic_specular = 0.0
+texture_filter = 2

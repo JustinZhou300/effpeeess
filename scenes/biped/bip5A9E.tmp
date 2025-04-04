@@ -1,0 +1,656 @@
+[gd_scene load_steps=128 format=3 uid="uid://bnp1uwq0n1qyi"]
+
+[ext_resource type="Script" path="res://scenes/biped/animation_handler.gd" id="1_0888q"]
+[ext_resource type="ArrayMesh" uid="uid://cp32lj72q2swt" path="res://assets/models/biped/mesh/blockbench_export_mesh.res" id="2_a35fc"]
+[ext_resource type="ArrayMesh" uid="uid://bnq5udptar3aq" path="res://assets/models/biped/mesh/blockbench_export_mesh2.res" id="3_j3srf"]
+[ext_resource type="ArrayMesh" uid="uid://be5brxjdbkjka" path="res://assets/models/biped/mesh/blockbench_export_mesh3.res" id="4_ppojj"]
+[ext_resource type="ArrayMesh" uid="uid://bagne5k3ang0b" path="res://assets/models/biped/mesh/blockbench_export_mesh4.res" id="5_mc4nk"]
+[ext_resource type="ArrayMesh" uid="uid://cetx5w1koed05" path="res://assets/models/biped/mesh/blockbench_export_mesh5.res" id="6_x3tnq"]
+[ext_resource type="ArrayMesh" uid="uid://do0g5ryvs1epg" path="res://assets/models/biped/mesh/blockbench_export_mesh6.res" id="7_hlw7x"]
+[ext_resource type="ArrayMesh" uid="uid://ct4u3iwjnpjt" path="res://assets/models/biped/mesh/blockbench_export_mesh7.res" id="8_ogy3e"]
+[ext_resource type="ArrayMesh" uid="uid://bqerbm87dmpcb" path="res://assets/models/biped/mesh/blockbench_export_mesh8.res" id="9_g8wd8"]
+[ext_resource type="ArrayMesh" uid="uid://coc1q766mt5oi" path="res://assets/models/biped/mesh/blockbench_export_mesh9.res" id="10_34j6w"]
+[ext_resource type="ArrayMesh" uid="uid://b6ou3bdeye5wq" path="res://assets/models/biped/mesh/blockbench_export_mesh10.res" id="11_ek1jx"]
+[ext_resource type="ArrayMesh" uid="uid://dwmv2fhkerw5h" path="res://assets/models/biped/mesh/blockbench_export_mesh11.res" id="12_h1tfe"]
+[ext_resource type="ArrayMesh" uid="uid://dm8sme74mnup0" path="res://assets/models/biped/mesh/blockbench_export_mesh12.res" id="13_ute7a"]
+[ext_resource type="ArrayMesh" uid="uid://brkv7k1pnsmwh" path="res://assets/models/biped/mesh/blockbench_export_mesh13.res" id="14_6238q"]
+[ext_resource type="ArrayMesh" uid="uid://k686nqiwcpyf" path="res://assets/models/biped/mesh/blockbench_export_mesh14.res" id="15_xbgal"]
+[ext_resource type="ArrayMesh" uid="uid://b8cfmuiwukghx" path="res://assets/models/biped/mesh/blockbench_export_mesh15.res" id="16_rpqqf"]
+[ext_resource type="ArrayMesh" uid="uid://c60mf40ajflnd" path="res://assets/models/biped/mesh/blockbench_export_mesh16.res" id="17_qcujq"]
+[ext_resource type="ArrayMesh" uid="uid://jbomgakmbkj" path="res://assets/models/biped/mesh/blockbench_export_mesh17.res" id="18_prv4q"]
+[ext_resource type="ArrayMesh" uid="uid://cyr1ry7d5q85v" path="res://assets/models/biped/mesh/blockbench_export_mesh18.res" id="19_ug56i"]
+[ext_resource type="ArrayMesh" uid="uid://02nr401vtm4k" path="res://assets/models/biped/mesh/blockbench_export_mesh19.res" id="20_q55rt"]
+[ext_resource type="ArrayMesh" uid="uid://dwovo623fhocq" path="res://assets/models/biped/mesh/blockbench_export_mesh20.res" id="21_2g7rv"]
+[ext_resource type="ArrayMesh" uid="uid://deeuksyri84mg" path="res://assets/models/biped/mesh/blockbench_export_mesh21.res" id="22_0ch2j"]
+[ext_resource type="ArrayMesh" uid="uid://bnvpjk8fqgksa" path="res://assets/models/biped/mesh/blockbench_export_mesh22.res" id="23_isuay"]
+[ext_resource type="ArrayMesh" uid="uid://cjmxu2tpfqbao" path="res://assets/models/biped/mesh/blockbench_export_mesh23.res" id="24_4k06x"]
+[ext_resource type="ArrayMesh" uid="uid://dexdaapo00k4k" path="res://assets/models/biped/mesh/blockbench_export_mesh24.res" id="25_7yw4u"]
+[ext_resource type="ArrayMesh" uid="uid://dte8gnaaorbl6" path="res://assets/models/biped/mesh/blockbench_export_mesh25.res" id="26_v7o4e"]
+[ext_resource type="ArrayMesh" uid="uid://27d86yj0ieiu" path="res://assets/models/biped/mesh/blockbench_export_mesh26.res" id="27_tuyo8"]
+[ext_resource type="Animation" uid="uid://3pev00m316qp" path="res://assets/models/biped/animation/walk.res" id="28_qsx8p"]
+[ext_resource type="Animation" uid="uid://bpo84h602u6ua" path="res://assets/models/biped/animation/torso_OH_idle.res" id="29_vj7q3"]
+[ext_resource type="Animation" uid="uid://b5kn1qp7aln7a" path="res://assets/models/biped/animation/torso_OH_stow.res" id="30_837b0"]
+[ext_resource type="Animation" uid="uid://dpr5cuox1p438" path="res://assets/models/biped/animation/torso_OH_sprint.res" id="31_k37t4"]
+[ext_resource type="Animation" uid="uid://811p5viux7e6" path="res://assets/models/biped/animation/torso_OH_draw.res" id="31_udrjk"]
+[ext_resource type="Animation" uid="uid://br5wevik0mno" path="res://assets/models/biped/animation/torso_OH_reload.res" id="32_qh587"]
+[ext_resource type="Animation" uid="uid://dsr672vwxt5sg" path="res://assets/models/biped/animation/torso_OH_fire.res" id="33_qjbw6"]
+[ext_resource type="Animation" uid="uid://bc2rqjl4q76pt" path="res://assets/models/biped/animation/torso_OH_walled.res" id="34_7q06q"]
+[ext_resource type="Animation" uid="uid://cpybjd1uo02ia" path="res://assets/models/biped/animation/torso_OH_fire_pos.res" id="35_egnl3"]
+[ext_resource type="Animation" uid="uid://cgbxh2qvfs6nn" path="res://assets/models/biped/animation/arms_two_hand.res" id="35_kc7s2"]
+[ext_resource type="Animation" uid="uid://bv6ef1c86wkjd" path="res://assets/models/biped/animation/arms_two_hand_reload.res" id="36_3c3x4"]
+[ext_resource type="Animation" uid="uid://ch2b3abpt6duy" path="res://assets/models/biped/animation/torso_turn_right.res" id="37_pdq1c"]
+[ext_resource type="Animation" uid="uid://bng08p4dfacvd" path="res://assets/models/biped/animation/torso_turn_left.res" id="38_pu4i0"]
+[ext_resource type="Animation" uid="uid://csj4uicq5nfqk" path="res://assets/models/biped/animation/idle.res" id="39_xonp6"]
+[ext_resource type="Animation" uid="uid://ddii5qtkuxb7m" path="res://assets/models/biped/animation/no_anim.res" id="40_clsq5"]
+[ext_resource type="Animation" uid="uid://thvosv33ew5d" path="res://assets/models/biped/animation/torso_look_down.res" id="41_3d81g"]
+[ext_resource type="Animation" uid="uid://lon27ecbvbbx" path="res://assets/models/biped/animation/torso_look_up.res" id="42_2llyo"]
+[ext_resource type="Animation" uid="uid://cqvt8gqu0ff80" path="res://assets/models/biped/animation/jump.res" id="43_qfsw6"]
+[ext_resource type="Animation" uid="uid://ddrfl1uqbhi80" path="res://assets/models/biped/animation/falling.res" id="44_ru7l5"]
+[ext_resource type="Animation" uid="uid://c2tpgonqhlswh" path="res://assets/models/biped/animation/slide.res" id="46_ya81a"]
+[ext_resource type="Animation" uid="uid://cj0l3s8pj862u" path="res://assets/models/biped/animation/slide_2.res" id="47_nkkoj"]
+[ext_resource type="Animation" uid="uid://crpm0q7hwmbgq" path="res://assets/models/biped/animation/crouch.res" id="48_231cw"]
+[ext_resource type="Animation" uid="uid://ck33tpc1vll3j" path="res://assets/models/biped/animation/crouch_walk.res" id="49_72qi6"]
+[ext_resource type="Animation" uid="uid://cdtthpfagkkfj" path="res://assets/models/biped/animation/arms_mantle.res" id="50_nfon0"]
+[ext_resource type="Animation" uid="uid://5fcoqrbmx8mt" path="res://assets/models/biped/animation/run.res" id="51_8fb1a"]
+[ext_resource type="Animation" uid="uid://b23hpt3wywyjs" path="res://assets/models/biped/animation/leg_turn_right.res" id="52_gfhgc"]
+[ext_resource type="Animation" uid="uid://cnjstwdnqvvgn" path="res://assets/models/biped/animation/leg_turn_left.res" id="53_uw185"]
+[ext_resource type="Animation" uid="uid://d2ebhpvoytyus" path="res://assets/models/biped/animation/head_look_down.res" id="54_bsd5v"]
+[ext_resource type="Animation" uid="uid://bv4ir6x51iu33" path="res://assets/models/biped/animation/head_look_up.res" id="55_stemm"]
+[ext_resource type="Animation" uid="uid://b8djluilfd51r" path="res://assets/models/biped/animation/torso_lean_left.res" id="56_i042g"]
+[ext_resource type="Animation" uid="uid://dcx1d7ef85ygv" path="res://assets/models/biped/animation/torso_lean_right.res" id="57_05yhi"]
+[ext_resource type="Animation" uid="uid://4fr1wnelrmh2" path="res://assets/models/biped/animation/torso_unarmed_idle.res" id="59_dkhgi"]
+[ext_resource type="Animation" uid="uid://bhyo25hjwosjh" path="res://assets/models/biped/animation/torso_unarmed_punch_left.res" id="60_uo6xl"]
+[ext_resource type="Animation" uid="uid://dunf7u42sdt8s" path="res://assets/models/biped/animation/torso_unarmed_punch_right.res" id="61_3bdtl"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_k5cfv"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_3l8g3"]
+filter_enabled = true
+filters = ["Node/hip/crotch2", "Node/hip/crotch2/leg_l", "Node/hip/crotch2/leg_l/calf_l2", "Node/hip/crotch2/leg_l/calf_l2/foot_l2", "Node/hip/crotch2/leg_r", "Node/hip/crotch2/leg_r/calf_r2", "Node/hip/crotch2/leg_r/calf_r2/foot_r2", "Node/hip2/crotch", "Node/hip2/crotch/leg_l", "Node/hip2/crotch/leg_l/calf_l", "Node/hip2/crotch/leg_l/calf_l/foot_l", "Node/hip2/crotch/leg_r", "Node/hip2/crotch/leg_r/calf_r", "Node/hip2/crotch/leg_r/calf_r/foot_r"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pec2o"]
+animation = &"arms_mantle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ty50v"]
+animation = &"torso_OH_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n2a8u"]
+animation = &"torso_OH_fire"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2wacj"]
+animation = &"torso_OH_stow"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x8pfb"]
+animation = &"torso_OH_draw"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cyq8f"]
+animation = &"torso_OH_reload"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d4v7o"]
+animation = &"no_anim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a30et"]
+animation = &"torso_OH_walled"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b5ka8"]
+animation = &"torso_OH_sprint"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nmief"]
+animation = &"no_anim"
+
+[sub_resource type="AnimationNodeSub2" id="AnimationNodeSub2_cm58l"]
+filter_enabled = true
+filters = ["Node/hip", "Node/hip/torso", "Node/hip/torso/arm_l2", "Node/hip/torso/arm_l2/forearm_l2", "Node/hip/torso/arm_l2/forearm_l2/hand_l2", "Node/hip/torso/arm_r2", "Node/hip/torso/arm_r2/forearm_r2", "Node/hip/torso/arm_r2/forearm_r2/hand_r2", "Node/hip/torso/head", "Node/hip/torso/head/head_a", "Node/hip2", "Node/hip2/torso", "Node/hip2/torso/head2"]
+
+[sub_resource type="AnimationNodeSub2" id="AnimationNodeSub2_0sc86"]
+filters = ["Node/hip2", "Node/hip2/crotch", "Node/hip2/crotch/leg_l", "Node/hip2/crotch/leg_l/calf_l", "Node/hip2/crotch/leg_l/calf_l/foot_l", "Node/hip2/crotch/leg_r", "Node/hip2/crotch/leg_r/calf_r", "Node/hip2/crotch/leg_r/calf_r/foot_r", "Node/hip2/torso/arm_l2", "Node/hip2/torso/arm_l2/forearm_l2", "Node/hip2/torso/arm_l2/forearm_l2/hand_l2", "Node/hip2/torso/arm_r2", "Node/hip2/torso/arm_r2/forearm_r2", "Node/hip2/torso/arm_r2/forearm_r2/hand_r2"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_qy002"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_v4ogn"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ksyli"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_jkgmh"]
+filter_enabled = true
+filters = ["Node/hip/torso", "Node/hip/torso/arm_l2", "Node/hip/torso/arm_l2/forearm_l2", "Node/hip/torso/arm_l2/forearm_l2/hand_l2", "Node/hip/torso/arm_r2", "Node/hip/torso/arm_r2/forearm_r2", "Node/hip/torso/arm_r2/forearm_r2/hand_r2", "Node/hip2/torso", "Node/hip2/torso/arm_l2", "Node/hip2/torso/arm_l2/forearm_l2", "Node/hip2/torso/arm_l2/forearm_l2/hand_l2", "Node/hip2/torso/arm_r2", "Node/hip2/torso/arm_r2/forearm_r2", "Node/hip2/torso/arm_r2/forearm_r2/hand_r2"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_wroby"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fihua"]
+animation = &"crouch_walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3sbrm"]
+animation = &"crouch_walk"
+play_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7bo6l"]
+animation = &"crouch"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_2p0tb"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_fihua")
+blend_point_0/pos = 1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_3sbrm")
+blend_point_1/pos = -1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_7bo6l")
+blend_point_2/pos = 0.0
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_jaaa2"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_8pm1e"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_lx8f0"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_d7rfv"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ojx7x"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_sk0ua"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p14h3"]
+animation = &"falling"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k1xnu"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_y0rnd"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_p14h3")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_k1xnu")
+blend_point_1/pos = 1.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jy30c"]
+animation = &"torso_lean_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qm6db"]
+animation = &"torso_lean_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q2dsx"]
+animation = &"no_anim"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_sy3v5"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_jy30c")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_qm6db")
+blend_point_1/pos = 1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_q2dsx")
+blend_point_2/pos = 0.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7qlch"]
+animation = &"leg_turn_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_61uid"]
+animation = &"leg_turn_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vy404"]
+animation = &"no_anim"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_0cokg"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_7qlch")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_61uid")
+blend_point_1/pos = 1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_vy404")
+blend_point_2/pos = 0.0
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_vmcf5"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_q8wc6"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_edm42"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c1rcc"]
+animation = &"torso_unarmed_punch_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b12bt"]
+animation = &"torso_unarmed_punch_right"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_bjc42"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_c1rcc")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_b12bt")
+blend_point_1/pos = 1.0
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_cxv1a"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_0c24l"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wyxrc"]
+animation = &"slide"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_5bqc1"]
+filters = ["Node/hip2", "Node/hip2/leg_l", "Node/hip2/leg_l/calf_l", "Node/hip2/leg_l/calf_l/foot_l", "Node/hip2/leg_r", "Node/hip2/leg_r/calf_r", "Node/hip2/leg_r/calf_r/foot_r"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_y3orv"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1aju0"]
+animation = &"torso_look_up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_skwd1"]
+animation = &"torso_look_down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p5skc"]
+animation = &"no_anim"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_x4tal"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_1aju0")
+blend_point_0/pos = 1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_skwd1")
+blend_point_1/pos = -1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_p5skc")
+blend_point_2/pos = 0.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oqhag"]
+animation = &"torso_unarmed_idle"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_35uyh"]
+filter_enabled = true
+filters = ["Node/hip2/torso", "Node/hip2/torso/arm_l2", "Node/hip2/torso/arm_l2/forearm_l2", "Node/hip2/torso/arm_l2/forearm_l2/hand_l2", "Node/hip2/torso/arm_r2", "Node/hip2/torso/arm_r2/forearm_r2", "Node/hip2/torso/arm_r2/forearm_r2/hand_r2"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5rj0l"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_70v78"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dlfq3"]
+animation = &"walk"
+play_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ow6nk"]
+animation = &"no_anim"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_m1fpw"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_5rj0l")
+blend_point_0/pos = 0.3
+blend_point_1/node = SubResource("AnimationNodeAnimation_70v78")
+blend_point_1/pos = 1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_dlfq3")
+blend_point_2/pos = -0.5
+blend_point_3/node = SubResource("AnimationNodeAnimation_ow6nk")
+blend_point_3/pos = 0.0
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_50s1c"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_7jieo"]
+filter_enabled = true
+filters = ["Node/hip/torso/arm_l2", "Node/hip/torso/arm_l2/forearm_l2", "Node/hip/torso/arm_l2/forearm_l2/hand_l2", "Node/hip/torso/arm_r2", "Node/hip/torso/arm_r2/forearm_r2", "Node/hip/torso/arm_r2/forearm_r2/hand_r2", "Node/hip2/torso", "Node/hip2/torso/arm_l2", "Node/hip2/torso/arm_l2/forearm_l2", "Node/hip2/torso/arm_l2/forearm_l2/hand_l2", "Node/hip2/torso/arm_r2", "Node/hip2/torso/arm_r2/forearm_r2", "Node/hip2/torso/arm_r2/forearm_r2/hand_r2"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_26uy8"]
+graph_offset = Vector2(-1192.95, 676.394)
+nodes/Add2/node = SubResource("AnimationNodeAdd2_3l8g3")
+nodes/Add2/position = Vector2(1320, 140)
+"nodes/Add2 2/node" = SubResource("AnimationNodeAdd2_k5cfv")
+"nodes/Add2 2/position" = Vector2(1920, 160)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_nmief")
+nodes/Animation/position = Vector2(1060, 660)
+"nodes/Animation 11/node" = SubResource("AnimationNodeAnimation_pec2o")
+"nodes/Animation 11/position" = Vector2(360, -160)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_ty50v")
+"nodes/Animation 2/position" = Vector2(-1100, 880)
+"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_n2a8u")
+"nodes/Animation 3/position" = Vector2(-1340, 1160)
+"nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_2wacj")
+"nodes/Animation 4/position" = Vector2(-1000, 1260)
+"nodes/Animation 5/node" = SubResource("AnimationNodeAnimation_x8pfb")
+"nodes/Animation 5/position" = Vector2(-680, 1280)
+"nodes/Animation 6/node" = SubResource("AnimationNodeAnimation_cyq8f")
+"nodes/Animation 6/position" = Vector2(-340, 1420)
+"nodes/Animation 7/node" = SubResource("AnimationNodeAnimation_d4v7o")
+"nodes/Animation 7/position" = Vector2(1480, 700)
+"nodes/Animation 8/node" = SubResource("AnimationNodeAnimation_a30et")
+"nodes/Animation 8/position" = Vector2(240, 1140)
+"nodes/Animation 9/node" = SubResource("AnimationNodeAnimation_b5ka8")
+"nodes/Animation 9/position" = Vector2(0, 1160)
+nodes/Sub2/node = SubResource("AnimationNodeSub2_0sc86")
+nodes/Sub2/position = Vector2(1240, 560)
+"nodes/Sub2 2/node" = SubResource("AnimationNodeSub2_cm58l")
+"nodes/Sub2 2/position" = Vector2(1720, 460)
+"nodes/TimeScale 2/node" = SubResource("AnimationNodeTimeScale_qy002")
+"nodes/TimeScale 2/position" = Vector2(-820, 1160)
+"nodes/TimeScale 3/node" = SubResource("AnimationNodeTimeScale_v4ogn")
+"nodes/TimeScale 3/position" = Vector2(-480, 1180)
+"nodes/TimeScale 4/node" = SubResource("AnimationNodeTimeScale_ksyli")
+"nodes/TimeScale 4/position" = Vector2(-200, 1180)
+nodes/add_torso_rot/node = SubResource("AnimationNodeAdd2_jkgmh")
+nodes/add_torso_rot/position = Vector2(960, 120)
+nodes/crouch_blend/node = SubResource("AnimationNodeBlend2_wroby")
+nodes/crouch_blend/position = Vector2(-240, 40)
+nodes/crouch_speed/node = SubResource("AnimationNodeBlendSpace1D_2p0tb")
+nodes/crouch_speed/position = Vector2(-473.384, 252.725)
+nodes/firing_timescale/node = SubResource("AnimationNodeTimeScale_jaaa2")
+nodes/firing_timescale/position = Vector2(-1140, 1140)
+nodes/gun_draw/node = SubResource("AnimationNodeOneShot_8pm1e")
+nodes/gun_draw/position = Vector2(-460, 840)
+nodes/gun_fire/node = SubResource("AnimationNodeOneShot_lx8f0")
+nodes/gun_fire/position = Vector2(-880, 860)
+nodes/gun_reload/node = SubResource("AnimationNodeOneShot_d7rfv")
+nodes/gun_reload/position = Vector2(-280, 860)
+nodes/gun_stow/node = SubResource("AnimationNodeOneShot_ojx7x")
+nodes/gun_stow/position = Vector2(-680, 860)
+nodes/jump_blend/node = SubResource("AnimationNodeBlend2_sk0ua")
+nodes/jump_blend/position = Vector2(320, 100)
+nodes/jump_space/node = SubResource("AnimationNodeBlendSpace1D_y0rnd")
+nodes/jump_space/position = Vector2(-140, 340)
+nodes/lean_space/node = SubResource("AnimationNodeBlendSpace1D_sy3v5")
+nodes/lean_space/position = Vector2(1440, 480)
+nodes/legs_turn/node = SubResource("AnimationNodeBlendSpace1D_0cokg")
+nodes/legs_turn/position = Vector2(960, 440)
+nodes/mantle_oneshot/node = SubResource("AnimationNodeOneShot_vmcf5")
+nodes/mantle_oneshot/position = Vector2(680, -520)
+nodes/mantle_timescale/node = SubResource("AnimationNodeTimeScale_q8wc6")
+nodes/mantle_timescale/position = Vector2(500, -300)
+nodes/output/position = Vector2(2740, 140)
+nodes/punch_oneshot/node = SubResource("AnimationNodeOneShot_edm42")
+nodes/punch_oneshot/position = Vector2(240, -440)
+nodes/punch_space/node = SubResource("AnimationNodeBlendSpace1D_bjc42")
+nodes/punch_space/position = Vector2(-320, -300)
+nodes/punch_timescale/node = SubResource("AnimationNodeTimeScale_cxv1a")
+nodes/punch_timescale/position = Vector2(-20, -360)
+nodes/run_scale/node = SubResource("AnimationNodeTimeScale_0c24l")
+nodes/run_scale/position = Vector2(-480, 40)
+nodes/slide_anim/node = SubResource("AnimationNodeAnimation_wyxrc")
+nodes/slide_anim/position = Vector2(-500, 480)
+nodes/slide_blend/node = SubResource("AnimationNodeBlend2_5bqc1")
+nodes/slide_blend/position = Vector2(20, -20)
+nodes/sprint_blend/node = SubResource("AnimationNodeBlend2_y3orv")
+nodes/sprint_blend/position = Vector2(20, 840)
+nodes/torso_pos/node = SubResource("AnimationNodeBlendSpace1D_x4tal")
+nodes/torso_pos/position = Vector2(600, 380)
+nodes/unarmed_anim/node = SubResource("AnimationNodeAnimation_oqhag")
+nodes/unarmed_anim/position = Vector2(0, -520)
+nodes/unarmed_blend/node = SubResource("AnimationNodeBlend2_35uyh")
+nodes/unarmed_blend/position = Vector2(580, -20)
+nodes/walk_speed/node = SubResource("AnimationNodeBlendSpace1D_m1fpw")
+nodes/walk_speed/position = Vector2(-740, 40)
+nodes/walled_blend/node = SubResource("AnimationNodeBlend2_50s1c")
+nodes/walled_blend/position = Vector2(260, 800)
+nodes/weapon_blend/node = SubResource("AnimationNodeBlend2_7jieo")
+nodes/weapon_blend/position = Vector2(800, 0)
+node_connections = [&"Add2", 0, &"add_torso_rot", &"Add2", 1, &"Sub2", &"Add2 2", 0, &"Add2", &"Add2 2", 1, &"Sub2 2", &"Sub2", 0, &"legs_turn", &"Sub2", 1, &"Animation", &"Sub2 2", 0, &"lean_space", &"Sub2 2", 1, &"Animation 7", &"TimeScale 2", 0, &"Animation 4", &"TimeScale 3", 0, &"Animation 5", &"TimeScale 4", 0, &"Animation 6", &"add_torso_rot", 0, &"weapon_blend", &"add_torso_rot", 1, &"torso_pos", &"crouch_blend", 0, &"run_scale", &"crouch_blend", 1, &"crouch_speed", &"firing_timescale", 0, &"Animation 3", &"gun_draw", 0, &"gun_stow", &"gun_draw", 1, &"TimeScale 3", &"gun_fire", 0, &"Animation 2", &"gun_fire", 1, &"firing_timescale", &"gun_reload", 0, &"gun_draw", &"gun_reload", 1, &"TimeScale 4", &"gun_stow", 0, &"gun_fire", &"gun_stow", 1, &"TimeScale 2", &"jump_blend", 0, &"slide_blend", &"jump_blend", 1, &"jump_space", &"mantle_oneshot", 0, &"punch_oneshot", &"mantle_oneshot", 1, &"mantle_timescale", &"mantle_timescale", 0, &"Animation 11", &"output", 0, &"Add2 2", &"punch_oneshot", 0, &"unarmed_anim", &"punch_oneshot", 1, &"punch_timescale", &"punch_timescale", 0, &"punch_space", &"run_scale", 0, &"walk_speed", &"slide_blend", 0, &"crouch_blend", &"slide_blend", 1, &"slide_anim", &"sprint_blend", 0, &"gun_reload", &"sprint_blend", 1, &"Animation 9", &"unarmed_blend", 0, &"jump_blend", &"unarmed_blend", 1, &"mantle_oneshot", &"walled_blend", 0, &"sprint_blend", &"walled_blend", 1, &"Animation 8", &"weapon_blend", 0, &"unarmed_blend", &"weapon_blend", 1, &"walled_blend"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r7u4k"]
+_data = {
+"arms_mantle": ExtResource("50_nfon0"),
+"arms_two_hand": ExtResource("35_kc7s2"),
+"arms_two_hand_reload": ExtResource("36_3c3x4"),
+"crouch": ExtResource("48_231cw"),
+"crouch_walk": ExtResource("49_72qi6"),
+"falling": ExtResource("44_ru7l5"),
+"head_look_down": ExtResource("54_bsd5v"),
+"head_look_up": ExtResource("55_stemm"),
+"idle": ExtResource("39_xonp6"),
+"jump": ExtResource("43_qfsw6"),
+"leg_turn_left": ExtResource("53_uw185"),
+"leg_turn_right": ExtResource("52_gfhgc"),
+"no_anim": ExtResource("40_clsq5"),
+"run": ExtResource("51_8fb1a"),
+"slide": ExtResource("46_ya81a"),
+"slide_2": ExtResource("47_nkkoj"),
+"torso_OH_draw": ExtResource("31_udrjk"),
+"torso_OH_fire": ExtResource("33_qjbw6"),
+"torso_OH_fire_pos": ExtResource("35_egnl3"),
+"torso_OH_idle": ExtResource("29_vj7q3"),
+"torso_OH_reload": ExtResource("32_qh587"),
+"torso_OH_sprint": ExtResource("31_k37t4"),
+"torso_OH_stow": ExtResource("30_837b0"),
+"torso_OH_walled": ExtResource("34_7q06q"),
+"torso_lean_left": ExtResource("56_i042g"),
+"torso_lean_right": ExtResource("57_05yhi"),
+"torso_look_down": ExtResource("41_3d81g"),
+"torso_look_up": ExtResource("42_2llyo"),
+"torso_turn_left": ExtResource("38_pu4i0"),
+"torso_turn_right": ExtResource("37_pdq1c"),
+"torso_unarmed_idle": ExtResource("59_dkhgi"),
+"torso_unarmed_punch_left": ExtResource("60_uo6xl"),
+"torso_unarmed_punch_right": ExtResource("61_3bdtl"),
+"walk": ExtResource("28_qsx8p")
+}
+
+[node name="blockbench_export" type="Node3D"]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendTree_26uy8")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Add2/add_amount = 1.0
+"parameters/Add2 2/add_amount" = 1.0
+parameters/Sub2/sub_amount = 1.0
+"parameters/Sub2 2/sub_amount" = 1.0
+"parameters/TimeScale 2/scale" = 1.0
+"parameters/TimeScale 3/scale" = 1.0
+"parameters/TimeScale 4/scale" = 1.0
+parameters/add_torso_rot/add_amount = 1.0
+parameters/crouch_blend/blend_amount = 1.0
+parameters/crouch_speed/blend_position = 0.0
+parameters/firing_timescale/scale = 4.0
+parameters/gun_draw/active = false
+parameters/gun_draw/internal_active = false
+parameters/gun_draw/request = 0
+parameters/gun_fire/active = false
+parameters/gun_fire/internal_active = false
+parameters/gun_fire/request = 0
+parameters/gun_reload/active = false
+parameters/gun_reload/internal_active = false
+parameters/gun_reload/request = 0
+parameters/gun_stow/active = false
+parameters/gun_stow/internal_active = false
+parameters/gun_stow/request = 0
+parameters/jump_blend/blend_amount = 0.0
+parameters/jump_space/blend_position = 0.0
+parameters/lean_space/blend_position = 0.0
+parameters/legs_turn/blend_position = -0.248
+parameters/mantle_oneshot/active = false
+parameters/mantle_oneshot/internal_active = false
+parameters/mantle_oneshot/request = 0
+parameters/mantle_timescale/scale = 1.0
+parameters/punch_oneshot/active = false
+parameters/punch_oneshot/internal_active = false
+parameters/punch_oneshot/request = 0
+parameters/punch_space/blend_position = 1.0
+parameters/punch_timescale/scale = 3.0
+parameters/run_scale/scale = 1.0
+parameters/slide_blend/blend_amount = 0.0
+parameters/sprint_blend/blend_amount = 0
+parameters/torso_pos/blend_position = 1.027
+parameters/unarmed_blend/blend_amount = 1.0
+parameters/walk_speed/blend_position = 1.0
+parameters/walled_blend/blend_amount = 0.0
+parameters/weapon_blend/blend_amount = 0.0
+script = ExtResource("1_0888q")
+
+[node name="Node" type="Node3D" parent="."]
+
+[node name="hip2" type="Node3D" parent="Node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, -0.05)
+
+[node name="crotch" type="Node3D" parent="Node/hip2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.025)
+
+[node name="hip" type="MeshInstance3D" parent="Node/hip2/crotch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0.025)
+mesh = ExtResource("2_a35fc")
+skeleton = NodePath("")
+
+[node name="leg_r" type="Node3D" parent="Node/hip2/crotch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.075, -0.1375, 0.0125)
+
+[node name="sphere" type="MeshInstance3D" parent="Node/hip2/crotch/leg_r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.075, 0)
+mesh = ExtResource("3_j3srf")
+skeleton = NodePath("")
+
+[node name="calf_r" type="Node3D" parent="Node/hip2/crotch/leg_r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, -0.433654, -0.00576923)
+
+[node name="cylinder" type="MeshInstance3D" parent="Node/hip2/crotch/leg_r/calf_r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.10385, 0.0182692)
+mesh = ExtResource("4_ppojj")
+skeleton = NodePath("")
+
+[node name="foot_r" type="Node3D" parent="Node/hip2/crotch/leg_r/calf_r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+
+[node name="cuboid" type="MeshInstance3D" parent="Node/hip2/crotch/leg_r/calf_r/foot_r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1, 0)
+mesh = ExtResource("5_mc4nk")
+skeleton = NodePath("")
+
+[node name="leg_l" type="Node3D" parent="Node/hip2/crotch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075, -0.1375, 0.0125)
+
+[node name="sphere2" type="MeshInstance3D" parent="Node/hip2/crotch/leg_l"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.075, 0)
+mesh = ExtResource("6_x3tnq")
+skeleton = NodePath("")
+
+[node name="calf_l" type="Node3D" parent="Node/hip2/crotch/leg_l"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.433654, -0.00576923)
+
+[node name="cylinder2" type="MeshInstance3D" parent="Node/hip2/crotch/leg_l/calf_l"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.10385, 0.0182692)
+mesh = ExtResource("7_hlw7x")
+skeleton = NodePath("")
+
+[node name="foot_l" type="Node3D" parent="Node/hip2/crotch/leg_l/calf_l"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+
+[node name="cuboid2" type="MeshInstance3D" parent="Node/hip2/crotch/leg_l/calf_l/foot_l"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1, 0)
+mesh = ExtResource("8_ogy3e")
+skeleton = NodePath("")
+
+[node name="torso" type="Node3D" parent="Node/hip2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="cylinder3" type="MeshInstance3D" parent="Node/hip2/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0.05)
+mesh = ExtResource("9_g8wd8")
+skeleton = NodePath("")
+
+[node name="sphere3" type="MeshInstance3D" parent="Node/hip2/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, 0.1875, -0.0125)
+mesh = ExtResource("10_34j6w")
+skeleton = NodePath("")
+
+[node name="cylinder4" type="MeshInstance3D" parent="Node/hip2/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.225, 0.0375)
+mesh = ExtResource("11_ek1jx")
+skeleton = NodePath("")
+
+[node name="sphere4" type="MeshInstance3D" parent="Node/hip2/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0625, 0.1875, -0.0125)
+mesh = ExtResource("12_h1tfe")
+skeleton = NodePath("")
+
+[node name="head2" type="Node3D" parent="Node/hip2/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77462e-17, 0.387583, 0.0260284)
+
+[node name="head_a" type="Node3D" parent="Node/hip2/torso/head2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="head" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.70831e-07, 0.156588, -0.0353584)
+mesh = ExtResource("13_ute7a")
+skeleton = NodePath("")
+
+[node name="ear_l" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, -0.0796875, 0.109472, -0.0195313)
+mesh = ExtResource("14_6238q")
+skeleton = NodePath("")
+
+[node name="ear_r" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0.0796875, 0.109472, -0.0195313)
+mesh = ExtResource("15_xbgal")
+skeleton = NodePath("")
+
+[node name="HAT" type="Node3D" parent="Node/hip2/torso/head2/head_a"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+
+[node name="cylinder5" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a/HAT"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3353e-18, 0.1125, -0.025)
+mesh = ExtResource("16_rpqqf")
+skeleton = NodePath("")
+
+[node name="cylinder6" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a/HAT"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075, 0.025, -1.04083e-17)
+mesh = ExtResource("17_qcujq")
+skeleton = NodePath("")
+
+[node name="hair" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a/HAT"]
+transform = Transform3D(-1, 0, -1.22465e-16, 0, 1, 0, 1.22465e-16, 0, -1, -4.77462e-17, 0.0374167, -0.0385284)
+mesh = ExtResource("18_prv4q")
+skeleton = NodePath("")
+
+[node name="sphere5" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a/HAT"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -0.05, 0.06875)
+mesh = ExtResource("19_ug56i")
+skeleton = NodePath("")
+
+[node name="sphere6" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a/HAT"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -0.05, 0.06875)
+mesh = ExtResource("20_q55rt")
+skeleton = NodePath("")
+
+[node name="cylinder7" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a/HAT"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.075, 0.025, -1.04083e-17)
+mesh = ExtResource("21_2g7rv")
+skeleton = NodePath("")
+
+[node name="arm_l2" type="Node3D" parent="Node/hip2/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.275, 0.05)
+
+[node name="arm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
+mesh = ExtResource("22_0ch2j")
+skeleton = NodePath("")
+
+[node name="forearm_l2" type="Node3D" parent="Node/hip2/torso/arm_l2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+
+[node name="forearm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
+mesh = ExtResource("23_isuay")
+skeleton = NodePath("")
+
+[node name="hand_l2" type="Node3D" parent="Node/hip2/torso/arm_l2/forearm_l2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00639205, -0.267898, -0.00170455)
+
+[node name="hand_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2/hand_l2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00639205, -1.0321, 0.00170455)
+mesh = ExtResource("24_4k06x")
+skeleton = NodePath("")
+
+[node name="arm_r2" type="Node3D" parent="Node/hip2/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.275, 0.05)
+
+[node name="arm_r" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
+mesh = ExtResource("25_7yw4u")
+skeleton = NodePath("")
+
+[node name="forearm_r2" type="Node3D" parent="Node/hip2/torso/arm_r2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+
+[node name="forearm_r" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2/forearm_r2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
+mesh = ExtResource("26_v7o4e")
+skeleton = NodePath("")
+
+[node name="hand_r" type="Node3D" parent="Node/hip2/torso/arm_r2/forearm_r2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00639205, -0.267898, -0.00170455)
+
+[node name="hand_t" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2/forearm_r2/hand_r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00639205, -1.0321, 0.00170455)
+mesh = ExtResource("27_tuyo8")
+skeleton = NodePath("")
+
+[node name="weapon_r" type="Node3D" parent="Node/hip2/torso/arm_r2/forearm_r2/hand_r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025, -0.1, 0)
+
+[node name="gun_loc_r" type="Node3D" parent="Node/hip2/torso/arm_r2/forearm_r2/hand_r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025, -0.075, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r7u4k")
+}

@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmu5ekiano2pd"]
+
+[ext_resource type="Script" path="res://scripts/states/state_handler.gd" id="1_g3ut1"]
+[ext_resource type="Script" path="res://biped.gd" id="1_g8l5k"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_idle.gd" id="2_1lger"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_walk.gd" id="3_ligoe"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_airbourne.gd" id="5_fdi5f"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e86gq"]
+
+[node name="biped" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_g8l5k")
+
+[node name="collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_e86gq")
+
+[node name="leg_state" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("1_g3ut1")
+initial_state = NodePath("leg_idle")
+
+[node name="leg_idle" type="Node" parent="leg_state"]
+script = ExtResource("2_1lger")
+
+[node name="leg_walk" type="Node" parent="leg_state"]
+script = ExtResource("3_ligoe")
+
+[node name="leg_airbourne" type="Node" parent="leg_state"]
+script = ExtResource("5_fdi5f")
+
+[node name="grounded_ray" type="RayCast3D" parent="."]
+target_position = Vector3(0, -0.1, 0)
+
+[node name="playerView" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="playerViewCamera" type="Camera3D" parent="playerView"]
+
+[node name="ground_cast" type="RayCast3D" parent="."]
+target_position = Vector3(0, -0.1, 0)

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ck4p52vr3w41s"]
+
+[ext_resource type="Texture2D" uid="uid://byx8nnry85x3s" path="res://assets/textures/world/128/blue_tile_test.png" id="1_pu1nr"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lt3r5"]
+
+[resource]
+albedo_texture = ExtResource("1_pu1nr")
+metallic_specular = 0.0
+normal_texture = SubResource("CompressedTexture2D_lt3r5")
+texture_filter = 2

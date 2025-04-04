@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlmsxfxadpull"]
+
+[ext_resource type="Script" path="res://scripts/effects/bullet_hole.gd" id="1_jjnc2"]
+[ext_resource type="Texture2D" uid="uid://c2aks7m5d8f6q" path="res://assets/textures/sprites/bullet_hole.png" id="2_kkpj1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bu1wb"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_kkpj1")
+texture_filter = 0
+
+[sub_resource type="QuadMesh" id="QuadMesh_vco3g"]
+material = SubResource("StandardMaterial3D_bu1wb")
+size = Vector2(0.1, 0.1)
+
+[node name="bullet_hole" type="Node3D"]
+script = ExtResource("1_jjnc2")
+
+[node name="hole" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+cast_shadow = 0
+mesh = SubResource("QuadMesh_vco3g")

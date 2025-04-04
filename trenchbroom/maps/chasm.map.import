@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dcuejdskmqpii"
+path="res://.godot/imported/chasm.map-9c3268f86bf5e3c7a3b2b8655195d452.tres"
+
+[deps]
+
+source_file="res://trenchbroom/maps/chasm.map"
+dest_files=["res://.godot/imported/chasm.map-9c3268f86bf5e3c7a3b2b8655195d452.tres"]
+
+[params]
+

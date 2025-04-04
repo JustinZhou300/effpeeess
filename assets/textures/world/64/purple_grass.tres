@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cuxx0g1gnf383"]
+
+[ext_resource type="Texture2D" uid="uid://jooerhsa571t" path="res://assets/textures/world/64/purple_grass.png" id="1_uo1k2"]
+
+[resource]
+albedo_texture = ExtResource("1_uo1k2")
+metallic_specular = 0.0
+texture_filter = 2

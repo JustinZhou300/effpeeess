@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://cn0etdsxjh3vb"
+path="res://.godot/imported/caves.map-d779461a247d70202a4415e2cf1f01b9.tres"
+
+[deps]
+
+source_file="res://trenchbroom/maps/caves.map"
+dest_files=["res://.godot/imported/caves.map-d779461a247d70202a4415e2cf1f01b9.tres"]
+
+[params]
+

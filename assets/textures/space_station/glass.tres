@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bdl3ymm88ex3i"]
+
+[ext_resource type="Texture2D" uid="uid://c7qjq2e3sbpu4" path="res://assets/textures/space_station/glass.png" id="1_rvgup"]
+
+[resource]
+albedo_texture = ExtResource("1_rvgup")
+metallic_specular = 0.0
+texture_filter = 2

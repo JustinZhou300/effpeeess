@@ -1,0 +1,276 @@
+[gd_scene load_steps=38 format=3 uid="uid://bmu5ekiano2pd"]
+
+[ext_resource type="Script" path="res://scripts/entities/biped.gd" id="1_g8l5k"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_idle.gd" id="2_1lger"]
+[ext_resource type="Script" path="res://scripts/states/leg_state_handler.gd" id="2_walqo"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_walk.gd" id="3_ligoe"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_airbourne.gd" id="5_fdi5f"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_crouch_walk.gd" id="6_g1vlr"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_crouch.gd" id="7_rtcut"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_sprint.gd" id="8_v1to7"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_sprint_airbourne.gd" id="9_ftooo"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_crouch_airbourne.gd" id="10_tbto0"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_slide.gd" id="11_03kjj"]
+[ext_resource type="Script" path="res://scripts/states/torso_state_handler.gd" id="12_87iba"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_mantle.gd" id="12_l68cp"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_spawn.gd" id="13_8hg8j"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_unarmed.gd" id="13_jas7c"]
+[ext_resource type="PackedScene" uid="uid://bnp1uwq0n1qyi" path="res://scenes/biped/biped_model.tscn" id="14_1farq"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_idle.gd" id="14_11mdg"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_stow.gd" id="15_wo5r0"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_draw.gd" id="16_mcgt6"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_firing.gd" id="17_ubcdq"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_walled.gd" id="18_pw2r2"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_reloading.gd" id="19_oic4n"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_sprint.gd" id="20_27ldo"]
+[ext_resource type="PackedScene" uid="uid://diyk5squwtwu1" path="res://scenes/hud/hud.tscn" id="20_eiqel"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_mantle.gd" id="22_mfjvk"]
+[ext_resource type="Script" path="res://scripts/entities/inventory_handler.gd" id="22_ujyeq"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_punch.gd" id="23_n8tgk"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_unarmed_walled.gd" id="24_yhoin"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_unarmed_sprint.gd" id="25_hl5ja"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_spawn.gd" id="26_pmxwq"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_overheat.gd" id="27_dg10e"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_throw.gd" id="29_7s0nb"]
+[ext_resource type="Script" path="res://scenes/biped/stats.gd" id="30_f6dsq"]
+[ext_resource type="Script" path="res://scripts/states/torso states/torso_swing.gd" id="30_l0ifq"]
+[ext_resource type="Resource" uid="uid://vgenpvyptiog" path="res://stat_sheets/olivie.tres" id="35_p0jg4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yyo8o"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_momvj"]
+radius = 0.4
+height = 1.2
+
+[node name="biped" type="CharacterBody3D" groups=["PLAYER"]]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_g8l5k")
+
+[node name="leg_state" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_walqo")
+initial_state = NodePath("leg_spawn")
+
+[node name="leg_idle" type="Node" parent="leg_state"]
+script = ExtResource("2_1lger")
+state_movement = "leg_walk"
+state_airbourne = "leg_airbourne"
+state_crouch = "leg_crouch"
+
+[node name="leg_walk" type="Node" parent="leg_state"]
+script = ExtResource("3_ligoe")
+state_no_movement = "leg_idle"
+state_airbourne = "leg_airbourne"
+state_sprint = "leg_sprint"
+state_crouch = "leg_crouch_walk"
+
+[node name="leg_airbourne" type="Node" parent="leg_state"]
+script = ExtResource("5_fdi5f")
+state_grounded = "leg_idle"
+state_sprint = "leg_sprint_airbourne"
+state_crouch = "leg_crouch_airbourne"
+
+[node name="leg_crouch_walk" type="Node" parent="leg_state"]
+script = ExtResource("6_g1vlr")
+state_no_movement = "leg_crouch"
+state_airbourne = "leg_crouch_airbourne"
+state_sprint = "leg_sprint"
+state_crouch = "leg_walk"
+
+[node name="leg_crouch" type="Node" parent="leg_state"]
+script = ExtResource("7_rtcut")
+state_movement = "leg_crouch_walk"
+state_airbourne = "leg_crouch_airbourne"
+state_crouch = "leg_idle"
+
+[node name="leg_sprint" type="Node" parent="leg_state"]
+script = ExtResource("8_v1to7")
+state_no_movement = "leg_idle"
+state_airbourne = "leg_sprint_airbourne"
+state_crouch = "leg_slide"
+
+[node name="leg_sprint_airbourne" type="Node" parent="leg_state"]
+script = ExtResource("9_ftooo")
+state_no_movement = "leg_airbourne"
+
+[node name="leg_crouch_airbourne" type="Node" parent="leg_state"]
+script = ExtResource("10_tbto0")
+state_grounded = "leg_crouch"
+state_crouch = "leg_airbourne"
+
+[node name="leg_slide" type="Node" parent="leg_state"]
+script = ExtResource("11_03kjj")
+state_airbourne = "leg_crouch_airbourne"
+
+[node name="leg_mantle" type="Node" parent="leg_state"]
+script = ExtResource("12_l68cp")
+
+[node name="leg_spawn" type="Node" parent="leg_state"]
+script = ExtResource("13_8hg8j")
+
+[node name="torso_state" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("12_87iba")
+initial_state = NodePath("torso_spawn")
+
+[node name="torso_unarmed" type="Node" parent="torso_state"]
+script = ExtResource("13_jas7c")
+
+[node name="torso_idle" type="Node" parent="torso_state"]
+script = ExtResource("14_11mdg")
+
+[node name="torso_stow" type="Node" parent="torso_state"]
+script = ExtResource("15_wo5r0")
+
+[node name="torso_draw" type="Node" parent="torso_state"]
+script = ExtResource("16_mcgt6")
+
+[node name="torso_firing" type="Node" parent="torso_state"]
+script = ExtResource("17_ubcdq")
+
+[node name="torso_walled" type="Node" parent="torso_state"]
+script = ExtResource("18_pw2r2")
+
+[node name="torso_reload" type="Node" parent="torso_state"]
+script = ExtResource("19_oic4n")
+
+[node name="torso_sprint" type="Node" parent="torso_state"]
+script = ExtResource("20_27ldo")
+
+[node name="torso_mantle" type="Node" parent="torso_state"]
+script = ExtResource("22_mfjvk")
+
+[node name="torso_punch" type="Node" parent="torso_state"]
+script = ExtResource("23_n8tgk")
+
+[node name="torso_unarmed_walled" type="Node" parent="torso_state"]
+script = ExtResource("24_yhoin")
+
+[node name="torso_unarmed_sprint" type="Node" parent="torso_state"]
+script = ExtResource("25_hl5ja")
+
+[node name="torso_spawn" type="Node" parent="torso_state"]
+script = ExtResource("26_pmxwq")
+
+[node name="torso_overheat" type="Node" parent="torso_state"]
+script = ExtResource("27_dg10e")
+
+[node name="torso_throw" type="Node" parent="torso_state"]
+script = ExtResource("29_7s0nb")
+
+[node name="torso_swing" type="Node" parent="torso_state"]
+script = ExtResource("30_l0ifq")
+
+[node name="stand_col" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_yyo8o")
+
+[node name="crouch_col" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_momvj")
+
+[node name="grounded_ray" type="RayCast3D" parent="."]
+target_position = Vector3(0, -0.1, 0)
+
+[node name="playerView" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65, 0)
+
+[node name="blockbench_export" parent="playerView" instance=ExtResource("14_1farq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.65, 0)
+
+[node name="lean_cast_right" type="RayCast3D" parent="playerView"]
+target_position = Vector3(0.6, 0, 0)
+
+[node name="lean_cast_left" type="RayCast3D" parent="playerView"]
+target_position = Vector3(-0.6, 0, 0)
+
+[node name="mantle_rays" type="Node3D" parent="playerView"]
+
+[node name="mantle_ray" type="RayCast3D" parent="playerView/mantle_rays"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.6)
+target_position = Vector3(0, -0.5, 0)
+hit_back_faces = false
+
+[node name="mantle_ray_l" type="RayCast3D" parent="playerView/mantle_rays"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.5)
+target_position = Vector3(0, -0.5, 0)
+hit_back_faces = false
+
+[node name="mantle_ray_r" type="RayCast3D" parent="playerView/mantle_rays"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.5)
+target_position = Vector3(0, -0.5, 0)
+hit_back_faces = false
+
+[node name="mantle_ray_alt" type="RayCast3D" parent="playerView/mantle_rays"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.6)
+target_position = Vector3(0, -0.5, 0)
+hit_from_inside = true
+
+[node name="mantle_ray_l_alt" type="RayCast3D" parent="playerView/mantle_rays"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.5)
+target_position = Vector3(0, -0.5, 0)
+hit_from_inside = true
+
+[node name="mantle_ray_r_alt" type="RayCast3D" parent="playerView/mantle_rays"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.5)
+target_position = Vector3(0, -0.5, 0)
+hit_from_inside = true
+
+[node name="playerViewCamera" type="Camera3D" parent="playerView"]
+fov = 95.0
+far = 200.0
+
+[node name="aim_wall_hit" type="RayCast3D" parent="playerView/playerViewCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.330318, 0)
+target_position = Vector3(0, 0, -0.6)
+
+[node name="arm_wall_hit" type="RayCast3D" parent="playerView/playerViewCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.211061, -0.330318, 0)
+target_position = Vector3(0, 0, -0.8)
+
+[node name="interact_ray" type="RayCast3D" parent="playerView/playerViewCamera"]
+target_position = Vector3(0, 0, -2)
+collision_mask = 4
+
+[node name="shoot_ray" type="RayCast3D" parent="playerView/playerViewCamera"]
+target_position = Vector3(0, 0, -1000)
+collision_mask = 9
+
+[node name="ears" type="AudioListener3D" parent="playerView/playerViewCamera"]
+current = true
+
+[node name="playerViewRay" type="RayCast3D" parent="playerView"]
+
+[node name="aim_ray" type="RayCast3D" parent="playerView/playerViewRay"]
+target_position = Vector3(0, 0, -1000)
+collision_mask = 9
+
+[node name="ground_cast" type="RayCast3D" parent="."]
+target_position = Vector3(0, -0.1, 0)
+
+[node name="head_bonk" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+target_position = Vector3(0, 1, 0)
+
+[node name="wall_hit" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+target_position = Vector3(0, 0, -0.7)
+
+[node name="inventory" type="Node" parent="."]
+script = ExtResource("22_ujyeq")
+
+[node name="HUD" parent="." instance=ExtResource("20_eiqel")]
+mouse_filter = 1
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
+light_energy = 0.1
+omni_attenuation = 2.0
+
+[node name="stats" type="Node" parent="."]
+script = ExtResource("30_f6dsq")
+entity_stat_sheet = ExtResource("35_p0jg4")

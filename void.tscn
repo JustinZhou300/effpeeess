@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7o7ux3c5nsha"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h2ldw"]
+emission_shape = 2
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ea2dy"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_5x735"]
+material = SubResource("StandardMaterial3D_ea2dy")
+size = Vector2(0.3, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_emn4x"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 5.0
+billboard_mode = 1
+
+[sub_resource type="SphereMesh" id="SphereMesh_ipw3p"]
+material = SubResource("StandardMaterial3D_emn4x")
+radius = 1.0
+height = 2.0
+
+[node name="void" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+amount = 10
+lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_h2ldw")
+draw_pass_1 = SubResource("QuadMesh_5x735")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_ipw3p")

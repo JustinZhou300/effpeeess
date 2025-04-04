@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://y5bbbilq0k64"]
+
+[ext_resource type="Script" path="res://scripts/states/item_state_handler.gd" id="1_xkqoo"]
+[ext_resource type="Script" path="res://scripts/states/item_state/item_equipped.gd" id="2_tebf0"]
+[ext_resource type="Script" path="res://scripts/states/item_state/item_inventory.gd" id="3_xmc75"]
+[ext_resource type="Script" path="res://scripts/states/item_state/item_stowed.gd" id="4_c1skc"]
+[ext_resource type="Script" path="res://scripts/states/item_state/item_object.gd" id="5_bihvc"]
+[ext_resource type="Script" path="res://scripts/states/item_state/item_spawn.gd" id="6_ghxj2"]
+
+[node name="item_state" type="Node" node_paths=PackedStringArray("initial_state")]
+script = ExtResource("1_xkqoo")
+initial_state = NodePath("item_spawn")
+
+[node name="item_equipped" type="Node" parent="."]
+script = ExtResource("2_tebf0")
+
+[node name="item_inventory" type="Node" parent="."]
+script = ExtResource("3_xmc75")
+
+[node name="item_stowed" type="Node" parent="."]
+script = ExtResource("4_c1skc")
+
+[node name="item_object" type="Node" parent="."]
+script = ExtResource("5_bihvc")
+
+[node name="item_spawn" type="Node" parent="."]
+script = ExtResource("6_ghxj2")

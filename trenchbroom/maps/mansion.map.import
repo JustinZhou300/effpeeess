@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dsyapso5d35x8"
+path="res://.godot/imported/mansion.map-3bb9d8ff4ba5dd5d48b63357500ae6bf.tres"
+
+[deps]
+
+source_file="res://trenchbroom/maps/mansion.map"
+dest_files=["res://.godot/imported/mansion.map-3bb9d8ff4ba5dd5d48b63357500ae6bf.tres"]
+
+[params]
+

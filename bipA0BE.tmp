@@ -1,0 +1,96 @@
+[gd_scene load_steps=14 format=3 uid="uid://bmu5ekiano2pd"]
+
+[ext_resource type="Script" path="res://biped.gd" id="1_g8l5k"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_idle.gd" id="2_1lger"]
+[ext_resource type="Script" path="res://scripts/states/leg_state_handler.gd" id="2_walqo"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_walk.gd" id="3_ligoe"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_airbourne.gd" id="5_fdi5f"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_crouch_walk.gd" id="6_g1vlr"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_crouch.gd" id="7_rtcut"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_sprint.gd" id="8_v1to7"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_sprint_airbourne.gd" id="9_ftooo"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_crouch_airbourne.gd" id="10_tbto0"]
+[ext_resource type="Script" path="res://scripts/states/leg states/leg_slide.gd" id="11_03kjj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e86gq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yynob"]
+height = 1.0
+
+[node name="biped" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_g8l5k")
+
+[node name="stand_col" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_e86gq")
+
+[node name="crouch_col" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_yynob")
+
+[node name="leg_state" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_walqo")
+initial_state = NodePath("leg_idle")
+
+[node name="leg_idle" type="Node" parent="leg_state"]
+script = ExtResource("2_1lger")
+state_movement = "leg_walk"
+state_airbourne = "leg_airbourne"
+state_crouch = "leg_crouch"
+
+[node name="leg_walk" type="Node" parent="leg_state"]
+script = ExtResource("3_ligoe")
+state_no_movement = "leg_idle"
+state_airbourne = "leg_airbourne"
+state_sprint = "leg_sprint"
+state_crouch = "leg_crouch_walk"
+
+[node name="leg_airbourne" type="Node" parent="leg_state"]
+script = ExtResource("5_fdi5f")
+state_grounded = "leg_idle"
+state_sprint = "leg_sprint_airbourne"
+state_crouch = "leg_crouch_airbourne"
+
+[node name="leg_crouch_walk" type="Node" parent="leg_state"]
+script = ExtResource("6_g1vlr")
+state_no_movement = "leg_crouch"
+state_airbourne = "leg_crouch_airbourne"
+state_crouch = "leg_walk"
+
+[node name="leg_crouch" type="Node" parent="leg_state"]
+script = ExtResource("7_rtcut")
+state_movement = "leg_crouch_walk"
+state_airbourne = "leg_crouch_airbourne"
+state_crouch = "leg_idle"
+
+[node name="leg_sprint" type="Node" parent="leg_state"]
+script = ExtResource("8_v1to7")
+state_no_movement = "leg_idle"
+state_airbourne = "leg_sprint_airbourne"
+state_crouch = "leg_slide"
+
+[node name="leg_sprint_airbourne" type="Node" parent="leg_state"]
+script = ExtResource("9_ftooo")
+state_no_movement = "leg_airbourne"
+state_grounded = "leg_sprint"
+state_crouch = "leg_crouch_airbourne"
+
+[node name="leg_crouch_airbourne" type="Node" parent="leg_state"]
+script = ExtResource("10_tbto0")
+state_grounded = "leg_crouch"
+
+[node name="leg_slide" type="Node" parent="leg_state"]
+script = ExtResource("11_03kjj")
+
+[node name="grounded_ray" type="RayCast3D" parent="."]
+target_position = Vector3(0, -0.1, 0)
+
+[node name="playerView" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="playerViewCamera" type="Camera3D" parent="playerView"]
+
+[node name="ground_cast" type="RayCast3D" parent="."]
+target_position = Vector3(0, -0.1, 0)

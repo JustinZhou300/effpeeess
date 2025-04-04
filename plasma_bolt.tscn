@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://dadpj2flx2s2e"]
+
+[ext_resource type="Script" path="res://scripts/effects/projectile.gd" id="1_hcnyf"]
+[ext_resource type="Texture2D" uid="uid://bygy8ab5144rv" path="res://assets/textures/particles/trail_test.png" id="2_oisyy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5n532"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_k852j"]
+material = SubResource("StandardMaterial3D_5n532")
+radius = 0.05
+height = 0.1
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_p3v1m"]
+gravity = Vector3(0, 0, 0)
+anim_speed_min = 1.0
+anim_speed_max = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l03si"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 1)
+albedo_texture = ExtResource("2_oisyy")
+texture_filter = 0
+billboard_mode = 3
+particles_anim_h_frames = 2
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_3diyj"]
+material = SubResource("StandardMaterial3D_l03si")
+size = Vector2(0.1, 0.1)
+
+[node name="plasma_bolt" type="Node3D"]
+script = ExtResource("1_hcnyf")
+colour = Color(1, 0, 0, 1)
+
+[node name="model" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_k852j")
+
+[node name="effect" type="GPUParticles3D" parent="."]
+lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_p3v1m")
+draw_pass_1 = SubResource("QuadMesh_3diyj")
+
+[node name="light" type="OmniLight3D" parent="."]
+light_color = Color(1, 0, 0, 1)

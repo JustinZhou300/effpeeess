@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs45sfton3u07"]
+
+[ext_resource type="Script" path="res://scripts/objects/light_test.gd" id="1_fdjn3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c2wa0"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_46mm3"]
+material = SubResource("StandardMaterial3D_c2wa0")
+size = Vector3(0.2, 0.2, 1)
+
+[node name="light" type="Node3D"]
+script = ExtResource("1_fdjn3")
+
+[node name="unshaded" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.140817, 0)
+omni_range = 15.0
+
+[node name="shaded" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.140817, 0)
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_46mm3")

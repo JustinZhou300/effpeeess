@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://qyuaac01dkyi"]
+
+[ext_resource type="Texture2D" uid="uid://c8tc5yhqc6a7o" path="res://assets/textures/world/64/basalt_big.png" id="1_xhiu4"]
+
+[resource]
+albedo_texture = ExtResource("1_xhiu4")
+metallic_specular = 0.0
+texture_filter = 2

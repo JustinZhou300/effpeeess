@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bnqk74nl86qox"]
+
+[ext_resource type="Texture2D" uid="uid://bvs1b8tw3ag58" path="res://assets/textures/mansion/pink_stone_brick_2.png" id="1_1dvet"]
+
+[resource]
+albedo_texture = ExtResource("1_1dvet")
+metallic_specular = 0.0
+texture_filter = 2

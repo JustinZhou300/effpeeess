@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cyy68mkwwyjad"]
+
+[ext_resource type="Texture2D" uid="uid://8ccmp1337yrb" path="res://assets/textures/world/64/grass_trimsheet.png" id="1_674yc"]
+
+[resource]
+albedo_texture = ExtResource("1_674yc")
+metallic_specular = 0.0
+texture_filter = 2

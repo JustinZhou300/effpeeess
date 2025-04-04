@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://du7a34thd45q0"]
+
+[ext_resource type="Script" path="res://scripts/effects/sound.gd" id="1_mpwm5"]
+[ext_resource type="AudioStream" uid="uid://d053q1nj23x3p" path="res://assets/audio/effects/gunshot_test.wav" id="2_t4drh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_o0iye"]
+radius = 10.0
+
+[node name="sound" type="Node3D"]
+script = ExtResource("1_mpwm5")
+
+[node name="audio_hitbox" type="Area3D" parent="."]
+
+[node name="audio_shape" type="CollisionShape3D" parent="audio_hitbox"]
+shape = SubResource("SphereShape3D_o0iye")
+
+[node name="stream" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_t4drh")
+volume_db = -15.0

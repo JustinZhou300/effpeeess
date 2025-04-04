@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvw1kqkahkmug"]
+
+[sub_resource type="Gradient" id="Gradient_jp1af"]
+colors = PackedColorArray(1, 1, 0, 1, 1, 1, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_u1cwl"]
+gradient = SubResource("Gradient_jp1af")
+
+[sub_resource type="Curve" id="Curve_hqueb"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_a1ys8"]
+curve = SubResource("Curve_hqueb")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hx2n2"]
+angle_min = 136.7
+angle_max = 136.7
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_a1ys8")
+color_ramp = SubResource("GradientTexture1D_u1cwl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_20ayk"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_yc06g"]
+material = SubResource("StandardMaterial3D_20ayk")
+radius = 0.1
+height = 0.2
+radial_segments = 8
+rings = 8
+
+[node name="muzzle_flash" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 1
+lifetime = 0.1
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_hx2n2")
+draw_pass_1 = SubResource("SphereMesh_yc06g")

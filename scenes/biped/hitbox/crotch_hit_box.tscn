@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3dwn7kqgaib0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijvey"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="crotch_hit_box" type="Area3D"]
+
+[node name="hitbox_shape" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ijvey")

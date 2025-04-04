@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://q0bfscmap5nu"]
+
+[ext_resource type="Texture2D" uid="uid://51hf1en13yum" path="res://assets/textures/world/floor_hangar_0.png" id="1_qv207"]
+
+[resource]
+albedo_texture = ExtResource("1_qv207")
+metallic_specular = 0.0
+texture_filter = 2

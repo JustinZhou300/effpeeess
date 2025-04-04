@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://behgcro0n615q"
+path="res://.godot/imported/space_station.map-f0a0f7ed1e63c5a4fb447de29d41a8bc.tres"
+
+[deps]
+
+source_file="res://trenchbroom/maps/space_station.map"
+dest_files=["res://.godot/imported/space_station.map-f0a0f7ed1e63c5a4fb447de29d41a8bc.tres"]
+
+[params]
+

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b720o46132jcv"]
+
+[ext_resource type="Texture2D" uid="uid://mj5lobvkj7du" path="res://assets/textures/world/wall_reinforced_panel.png" id="1_4bjb7"]
+
+[resource]
+albedo_texture = ExtResource("1_4bjb7")
+metallic_specular = 0.0
+texture_filter = 2

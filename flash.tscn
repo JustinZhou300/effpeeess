@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8lbivgiw3vgu"]
+
+[ext_resource type="Script" path="res://scripts/effects/flash.gd" id="1_xt3pu"]
+[ext_resource type="Texture2D" uid="uid://tke11ed0utau" path="res://assets/textures/particles/muzzle_flash_2.png" id="2_bx1m0"]
+
+[sub_resource type="Curve" id="Curve_eov7s"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.471429, 0.98105), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_u6s1p"]
+curve = SubResource("Curve_eov7s")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5ebq1"]
+angle_min = 1.07288e-05
+angle_max = 360.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_u6s1p")
+color = Color(1, 1, 0, 1)
+anim_speed_max = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_useld"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(1, 1, 1, 0.741176)
+albedo_texture = ExtResource("2_bx1m0")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 5.0
+texture_filter = 0
+disable_receive_shadows = true
+billboard_mode = 3
+particles_anim_h_frames = 2
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_usl3f"]
+material = SubResource("StandardMaterial3D_useld")
+size = Vector2(0.2, 0.2)
+
+[node name="flash" type="Node3D"]
+script = ExtResource("1_xt3pu")
+
+[node name="muzzle_flash" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 10
+lifetime = 0.04
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_5ebq1")
+draw_passes = 2
+draw_pass_1 = SubResource("QuadMesh_usl3f")
+draw_pass_2 = null
+
+[node name="muzzle_light" type="OmniLight3D" parent="."]
+shadow_enabled = true
+omni_range = 30.0

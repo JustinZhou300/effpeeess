@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://cbvp1t73l1gbv"
+path="res://.godot/imported/nephele_station.map-8c298194f30d9fb0bd563deae85c4464.tres"
+
+[deps]
+
+source_file="res://trenchbroom/maps/nephele_station.map"
+dest_files=["res://.godot/imported/nephele_station.map-8c298194f30d9fb0bd563deae85c4464.tres"]
+
+[params]
+

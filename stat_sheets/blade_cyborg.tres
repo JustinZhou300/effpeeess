@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="stat_sheet" load_steps=2 format=3 uid="uid://bgbus30m6vbf2"]
+
+[ext_resource type="Script" path="res://stat_sheet.gd" id="1_57fbb"]
+
+[resource]
+script = ExtResource("1_57fbb")
+name = "cyborg"
+description = "cyborg"
+mass = 70.0
+strength = 0
+endurance = 0
+dexterity = 0
+agility = 3
+intelligence = 0
+mind = 0
+luck = 0
