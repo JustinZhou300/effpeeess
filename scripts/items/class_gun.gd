@@ -17,6 +17,7 @@ enum animation_sets {one_handed2, two_handed, one_handed, flashlight_handed, mel
 @export var tracer_colour: Color
 @export var firing_location: Node3D
 @export var swings_num = 1
+
 var current_firing_location:Node3D
 #weapon variables
 var current_ammo = 0
@@ -81,6 +82,7 @@ var muzzle_flash_timer_max = 0.05
 func shoot_muzzle_flash():
 	var flash_instance = flash.instantiate()
 	flash_instance.firing_pos = current_firing_location.global_position
+	flash_instance.colour = tracer_colour
 	current_firing_location.add_child(flash_instance)
 	#item.state_handler.current_state.weapon_model
 
@@ -98,6 +100,7 @@ func shoot_hitscan():
 		tracer_instance.firing_pos = current_firing_location.global_position
 		#tracer_instance.firing_rot = biped.playerViewRay.global_rotation
 		tracer_instance.hit_pos = biped.shoot_ray.get_collision_point()
+		tracer_instance.colour = tracer_colour
 		tracer_instance.dist = current_firing_location.global_position.distance_to(biped.shoot_ray.get_collision_point())
 		GAME.WORLD.PROJECTILES.add_child(tracer_instance)
 		print(biped.shoot_ray.get_collision_mask_value(1))
@@ -108,6 +111,7 @@ func shoot_hitscan():
 		if biped.shoot_ray.get_collider().get_collision_layer() == 1:
 			var ricochet_instance = ricochet.instantiate()
 			ricochet_instance.spawn_position = biped.shoot_ray.get_collision_point()
+			ricochet_instance.colour = tracer_colour
 			ricochet_instance.wall_normal = biped.shoot_ray.get_collision_normal()
 			var bullet_hole_instance = bullet_hole.instantiate()
 			bullet_hole_instance.spawn_position = biped.shoot_ray.get_collision_point()

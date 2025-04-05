@@ -29,6 +29,7 @@ var bullet_hole
 
 func weapon_ready():
 	is_weapon = true
+	is_melee = true
 	#tracer = preload("res://tracer.tscn")
 	#flash = preload("res://flash.tscn")
 	ricochet = preload("res://ricochet.tscn")

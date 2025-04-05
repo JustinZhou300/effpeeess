@@ -56,6 +56,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o06tf"]
 radius = 0.3
+height = 1.8
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6eojw"]
 animation = &"attack2"
@@ -216,13 +217,13 @@ collision_mask = 524291
 script = ExtResource("1_wc585")
 
 [node name="nav" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true
 
 [node name="collider" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_o06tf")
 
 [node name="model" type="Node3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
 
 [node name="AnimationTree" type="AnimationTree" parent="model"]
 tree_root = SubResource("AnimationNodeBlendTree_q2cxj")
@@ -348,7 +349,7 @@ mesh = ExtResource("14_k23on")
 skeleton = NodePath("")
 
 [node name="torso" type="Node3D" parent="model/Node/hip2"]
-transform = Transform3D(0.998962, -0.0453531, 0.00360429, 0.0454923, 0.996757, -0.0663645, -0.000582767, 0.0664597, 0.99779, 0, 0, 0)
+transform = Transform3D(0.964451, 0.258186, 0.0562943, -0.263675, 0.926197, 0.269506, 0.0174429, -0.274769, 0.961353, 0, 0, 0)
 
 [node name="cylinder3" type="MeshInstance3D" parent="model/Node/hip2/torso"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0.05)
@@ -370,7 +371,7 @@ skeleton = NodePath("")
 transform = Transform3D(0.953717, -0.300706, 0, 0.300706, 0.953717, 0, 0, 0, 1, 4.77462e-17, 0.387583, 0.0260284)
 
 [node name="head_a" type="Node3D" parent="model/Node/hip2/torso/head2"]
-transform = Transform3D(0.932105, 0.355577, -0.0688666, -0.0642497, 0.349461, 0.934745, 0.35644, -0.866857, 0.34858, 0, 0, 0)
+transform = Transform3D(0.988153, -0.025091, -0.151397, 0.00158, 0.988154, -0.153454, 0.153454, 0.151397, 0.976488, 0, 0, 0)
 
 [node name="head" type="MeshInstance3D" parent="model/Node/hip2/torso/head2/head_a"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.70831e-07, 0.156588, -0.0353584)
@@ -404,7 +405,7 @@ mesh = ExtResource("14_e21rs")
 skeleton = NodePath("")
 
 [node name="arm_l2" type="Node3D" parent="model/Node/hip2/torso"]
-transform = Transform3D(0.999779, 0.0210003, 0, -0.0210003, 0.999779, 0, 0, 0, 1, -0.3, 0.275, 0.05)
+transform = Transform3D(0.981522, -0.191347, 0, 0.191347, 0.981522, 0, 0, 0, 1, -0.3, 0.275, 0.05)
 
 [node name="arm_l" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
@@ -418,7 +419,7 @@ mesh = ExtResource("26_wl38f")
 skeleton = NodePath("")
 
 [node name="forearm_l2" type="Node3D" parent="model/Node/hip2/torso/arm_l2"]
-transform = Transform3D(0.939692, 0.337126, 0.0576433, -0.336719, 0.941451, -0.0169395, -0.0599792, -0.0034917, 0.998192, 0, -0.25, 0)
+transform = Transform3D(0.988154, 0.153454, 0.00158, -0.151397, 0.976487, -0.153454, -0.025091, 0.151397, 0.988153, 0, -0.25, 0)
 
 [node name="forearm_l" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2/forearm_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)

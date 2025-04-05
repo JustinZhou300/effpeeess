@@ -6,6 +6,7 @@
 script = ExtResource("1_57fbb")
 name = "cyborg"
 description = "cyborg"
+team = 1
 mass = 70.0
 strength = 0
 endurance = 0

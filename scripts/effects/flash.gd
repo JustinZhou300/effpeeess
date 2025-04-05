@@ -5,12 +5,18 @@ var lifetime #in seconds
 
 var firing_pos: Vector3
 var flash
+var light
 var colour: Color
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
 	flash = $muzzle_flash
+	light = $muzzle_light
+	
+	light.light_color = colour
+	flash.draw_pass_1.material.albedo_color = colour
+	flash.draw_pass_1.material.emission = colour
 	lifetime = flash.lifetime
 	flash.emitting = true
 	global_position = firing_pos

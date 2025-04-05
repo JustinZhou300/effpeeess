@@ -7,7 +7,7 @@ var active: bool
 
 func enter():
 	active = true
-	patrol_node = entity.patrols[0]
+	patrol_node = entity.patrols[randi() % entity.patrols.size()]
 	target = patrol_node.global_position
 	entity.nav.target_position = target
 
@@ -35,7 +35,7 @@ func physics_update(delta):
 		dir = entity.global_position.direction_to(target_position)
 		#entity.velocity = dir * entity.SPEED_RUN
 		entity.DESIRED_ROTATION = entity.get_desired_angle(target_position)
-		entity.velocity = lerp(entity.velocity, entity.stats.SPEED_RUN / 1.5 * Vector3(dir.x, 0, dir.z) , 0.5)
+		entity.velocity = lerp(entity.velocity, entity.stats.SPEED_RUN / 1.5 * Vector3(dir.x, entity.velocity.y, dir.z) , 0.5)
 
 
 var dir

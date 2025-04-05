@@ -164,10 +164,12 @@ script = ExtResource("30_l0ifq")
 
 [node name="stand_col" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+visible = false
 shape = SubResource("CapsuleShape3D_yyo8o")
 
 [node name="crouch_col" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+visible = false
 shape = SubResource("CapsuleShape3D_momvj")
 
 [node name="grounded_ray" type="RayCast3D" parent="."]
@@ -180,40 +182,48 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.65, 0)
 
 [node name="lean_cast_right" type="RayCast3D" parent="playerView"]
+visible = false
 target_position = Vector3(0.6, 0, 0)
 
 [node name="lean_cast_left" type="RayCast3D" parent="playerView"]
+visible = false
 target_position = Vector3(-0.6, 0, 0)
 
 [node name="mantle_rays" type="Node3D" parent="playerView"]
 
 [node name="mantle_ray" type="RayCast3D" parent="playerView/mantle_rays"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.6)
+visible = false
 target_position = Vector3(0, -0.5, 0)
 hit_back_faces = false
 
 [node name="mantle_ray_l" type="RayCast3D" parent="playerView/mantle_rays"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.5)
+visible = false
 target_position = Vector3(0, -0.5, 0)
 hit_back_faces = false
 
 [node name="mantle_ray_r" type="RayCast3D" parent="playerView/mantle_rays"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.5)
+visible = false
 target_position = Vector3(0, -0.5, 0)
 hit_back_faces = false
 
 [node name="mantle_ray_alt" type="RayCast3D" parent="playerView/mantle_rays"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.6)
+visible = false
 target_position = Vector3(0, -0.5, 0)
 hit_from_inside = true
 
 [node name="mantle_ray_l_alt" type="RayCast3D" parent="playerView/mantle_rays"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -0.5)
+visible = false
 target_position = Vector3(0, -0.5, 0)
 hit_from_inside = true
 
 [node name="mantle_ray_r_alt" type="RayCast3D" parent="playerView/mantle_rays"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -0.5)
+visible = false
 target_position = Vector3(0, -0.5, 0)
 hit_from_inside = true
 
@@ -223,38 +233,47 @@ far = 200.0
 
 [node name="aim_wall_hit" type="RayCast3D" parent="playerView/playerViewCamera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.330318, 0)
+visible = false
 target_position = Vector3(0, 0, -0.6)
 
 [node name="arm_wall_hit" type="RayCast3D" parent="playerView/playerViewCamera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.211061, -0.330318, 0)
+visible = false
 target_position = Vector3(0, 0, -0.8)
 
 [node name="interact_ray" type="RayCast3D" parent="playerView/playerViewCamera"]
+visible = false
 target_position = Vector3(0, 0, -2)
 collision_mask = 4
 
 [node name="shoot_ray" type="RayCast3D" parent="playerView/playerViewCamera"]
+visible = false
 target_position = Vector3(0, 0, -1000)
 collision_mask = 9
 
 [node name="ears" type="AudioListener3D" parent="playerView/playerViewCamera"]
+visible = false
 current = true
 
 [node name="playerViewRay" type="RayCast3D" parent="playerView"]
 
 [node name="aim_ray" type="RayCast3D" parent="playerView/playerViewRay"]
+visible = false
 target_position = Vector3(0, 0, -1000)
 collision_mask = 9
 
 [node name="ground_cast" type="RayCast3D" parent="."]
+visible = false
 target_position = Vector3(0, -0.1, 0)
 
 [node name="head_bonk" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 target_position = Vector3(0, 1, 0)
 
 [node name="wall_hit" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 target_position = Vector3(0, 0, -0.7)
 
 [node name="inventory" type="Node" parent="."]
@@ -268,7 +287,8 @@ mouse_filter = 1
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 visible = false
-light_energy = 0.1
+light_energy = 0.05
+omni_range = 10.0
 omni_attenuation = 2.0
 
 [node name="stats" type="Node" parent="."]

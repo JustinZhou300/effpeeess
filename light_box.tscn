@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=4 uid="uid://dyadpt7uelmry"]
+[gd_scene load_steps=13 format=4 uid="uid://dyadpt7uelmry"]
 
 [ext_resource type="Script" path="res://scripts/objects/lamp.gd" id="1_cl744"]
 [ext_resource type="Texture2D" uid="uid://caw0bywnb0epq" path="res://assets/models/scenery/boxlight/light_box_0.png" id="1_l4o16"]
+[ext_resource type="PackedScene" uid="uid://cu1b0o73useim" path="res://floor_aligning_ray.tscn" id="3_nue43"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8lsk"]
 resource_name = "material_0"
@@ -113,15 +114,14 @@ emission = Color(1, 1, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qnx4r"]
 material = SubResource("StandardMaterial3D_qu061")
-size = Vector3(0.1, 0.1, 0.1)
+size = Vector3(0.2, 0.1, 0.2)
 
 [node name="light_box" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
 script = ExtResource("1_cl744")
 mode = 1
 
 [node name="model" type="Node3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+transform = Transform3D(-4, 6.03983e-07, 0, -6.03983e-07, -4, 0, 0, 0, 4, -1.08162e-09, 0.0247447, 0)
 
 [node name="cuboid" type="MeshInstance3D" parent="model"]
 mesh = SubResource("ArrayMesh_eg1a2")
@@ -138,10 +138,13 @@ mesh = SubResource("ArrayMesh_glnxo")
 skeleton = NodePath("")
 
 [node name="light" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.037117, 0)
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 2.16325e-09, -0.0123723, 0)
 light_energy = 5.0
 omni_range = 20.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="light"]
-transform = Transform3D(2.14917, 0, 0, 0, 0.388751, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(2.14917, 0, 0, 0, 0.388751, 0, 0, 0, 1, 3.84165e-09, 0.0439433, 0)
 mesh = SubResource("BoxMesh_qnx4r")
+
+[node name="floor_aligning_ray" parent="." instance=ExtResource("3_nue43")]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -1.08162e-09, 0.0247447, 0)

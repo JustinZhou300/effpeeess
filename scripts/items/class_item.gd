@@ -12,6 +12,7 @@ class_name item
 #item flags
 @export var is_weapon: bool
 @export var is_gun: bool = false
+@export var is_melee: bool
 @export var is_breakable: bool
 @export var is_usabled: bool #Can you use the item? Potions etc.
 

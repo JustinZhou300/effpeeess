@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu1b0o73useim"]
+
+[ext_resource type="Script" path="res://floor_aligning_ray.gd" id="1_fbxd5"]
+
+[node name="floor_aligning_ray" type="RayCast3D"]
+hit_back_faces = false
+script = ExtResource("1_fbxd5")

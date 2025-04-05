@@ -35,10 +35,7 @@ func update(delta):
 	
 	timer += delta
 	if timer >= firing_period:
-		if biped.aim_wall_hit.is_colliding() or biped.arm_wall_hit.is_colliding():
-			transition_to_state("torso_walled")
-			swing_anim = 0
-		elif biped.stats.is_sprinting:
+		if biped.stats.is_sprinting:
 			transition_to_state("torso_sprint")
 			swing_anim = 0
 		elif has_fired_again:

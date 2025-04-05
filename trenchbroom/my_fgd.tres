@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=25 format=3 uid="uid://cdy5m5oqayyve"]
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=29 format=3 uid="uid://cdy5m5oqayyve"]
 
 [ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_hs2h4"]
 [ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_uk35p"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://dk2ykp84eur0p" path="res://objects/trees/tree_2.tscn" id="11_vn121"]
 [ext_resource type="PackedScene" uid="uid://ci48qrmjmdriu" path="res://objects/trees/tree_3.tscn" id="12_42akj"]
 [ext_resource type="PackedScene" uid="uid://cp14g6ijlf5v7" path="res://MISSION/patrol_point_spawner.tscn" id="13_2hqel"]
+[ext_resource type="PackedScene" uid="uid://bavt6fx88tiyf" path="res://floor_light.tscn" id="14_xvtvg"]
+[ext_resource type="PackedScene" uid="uid://bkec0cvtiraio" path="res://door.tscn" id="15_85y3m"]
 
 [sub_resource type="Resource" id="Resource_q1hdi"]
 resource_name = "player_object"
@@ -218,10 +220,53 @@ meta_properties = {
 node_class = ""
 name_property = ""
 
+[sub_resource type="Resource" id="Resource_uk7yh"]
+resource_name = "floor_light"
+script = ExtResource("4_s50qx")
+scene_file = ExtResource("14_xvtvg")
+apply_rotation_on_map_build = true
+classname = "floor_light"
+description = "floor light"
+func_godot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {
+"light_colour": Color(1, 0.82029, 0.626245, 1),
+"light_mode": 0,
+"light_power": 5.0,
+"light_range": 20,
+"shadows_bool": true
+}
+class_property_descriptions = {}
+meta_properties = {
+"color": Color(0.8, 0.8, 0.8, 1),
+"size": AABB(-8, -8, -8, 8, 8, 8)
+}
+node_class = ""
+name_property = ""
+
+[sub_resource type="Resource" id="Resource_rt4ic"]
+resource_name = "door"
+script = ExtResource("4_s50qx")
+scene_file = ExtResource("15_85y3m")
+apply_rotation_on_map_build = true
+classname = "door"
+description = "its a door
+"
+func_godot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {}
+class_property_descriptions = {}
+meta_properties = {
+"color": Color(0.8, 0.8, 0.8, 1),
+"size": AABB(-8, -8, -8, 8, 8, 8)
+}
+node_class = ""
+name_property = ""
+
 [resource]
 script = ExtResource("1_uk35p")
 export_file = false
 target_map_editor = 1
 fgd_name = "fps"
 base_fgd_files = Array[Resource]([ExtResource("1_hs2h4")])
-entity_definitions = Array[Resource]([ExtResource("2_dicsi"), SubResource("Resource_q1hdi"), SubResource("Resource_a4ooa"), SubResource("Resource_6tl24"), SubResource("Resource_e5k21"), SubResource("Resource_sveuj"), SubResource("Resource_1lwih"), SubResource("Resource_5uxjc"), SubResource("Resource_8myvo"), SubResource("Resource_f5dnr"), SubResource("Resource_lms3x")])
+entity_definitions = Array[Resource]([ExtResource("2_dicsi"), SubResource("Resource_q1hdi"), SubResource("Resource_a4ooa"), SubResource("Resource_6tl24"), SubResource("Resource_e5k21"), SubResource("Resource_sveuj"), SubResource("Resource_1lwih"), SubResource("Resource_5uxjc"), SubResource("Resource_8myvo"), SubResource("Resource_f5dnr"), SubResource("Resource_lms3x"), SubResource("Resource_uk7yh"), SubResource("Resource_rt4ic")])

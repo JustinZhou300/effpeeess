@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dpoopuqpcpayi"
+path="res://.godot/imported/orbital_station.map-88bcc4a933ed4ae2b9b9069c59e76c59.tres"
+
+[deps]
+
+source_file="res://trenchbroom/maps/orbital_station.map"
+dest_files=["res://.godot/imported/orbital_station.map-88bcc4a933ed4ae2b9b9069c59e76c59.tres"]
+
+[params]
+

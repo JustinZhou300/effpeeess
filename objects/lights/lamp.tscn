@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=4 uid="uid://bqblubv40c3lh"]
+[gd_scene load_steps=25 format=4 uid="uid://bqblubv40c3lh"]
 
 [ext_resource type="Script" path="res://scripts/objects/lamp.gd" id="1_pkikh"]
 [ext_resource type="Texture2D" uid="uid://c7luv0ff5l2n7" path="res://assets/models/scenery/lamppost/lamp_post_0.png" id="2_v008x"]
 [ext_resource type="Texture2D" uid="uid://b01ib5npn05ut" path="res://assets/models/scenery/lamppost/lamp_post_1.png" id="3_0i8uc"]
+[ext_resource type="PackedScene" uid="uid://cu1b0o73useim" path="res://floor_aligning_ray.tscn" id="4_3d35w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0aqvq"]
 emission_enabled = true
@@ -354,3 +355,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.459375, 0)
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_83j3g")
 skeleton = NodePath("")
+
+[node name="floor_aligning_ray" parent="." instance=ExtResource("4_3d35w")]

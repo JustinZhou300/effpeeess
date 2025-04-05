@@ -23,7 +23,8 @@ func update(delta):
 		biped.inventory.equipped.secondary_fire()
 	
 	if biped.aim_wall_hit.is_colliding() or biped.arm_wall_hit.is_colliding():
-		transition_to_state("torso_walled")
+		if !biped.inventory.equipped.is_melee:
+			transition_to_state("torso_walled")
 	
 	if Input.is_action_just_pressed("Reload"):
 		biped.inventory.equipped.proc_reload()

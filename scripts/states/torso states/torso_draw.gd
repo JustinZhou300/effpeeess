@@ -24,7 +24,7 @@ func enter():
 
 func exit():
 	biped.inventory.swap_position = -1
-	if biped.inventory.equipped.has_animations:
+	if biped.inventory.equipped.has_animations: #and biped.inventory.equipped.state_handler.current_state is not item_stowed:
 		biped.inventory.equipped.state_handler.current_state.weapon_model_anim.set_draw(false)
 
 func update(delta):

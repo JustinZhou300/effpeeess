@@ -16,6 +16,8 @@ func _ready() -> void:
 	visible = false
 	beam = $beam
 	beam.mesh.height = dist
+	beam.mesh.material.albedo_color = colour
+	beam.mesh.material.emission = colour
 	beam.position.z = -dist/2
 	global_position = firing_pos
 	global_rotation = firing_rot

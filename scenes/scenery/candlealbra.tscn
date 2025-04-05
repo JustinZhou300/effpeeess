@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=4 uid="uid://dda88e81dd5qr"]
+[gd_scene load_steps=21 format=4 uid="uid://dda88e81dd5qr"]
 
 [ext_resource type="Script" path="res://scripts/objects/lamp.gd" id="1_5fl3p"]
 [ext_resource type="Texture2D" uid="uid://c64qixpmcn83s" path="res://assets/models/scenery/candlealeba/candlealbra_0.png" id="2_7ghdu"]
 [ext_resource type="Texture2D" uid="uid://d2e6k1ox8sydb" path="res://assets/models/scenery/candlealeba/candlealbra_1.png" id="3_5oddn"]
 [ext_resource type="Texture2D" uid="uid://dvck8pvxwqisy" path="res://assets/textures/particles/fire.png" id="4_2m6hp"]
+[ext_resource type="PackedScene" uid="uid://cu1b0o73useim" path="res://floor_aligning_ray.tscn" id="5_lod7j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcyq5"]
 resource_name = "material_0"
@@ -170,3 +171,5 @@ amount = 16
 draw_order = 2
 process_material = SubResource("ParticleProcessMaterial_xxsja")
 draw_pass_1 = SubResource("QuadMesh_6m518")
+
+[node name="floor_aligning_ray" parent="." instance=ExtResource("5_lod7j")]

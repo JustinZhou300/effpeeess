@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=4 uid="uid://bavt6fx88tiyf"]
+[gd_scene load_steps=13 format=4 uid="uid://bavt6fx88tiyf"]
 
 [ext_resource type="Script" path="res://scripts/objects/lamp.gd" id="1_i1481"]
 [ext_resource type="Texture2D" uid="uid://wcs6vd0jb52j" path="res://assets/models/scenery/floorlight/light_0.png" id="1_jexec"]
+[ext_resource type="PackedScene" uid="uid://cu1b0o73useim" path="res://floor_aligning_ray.tscn" id="3_hqcyg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l0e4k"]
 resource_name = "material_0"
@@ -115,15 +116,15 @@ emission = Color(1, 1, 1, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_70hkq"]
 material = SubResource("StandardMaterial3D_1ewjv")
-radius = 0.025
-height = 0.05
+radius = 0.05
+height = 0.1
 
 [node name="floor_light" type="Node3D"]
 script = ExtResource("1_i1481")
 mode = 1
 
 [node name="model" type="Node3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
 [node name="light" type="MeshInstance3D" parent="model"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025, 0)
@@ -141,11 +142,13 @@ mesh = SubResource("ArrayMesh_s0cpa")
 skeleton = NodePath("")
 
 [node name="light" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0399334, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.117808, 0)
 light_color = Color(0, 0, 0, 1)
 light_energy = 5.0
 omni_range = 20.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="light"]
-transform = Transform3D(1.95407, 0, 0, 0, 1.95407, 0, 0, 0, 1.95407, 0, 0.0122437, 0)
+transform = Transform3D(1.95407, 0, 0, 0, 1.95407, 0, 0, 0, 1.95407, 0, 0, 0)
 mesh = SubResource("SphereMesh_70hkq")
+
+[node name="floor_aligning_ray" parent="." instance=ExtResource("3_hqcyg")]

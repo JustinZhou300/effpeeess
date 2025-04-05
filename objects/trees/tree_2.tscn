@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://objects/trees/tree.gd" id="1_bkoid"]
 [ext_resource type="Texture2D" uid="uid://c2krrcvsy1fvn" path="res://assets/models/scenery/trees/tree2/tree_2_0.png" id="1_snsd2"]
-[ext_resource type="Texture2D" uid="uid://brenwrwtbl8kx" path="res://assets/models/scenery/trees/tree2/tree_2_1.png" id="2_vdi7k"]
+[ext_resource type="Texture2D" uid="uid://d1esddxkb38by" path="res://assets/models/scenery/trees/tree2/tree_2_1.png" id="2_vdi7k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e243j"]
 resource_name = "material_0"
