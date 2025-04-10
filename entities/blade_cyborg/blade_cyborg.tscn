@@ -1,45 +1,46 @@
-[gd_scene load_steps=80 format=4 uid="uid://bsyy4m63uj1g4"]
+[gd_scene load_steps=78 format=3 uid="uid://bsyy4m63uj1g4"]
 
-[ext_resource type="ArrayMesh" uid="uid://dws2qeh0j8ypg" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh.res" id="1_iyoib"]
+[ext_resource type="ArrayMesh" uid="uid://cnca6pcu4rpfv" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh.res" id="1_iyoib"]
 [ext_resource type="Script" path="res://entities/blade_cyborg/blade_cyborg_anim.gd" id="1_l26hv"]
 [ext_resource type="Script" path="res://enemy_handler.gd" id="1_wc585"]
-[ext_resource type="ArrayMesh" uid="uid://dag0iihsn2x1m" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh2.res" id="2_dhtmw"]
-[ext_resource type="ArrayMesh" uid="uid://1n3ex68brcgo" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh3.res" id="3_60wir"]
-[ext_resource type="ArrayMesh" uid="uid://w05j4d8lqo2f" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh4.res" id="4_rqqyn"]
-[ext_resource type="ArrayMesh" uid="uid://dlagkjhwmtsyv" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh5.res" id="5_sm1vs"]
-[ext_resource type="ArrayMesh" uid="uid://ck2407iatfxh3" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh6.res" id="6_ebybv"]
-[ext_resource type="ArrayMesh" uid="uid://ua75uxqtm626" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh7.res" id="7_8m3op"]
-[ext_resource type="ArrayMesh" uid="uid://dqsa0ylvkxg8n" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh8.res" id="8_x82pn"]
-[ext_resource type="ArrayMesh" uid="uid://va1xlx2qukkb" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh9.res" id="9_2ofi5"]
-[ext_resource type="ArrayMesh" uid="uid://b5136bgkj3g81" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh10.res" id="10_pmqiq"]
-[ext_resource type="ArrayMesh" uid="uid://bxxa4dgmlj8bk" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh11.res" id="11_s3cfd"]
-[ext_resource type="ArrayMesh" uid="uid://bscbjm54twur0" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh12.res" id="12_1bosw"]
-[ext_resource type="ArrayMesh" uid="uid://nwyeony2bich" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh13.res" id="13_kkqd8"]
-[ext_resource type="ArrayMesh" uid="uid://br204bjm6msdx" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh23.res" id="14_e21rs"]
-[ext_resource type="ArrayMesh" uid="uid://dg38f44chjn5i" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh14.res" id="14_k23on"]
-[ext_resource type="ArrayMesh" uid="uid://bpl3yx38p7ea7" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh15.res" id="15_0ergk"]
-[ext_resource type="ArrayMesh" uid="uid://bc8tvvlcu7423" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh24.res" id="15_imtj2"]
-[ext_resource type="ArrayMesh" uid="uid://xr7af64qc2ce" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh16.res" id="16_xj3h8"]
-[ext_resource type="ArrayMesh" uid="uid://upmeo6trmb4q" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh17.res" id="17_eft8r"]
-[ext_resource type="Animation" uid="uid://e4oj32klmdit" path="res://assets/models/character/blade_cyborg/animations/idle.res" id="17_k0i8l"]
-[ext_resource type="Animation" uid="uid://rjiew6x4smkw" path="res://assets/models/character/blade_cyborg/animations/walk.res" id="18_2vsnm"]
-[ext_resource type="ArrayMesh" uid="uid://neel0e8y1tre" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh18.res" id="18_ue6yq"]
-[ext_resource type="Animation" uid="uid://1k381223mree" path="res://assets/models/character/blade_cyborg/animations/attack1.res" id="19_mgksk"]
-[ext_resource type="ArrayMesh" uid="uid://bsklstnty68hm" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh19.res" id="22_5rqrc"]
-[ext_resource type="ArrayMesh" uid="uid://bmojmtsesjcwk" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh20.res" id="23_5nvqx"]
-[ext_resource type="Texture2D" uid="uid://di7bwnlobiylp" path="res://assets/models/character/blade_cyborg/blade_cyborg_0.png" id="23_cnrpv"]
-[ext_resource type="ArrayMesh" uid="uid://cdiropoc8lw71" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh22.res" id="25_3mxcj"]
-[ext_resource type="ArrayMesh" uid="uid://dvwjuq474ejvo" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh25.res" id="26_wl38f"]
-[ext_resource type="ArrayMesh" uid="uid://dg8anw0m5w4sj" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh26.res" id="27_qn6w7"]
-[ext_resource type="ArrayMesh" uid="uid://wf5qe4cwvjxe" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh27.res" id="28_oxo8x"]
-[ext_resource type="ArrayMesh" uid="uid://dkh0r35ki5s8n" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh28.res" id="29_7e54t"]
-[ext_resource type="ArrayMesh" uid="uid://d1kyvtifd35sr" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh29.res" id="30_8htde"]
-[ext_resource type="Animation" uid="uid://dmp8j2baamb4v" path="res://assets/models/character/blade_cyborg/animations/attack2.res" id="31_fqpoq"]
-[ext_resource type="Animation" uid="uid://um2tlnylc0bg" path="res://assets/models/character/blade_cyborg/animations/death.res" id="32_bvrfy"]
-[ext_resource type="Animation" uid="uid://dq2tykcoe6d7e" path="res://assets/models/character/blade_cyborg/animations/attack3.res" id="36_ltc5s"]
+[ext_resource type="ArrayMesh" uid="uid://r60dx1uagqkg" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh2.res" id="2_dhtmw"]
+[ext_resource type="ArrayMesh" uid="uid://dif3k0ysbspb0" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh3.res" id="3_60wir"]
+[ext_resource type="ArrayMesh" uid="uid://cfwavmouegrwn" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh4.res" id="4_rqqyn"]
+[ext_resource type="ArrayMesh" uid="uid://cl0ofk7oa0xv6" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh5.res" id="5_sm1vs"]
+[ext_resource type="ArrayMesh" uid="uid://dtpwmnn511a8s" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh6.res" id="6_ebybv"]
+[ext_resource type="ArrayMesh" uid="uid://pyhj7vrkgex2" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh7.res" id="7_8m3op"]
+[ext_resource type="ArrayMesh" uid="uid://baph40cwyxrkh" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh8.res" id="8_x82pn"]
+[ext_resource type="ArrayMesh" uid="uid://bt0f6iqodn8ha" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh9.res" id="9_2ofi5"]
+[ext_resource type="ArrayMesh" uid="uid://bnvpmoly8b4pg" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh10.res" id="10_pmqiq"]
+[ext_resource type="ArrayMesh" uid="uid://bnd4afv3w4y0" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh11.res" id="11_s3cfd"]
+[ext_resource type="ArrayMesh" uid="uid://b7ir7tclqswq2" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh12.res" id="12_1bosw"]
+[ext_resource type="ArrayMesh" uid="uid://bxkn6fxleni7s" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh13.res" id="13_kkqd8"]
+[ext_resource type="ArrayMesh" uid="uid://y6clw5lci0l3" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh23.res" id="14_e21rs"]
+[ext_resource type="ArrayMesh" uid="uid://gfik2n4t2nxx" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh14.res" id="14_k23on"]
+[ext_resource type="ArrayMesh" uid="uid://df6lray4bft55" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh15.res" id="15_0ergk"]
+[ext_resource type="ArrayMesh" uid="uid://dewfyysmqqxit" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh24.res" id="15_imtj2"]
+[ext_resource type="ArrayMesh" uid="uid://dn8vgentpb3p2" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh16.res" id="16_xj3h8"]
+[ext_resource type="ArrayMesh" uid="uid://g662gx4e0jrc" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh17.res" id="17_eft8r"]
+[ext_resource type="Animation" uid="uid://dsuv1nmu8flcr" path="res://assets/models/character/blade_cyborg/animations/idle.res" id="17_k0i8l"]
+[ext_resource type="Animation" uid="uid://b5pvp8j3hbk8q" path="res://assets/models/character/blade_cyborg/animations/walk.res" id="18_2vsnm"]
+[ext_resource type="ArrayMesh" uid="uid://cwhxm43b2db34" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh18.res" id="18_ue6yq"]
+[ext_resource type="Animation" uid="uid://b6sbx47r3luax" path="res://assets/models/character/blade_cyborg/animations/attack1.res" id="19_mgksk"]
+[ext_resource type="ArrayMesh" uid="uid://cygw0n45hcuel" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh19.res" id="22_5rqrc"]
+[ext_resource type="ArrayMesh" uid="uid://c0mgep0yu0176" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh20.res" id="23_5nvqx"]
+[ext_resource type="ArrayMesh" uid="uid://bvop42g07dps3" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh21.res" id="23_pal6w"]
+[ext_resource type="ArrayMesh" uid="uid://65ia6p0qbaux" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh22.res" id="25_3mxcj"]
+[ext_resource type="ArrayMesh" uid="uid://bfv8thgrhwlyn" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh25.res" id="26_wl38f"]
+[ext_resource type="ArrayMesh" uid="uid://dbhyrtowydmjw" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh26.res" id="27_qn6w7"]
+[ext_resource type="ArrayMesh" uid="uid://chvtkmfqbfydu" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh27.res" id="28_oxo8x"]
+[ext_resource type="ArrayMesh" uid="uid://cjek7xvf5arhh" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh28.res" id="29_7e54t"]
+[ext_resource type="ArrayMesh" uid="uid://fatvb4jbswlf" path="res://assets/models/character/blade_cyborg/mesh/blockbench_export_mesh29.res" id="30_8htde"]
+[ext_resource type="Animation" uid="uid://bt5xx3c1yptns" path="res://assets/models/character/blade_cyborg/animations/attack2.res" id="31_fqpoq"]
+[ext_resource type="Animation" uid="uid://g2tmjn82y1mk" path="res://assets/models/character/blade_cyborg/animations/death.res" id="32_bvrfy"]
+[ext_resource type="Animation" uid="uid://b2voi858kvw3e" path="res://assets/models/character/blade_cyborg/animations/attack3.res" id="36_ltc5s"]
 [ext_resource type="Script" path="res://scripts/states/enemy_state_handler.gd" id="37_ipy87"]
-[ext_resource type="Animation" uid="uid://bs6ye1lponyo" path="res://assets/models/character/blade_cyborg/animations/dead.res" id="38_085ok"]
-[ext_resource type="Animation" uid="uid://q2hgqat1iot6" path="res://assets/models/character/blade_cyborg/animations/stun_pos.res" id="39_65s4h"]
+[ext_resource type="Animation" uid="uid://b1srg2qj4d8mm" path="res://assets/models/character/blade_cyborg/animations/dead.res" id="38_085ok"]
+[ext_resource type="Animation" uid="uid://bjidcma77euhu" path="res://assets/models/character/blade_cyborg/animations/stun_pos.res" id="39_65s4h"]
+[ext_resource type="Animation" uid="uid://n6bpr2odos06" path="res://assets/models/character/blade_cyborg/animations/stun.res" id="40_ocuv7"]
 [ext_resource type="Script" path="res://scripts/states/enemy_state/idle/enemy_idle.gd" id="41_uyyjs"]
 [ext_resource type="Script" path="res://scripts/states/enemy_state/idle/enemy_spawn.gd" id="42_d5h5s"]
 [ext_resource type="Script" path="res://scripts/states/enemy_state/alert/enemy_investigate.gd" id="43_q3ln3"]
@@ -116,7 +117,6 @@ blend_point_2/node = SubResource("AnimationNodeAnimation_61b2n")
 blend_point_2/pos = -1.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_q2cxj"]
-graph_offset = Vector2(-180.367, 164.374)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_op5yk")
 nodes/Animation/position = Vector2(-1280, 500)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_6eojw")
@@ -152,51 +152,7 @@ nodes/walk_speed/node = SubResource("AnimationNodeBlendSpace1D_wuvfi")
 nodes/walk_speed/position = Vector2(-460, 220)
 node_connections = [&"attack_blend", 0, &"run_scale", &"attack_blend", 1, &"melee_3", &"death_blend", 0, &"stun_blend", &"death_blend", 1, &"death_oneshot", &"death_oneshot", 0, &"Animation 4", &"death_oneshot", 1, &"Animation 5", &"melee_1", 0, &"Animation", &"melee_1", 1, &"Animation 3", &"melee_2", 0, &"melee_1", &"melee_2", 1, &"Animation 2", &"melee_3", 0, &"melee_2", &"melee_3", 1, &"Animation 6", &"output", 0, &"death_blend", &"run_scale", 0, &"walk_speed", &"stun_blend", 0, &"attack_blend", &"stun_blend", 1, &"Animation 7"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r5nkp"]
-resource_name = "material_0"
-transparency = 2
-alpha_scissor_threshold = 0.05
-alpha_antialiasing_mode = 0
-cull_mode = 2
-albedo_texture = ExtResource("23_cnrpv")
-emission_enabled = true
-emission = Color(1, 0, 0, 1)
-texture_filter = 0
-texture_repeat = false
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_w3piq"]
-_surfaces = [{
-"aabb": AABB(-0.00625, 0.00625, -0.00625, 0.0125, 0.0125, 0.0125),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AgABAAAAAgADAAEABgAFAAQABgAHAAUABAACAAAABAAFAAIAAwAGAAEAAwAHAAYAAQAEAAAAAQAGAAQABQADAAIABQAHAAMA"),
-"name": "material_0",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("////////AAD//wAA//8AAP////8AAAAA//8AAAAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAAAAAAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_sak3i"]
-resource_name = "blockbench_export_mesh21"
-_surfaces = [{
-"aabb": AABB(-0.00625, 0.00625, -0.00625, 0.0125, 0.0125, 0.0125),
-"attribute_data": PackedByteArray("bOSO8XPiBfjF4nDyyODy+NPqzfM36bP01uhE+jfnNvts5I7xxeJw8tPqzfM36bP0c+IF+NboRPrI4PL4N+c2+2zkjvHT6s3zc+IF+NboRPrF4nDyyODy+Dfps/Q35zb7"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AgABAAAAAgADAAEABgAFAAQABgAHAAUACgAJAAgACgALAAkADgANAAwADgAPAA0AEgARABAAEgATABEAFgAVABQAFgAXABUA"),
-"material": SubResource("StandardMaterial3D_r5nkp"),
-"name": "material_0",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("////////6QP//wAA////A/////8AAP8D//8AAAAAFAQAAP////8xwAAA//8AADPAAAAAAP//M8AAAAAAAAA1wP///////6Pe/////wAAsN4AAP////+w3gAA//8AAL3e//8AAP//7CAAAAAA///fIP//AAAAAN8gAAAAAAAA0yD///////+eDQAA/////58N//8AAP//nw0AAAAA//+gDf////8AAP////8AAAAA//8AAP//AAD//wAAAAAAAP//5L3Je9m9s3vZvbN7zb2cezR4afAQeCDwEHgg8Ot31++DoL2vdqDDr3agw69ooMqv9S/q3/sv99/7L/ffAjAE4P////////////////////98koLtfZKB7X2Sge1+kn/t")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_w3piq")
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rtc1o"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e1kqq"]
 _data = {
 "attack1": ExtResource("19_mgksk"),
 "attack2": ExtResource("31_fqpoq"),
@@ -204,6 +160,7 @@ _data = {
 "dead": ExtResource("38_085ok"),
 "death": ExtResource("32_bvrfy"),
 "idle": ExtResource("17_k0i8l"),
+"stun": ExtResource("40_ocuv7"),
 "stun_pos": ExtResource("39_65s4h"),
 "walk": ExtResource("18_2vsnm")
 }
@@ -218,6 +175,9 @@ script = ExtResource("1_wc585")
 
 [node name="nav" type="NavigationAgent3D" parent="."]
 avoidance_enabled = true
+radius = 0.4
+neighbor_distance = 10.0
+use_3d_avoidance = true
 
 [node name="collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
@@ -267,7 +227,6 @@ skeleton = NodePath("")
 
 [node name="hip_hitbox" type="MeshInstance3D" parent="model/Node/hip2/crotch"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0.025)
-visible = false
 mesh = ExtResource("3_60wir")
 skeleton = NodePath("")
 
@@ -285,22 +244,20 @@ mesh = ExtResource("5_sm1vs")
 skeleton = NodePath("")
 
 [node name="thigh_hitbox_r" type="MeshInstance3D" parent="model/Node/hip2/crotch/leg_r"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77556e-17, -0.2875, 0.00625)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2875, 0.00625)
 mesh = ExtResource("6_ebybv")
 skeleton = NodePath("")
 
 [node name="calf_r" type="Node3D" parent="model/Node/hip2/crotch/leg_r"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.433654, -0.00576923)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.433655, -0.00577)
 
 [node name="cylinder" type="MeshInstance3D" parent="model/Node/hip2/crotch/leg_r/calf_r"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.10385, 0.0182692)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.10385, 0.01827)
 mesh = ExtResource("7_8m3op")
 skeleton = NodePath("")
 
 [node name="calf_hitbox_r" type="MeshInstance3D" parent="model/Node/hip2/crotch/leg_r/calf_r"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77556e-17, -0.378846, 0.0120192)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.378845, 0.01202)
 mesh = ExtResource("8_x82pn")
 skeleton = NodePath("")
 
@@ -322,21 +279,19 @@ skeleton = NodePath("")
 
 [node name="thigh_hitbox_l" type="MeshInstance3D" parent="model/Node/hip2/crotch/leg_l"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025, -0.2875, 0.00625)
-visible = false
 mesh = ExtResource("11_s3cfd")
 skeleton = NodePath("")
 
 [node name="calf_l" type="Node3D" parent="model/Node/hip2/crotch/leg_l"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.433654, -0.00576923)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.433655, -0.00577)
 
 [node name="cylinder2" type="MeshInstance3D" parent="model/Node/hip2/crotch/leg_l/calf_l"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01875, -1.10385, 0.0182692)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01875, -1.10385, 0.01827)
 mesh = ExtResource("12_1bosw")
 skeleton = NodePath("")
 
 [node name="calf_hitbox_l" type="MeshInstance3D" parent="model/Node/hip2/crotch/leg_l/calf_l"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01875, -0.378846, 0.0120192)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01875, -0.378845, 0.01202)
 mesh = ExtResource("13_kkqd8")
 skeleton = NodePath("")
 
@@ -349,53 +304,51 @@ mesh = ExtResource("14_k23on")
 skeleton = NodePath("")
 
 [node name="torso" type="Node3D" parent="model/Node/hip2"]
-transform = Transform3D(0.964451, 0.258186, 0.0562943, -0.263675, 0.926197, 0.269506, 0.0174429, -0.274769, 0.961353, 0, 0, 0)
+transform = Transform3D(0.926765, 0.358597, 0.111871, -0.373937, 0.852348, 0.365615, 0.0357554, -0.380672, 0.924019, 0, 0, 0.0375)
 
 [node name="cylinder3" type="MeshInstance3D" parent="model/Node/hip2/torso"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0.05)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0.0125)
 mesh = ExtResource("15_0ergk")
 skeleton = NodePath("")
 
 [node name="cylinder4" type="MeshInstance3D" parent="model/Node/hip2/torso"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.225, 0.0375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.225, 0)
 mesh = ExtResource("16_xj3h8")
 skeleton = NodePath("")
 
 [node name="chest_hitbox" type="MeshInstance3D" parent="model/Node/hip2/torso"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025, 0.05, 0.05)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025, 0.05, 0.0125)
 mesh = ExtResource("17_eft8r")
 skeleton = NodePath("")
 
 [node name="head2" type="Node3D" parent="model/Node/hip2/torso"]
-transform = Transform3D(0.953717, -0.300706, 0, 0.300706, 0.953717, 0, 0, 0, 1, 4.77462e-17, 0.387583, 0.0260284)
+transform = Transform3D(0.953717, -0.300706, 0, 0.300706, 0.953717, 0, 0, 0, 1, 0, 0.387583, 0.0135275)
 
 [node name="head_a" type="Node3D" parent="model/Node/hip2/torso/head2"]
-transform = Transform3D(0.988153, -0.025091, -0.151397, 0.00158, 0.988154, -0.153454, 0.153454, 0.151397, 0.976488, 0, 0, 0)
+transform = Transform3D(0.975296, -0.0436486, -0.216544, -0.00538298, 0.975296, -0.220834, 0.220834, 0.216544, 0.950968, 0, 0, 0)
 
 [node name="head" type="MeshInstance3D" parent="model/Node/hip2/torso/head2/head_a"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.70831e-07, 0.156588, -0.0353584)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.156587, -0.0353575)
 mesh = ExtResource("18_ue6yq")
 skeleton = NodePath("")
 
 [node name="ear_l" type="MeshInstance3D" parent="model/Node/hip2/torso/head2/head_a"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, -0.0796875, 0.109472, -0.0195313)
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, -0.0796875, 0.109472, -0.01953)
 mesh = ExtResource("22_5rqrc")
 skeleton = NodePath("")
 
 [node name="ear_r" type="MeshInstance3D" parent="model/Node/hip2/torso/head2/head_a"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0.0796875, 0.109472, -0.0195313)
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0.0796875, 0.109472, -0.01953)
 mesh = ExtResource("23_5nvqx")
 skeleton = NodePath("")
 
 [node name="eye_r" type="MeshInstance3D" parent="model/Node/hip2/torso/head2/head_a"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03125, 0.11875, -0.1125)
-mesh = SubResource("ArrayMesh_sak3i")
+mesh = ExtResource("23_pal6w")
 skeleton = NodePath("")
 
 [node name="head_hitbox" type="MeshInstance3D" parent="model/Node/hip2/torso/head2/head_a"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.94809e-17, -0.0125833, -0.0385284)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0125825, -0.0385275)
 mesh = ExtResource("25_3mxcj")
 skeleton = NodePath("")
 
@@ -405,21 +358,20 @@ mesh = ExtResource("14_e21rs")
 skeleton = NodePath("")
 
 [node name="arm_l2" type="Node3D" parent="model/Node/hip2/torso"]
-transform = Transform3D(0.981522, -0.191347, 0, 0.191347, 0.981522, 0, 0, 0, 1, -0.3, 0.275, 0.05)
+transform = Transform3D(0.961429, -0.275053, 0, 0.275053, 0.961429, 0, 0, 0, 1, -0.2, 0.325, 0.0125)
 
 [node name="arm_l" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, -0.275, 0)
 mesh = ExtResource("15_imtj2")
 skeleton = NodePath("")
 
 [node name="arm_hitbox" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2"]
-transform = Transform3D(0.945519, 0.325568, 0, -0.325568, 0.945519, 0, 0, 0, 1, 0.0636271, -0.106118, -0.003125)
-visible = false
+transform = Transform3D(0.945519, 0.325568, 0, -0.325568, 0.945519, 0, 0, 0, 1, -0.0363725, -0.156117, -0.003125)
 mesh = ExtResource("26_wl38f")
 skeleton = NodePath("")
 
 [node name="forearm_l2" type="Node3D" parent="model/Node/hip2/torso/arm_l2"]
-transform = Transform3D(0.988154, 0.153454, 0.00158, -0.151397, 0.976487, -0.153454, -0.025091, 0.151397, 0.988153, 0, -0.25, 0)
+transform = Transform3D(0.975296, 0.220834, -0.00538298, -0.216544, 0.950969, -0.220834, -0.0436486, 0.216544, 0.975297, -0.1, -0.3, 0)
 
 [node name="forearm_l" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2/forearm_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
@@ -427,16 +379,15 @@ mesh = ExtResource("27_qn6w7")
 skeleton = NodePath("")
 
 [node name="forearm_hitbox" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2/forearm_l2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0113729, -0.181118, -0.003125)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0113725, -0.181118, -0.003125)
 mesh = ExtResource("28_oxo8x")
 skeleton = NodePath("")
 
 [node name="hand_l2" type="Node3D" parent="model/Node/hip2/torso/arm_l2/forearm_l2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00639205, -0.267898, -0.00170455)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0063925, -0.267897, -0.001705)
 
 [node name="hand_l" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2/forearm_l2/hand_l2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00639205, -1.0321, 0.00170455)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0063925, -1.0321, 0.001705)
 mesh = ExtResource("29_7e54t")
 skeleton = NodePath("")
 
@@ -447,7 +398,7 @@ skeleton = NodePath("")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="model"]
 libraries = {
-"": SubResource("AnimationLibrary_rtc1o")
+"": SubResource("AnimationLibrary_e1kqq")
 }
 
 [node name="enemy_state" type="Node" parent="." node_paths=PackedStringArray("initial_state")]

@@ -7,6 +7,7 @@ var player# = $ENTITIES/biped
 var PROJECTILES# = $PROJECTILES
 var SOUNDS# = $SOUNDS
 var ENVIRONMENT
+var SCENERY
 
 var loaded = false
 
@@ -24,6 +25,7 @@ func _ready() -> void:
 	PROJECTILES = $PROJECTILES
 	SOUNDS = $SOUNDS
 	ENVIRONMENT = $ENVIRONMENT
+	SCENERY = $SCENERY
 	
 	GAME.WORLD = self
 	godot_map.verify_and_build()

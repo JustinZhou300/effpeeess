@@ -1,4 +1,4 @@
-extends Node3D
+extends interactable
 class_name lamp
 
 # FUNC GODOT +++++++++++++++++++++++++++++++++++++++++++++++
@@ -24,8 +24,10 @@ var flash_timer = 0
 var light
 @export var mode: light_mode = 0 #0 = normal, 1 = flashing, 2 = flickering
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	super()
 	flash_timer = 0
 	light = $light
 	light.light_energy = entProperties.light_power
@@ -37,16 +39,19 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if mode != 0:
-		flash_timer += delta
-	if mode == 2:
-		flicker()
-	elif mode == 1:
-		flash()
-	elif mode == 0:
-		normal()
+	if !stats.is_dead:
+		if mode != 0:
+			flash_timer += delta
+		if mode == 2:
+			flicker()
+		elif mode == 1:
+			flash()
+		elif mode == 0:
+			normal()
+		else:
+			print("invalid light mode")
 	else:
-		print("invalid light mode")
+		broken()
 
 func flicker():
 	var roll = randi_range(0,flicker_amount) #whether to turn off this frame
@@ -70,3 +75,7 @@ func flash():
 func normal():
 	if light.visible == false:
 		light.visible = true
+
+func broken():
+	if light.visible != false:
+		light.visible = false

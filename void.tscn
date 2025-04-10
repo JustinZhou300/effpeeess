@@ -28,10 +28,17 @@ height = 2.0
 [node name="void" type="Node3D"]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+cast_shadow = 0
 amount = 10
 lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_h2ldw")
 draw_pass_1 = SubResource("QuadMesh_5x735")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+cast_shadow = 0
 mesh = SubResource("SphereMesh_ipw3p")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(100, 100, 100, 1)
+light_energy = 50.0
+omni_range = 3.0

@@ -11,10 +11,11 @@ func _process(delta: float) -> void:
 	pass
 
 func fire():
-	pass
+	set("parameters/fire_set/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 func reload():
-	pass
+	set("parameters/reload_set/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+	print("RELOAD ANIMATION")
 	
 
 func set_animation_speed(animation: String, speed: float):
@@ -26,7 +27,9 @@ func set_animation_speed(animation: String, speed: float):
 		print(1/speed)
 	elif animation == "draw":
 		set("parameters/draw_scale/scale", 2/speed)
-		print(2/speed)
+	elif animation == "reload":
+		set("parameters/reload_scale/scale", 1/speed)
+		#print("1/speed" + str(1/speed))
 
 
 func set_draw(yesno: bool):

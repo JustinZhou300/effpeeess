@@ -1,6 +1,6 @@
 [gd_scene load_steps=51 format=4 uid="uid://blvsvrljqnsuh"]
 
-[ext_resource type="Script" path="res://scripts/items/class_revolver.gd" id="1_3ty2s"]
+[ext_resource type="Script" path="res://scripts/items/class_gun.gd" id="1_a4yam"]
 [ext_resource type="Texture2D" uid="uid://demppdudutjna" path="res://assets/models/weapon/revolver/revolver_0.png" id="2_0tx6n"]
 [ext_resource type="Script" path="res://items/weapons/revolver/weapon_animation_handler.gd" id="2_wmxgk"]
 [ext_resource type="Animation" uid="uid://b2b2q15nyngg" path="res://assets/models/weapon/revolver/animations/fire.res" id="3_jklve"]
@@ -21,8 +21,6 @@ animation = &"idle"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p82uu"]
 animation = &"fire"
 
-[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_q7l11"]
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sul8a"]
 animation = &"spin"
 
@@ -34,6 +32,8 @@ animation = &"spin"
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_7nsgt"]
 
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_q7l11"]
+
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_dqkpq"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_rphl4"]
@@ -41,7 +41,7 @@ animation = &"spin"
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_dd7ml"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1wjr8"]
-graph_offset = Vector2(-1159.18, 269.617)
+graph_offset = Vector2(-884.296, 132.218)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_p82uu")
 nodes/Animation/position = Vector2(-320, 560)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_unr7q")
@@ -50,8 +50,6 @@ nodes/Animation/position = Vector2(-320, 560)
 "nodes/Animation 3/position" = Vector2(-1460, 580)
 "nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_h18d5")
 "nodes/Animation 4/position" = Vector2(-1320, 260)
-nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_q7l11")
-nodes/TimeScale/position = Vector2(-520, 520)
 nodes/draw/node = SubResource("AnimationNodeAnimation_sul8a")
 nodes/draw/position = Vector2(-1140, 700)
 nodes/draw_scale/node = SubResource("AnimationNodeTimeScale_saf21")
@@ -62,13 +60,15 @@ nodes/fire_scale/node = SubResource("AnimationNodeTimeScale_ucnn1")
 nodes/fire_scale/position = Vector2(-140, 340)
 nodes/fire_set/node = SubResource("AnimationNodeOneShot_7nsgt")
 nodes/fire_set/position = Vector2(20, 160)
+nodes/reload_scale/node = SubResource("AnimationNodeTimeScale_q7l11")
+nodes/reload_scale/position = Vector2(-520, 520)
 nodes/reload_set/node = SubResource("AnimationNodeOneShot_dqkpq")
 nodes/reload_set/position = Vector2(-400, 240)
 nodes/stow_scale/node = SubResource("AnimationNodeTimeScale_rphl4")
 nodes/stow_scale/position = Vector2(-1221, 484.696)
 nodes/stow_set/node = SubResource("AnimationNodeBlend2_dd7ml")
 nodes/stow_set/position = Vector2(-1060, 300)
-node_connections = [&"TimeScale", 0, &"Animation 2", &"draw_scale", 0, &"draw", &"draw_set", 0, &"stow_set", &"draw_set", 1, &"draw_scale", &"fire_scale", 0, &"Animation", &"fire_set", 0, &"reload_set", &"fire_set", 1, &"fire_scale", &"output", 0, &"fire_set", &"reload_set", 0, &"draw_set", &"reload_set", 1, &"TimeScale", &"stow_scale", 0, &"Animation 3", &"stow_set", 0, &"Animation 4", &"stow_set", 1, &"stow_scale"]
+node_connections = [&"draw_scale", 0, &"draw", &"draw_set", 0, &"stow_set", &"draw_set", 1, &"draw_scale", &"fire_scale", 0, &"Animation", &"fire_set", 0, &"reload_set", &"fire_set", 1, &"fire_scale", &"output", 0, &"fire_set", &"reload_scale", 0, &"Animation 2", &"reload_set", 0, &"draw_set", &"reload_set", 1, &"reload_scale", &"stow_scale", 0, &"Animation 3", &"stow_set", 0, &"Animation 4", &"stow_set", 1, &"stow_scale"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5opm"]
 resource_name = "material_0"
@@ -512,13 +512,14 @@ _data = {
 size = Vector3(0.08, 0.191, 0.366)
 
 [node name="revolver" type="RigidBody3D" node_paths=PackedStringArray("firing_location")]
-script = ExtResource("1_3ty2s")
+script = ExtResource("1_a4yam")
 animation_set = 2
 damage = 50
 stagger_damage = 100
 firing_rpm = 140
 magazine_size = 7
 firing_location = NodePath("model/Node/gun/barrel/firing_loc")
+recoil_amount = 400
 stow_speed = 0.7
 draw_speed = 0.7
 has_animations = true
@@ -529,18 +530,18 @@ item_name = "Revolver"
 [node name="AnimationTree" type="AnimationTree" parent="model"]
 tree_root = SubResource("AnimationNodeBlendTree_1wjr8")
 anim_player = NodePath("../AnimationPlayer")
-parameters/TimeScale/scale = 1.0
 parameters/draw_scale/scale = 2.0
 parameters/draw_set/blend_amount = 0.0
 parameters/fire_scale/scale = 1.0
 parameters/fire_set/active = false
 parameters/fire_set/internal_active = false
 parameters/fire_set/request = 0
+parameters/reload_scale/scale = 1.0
 parameters/reload_set/active = false
 parameters/reload_set/internal_active = false
 parameters/reload_set/request = 0
 parameters/stow_scale/scale = 1.0
-parameters/stow_set/blend_amount = 0
+parameters/stow_set/blend_amount = 0.0
 script = ExtResource("2_wmxgk")
 
 [node name="Node" type="Node3D" parent="model"]

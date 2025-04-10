@@ -1,8 +1,6 @@
-[gd_scene load_steps=17 format=4 uid="uid://jnt6md3uefvc"]
+[gd_scene load_steps=15 format=4 uid="uid://jnt6md3uefvc"]
 
-[ext_resource type="Script" path="res://scripts/items/class_pistol.gd" id="1_ubgjh"]
-[ext_resource type="PackedScene" uid="uid://djsudk5nwn8lt" path="res://items/weapons/9mm/effects/sound_9_mm_gunshot.tscn" id="2_fnvn4"]
-[ext_resource type="PackedScene" uid="uid://det2cpx73ooe1" path="res://items/weapons/9mm/effects/9mm_flash.tscn" id="2_ixd1f"]
+[ext_resource type="Script" path="res://scripts/items/class_gun.gd" id="1_gmhkp"]
 [ext_resource type="Texture2D" uid="uid://ds0s2mwclg1hq" path="res://assets/models/weapon/9mm/9mm_0.png" id="2_xl7rt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sa8ly"]
@@ -181,17 +179,16 @@ shadow_mesh = SubResource("ArrayMesh_60h4l")
 [node name="9mm" type="RigidBody3D" node_paths=PackedStringArray("firing_location")]
 collision_layer = 4
 collision_mask = 5
-script = ExtResource("1_ubgjh")
+script = ExtResource("1_gmhkp")
 damage = 20
 stagger_damage = 40
 firing_rpm = 180
-tracer_colour = Color(1, 0, 0, 1)
 firing_location = NodePath("model/firing_loc")
 reload_speed = 3.0
-flash = ExtResource("2_ixd1f")
-sound = ExtResource("2_fnvn4")
 item_name = "9mm Pistol"
 item_description = "It's a pistol that 9mms."
+is_weapon = true
+is_gun = true
 
 [node name="collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00226875, -0.0313172)

@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=4 uid="uid://dyadpt7uelmry"]
+[gd_scene load_steps=16 format=4 uid="uid://dyadpt7uelmry"]
 
 [ext_resource type="Script" path="res://scripts/objects/lamp.gd" id="1_cl744"]
 [ext_resource type="Texture2D" uid="uid://caw0bywnb0epq" path="res://assets/models/scenery/boxlight/light_box_0.png" id="1_l4o16"]
 [ext_resource type="PackedScene" uid="uid://cu1b0o73useim" path="res://floor_aligning_ray.tscn" id="3_nue43"]
+[ext_resource type="Script" path="res://scripts/entities/object_hitbox.gd" id="4_lxfpg"]
+[ext_resource type="Script" path="res://scripts/objects/object_stats.gd" id="5_27gg0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8lsk"]
 resource_name = "material_0"
@@ -116,24 +118,29 @@ emission = Color(1, 1, 1, 1)
 material = SubResource("StandardMaterial3D_qu061")
 size = Vector3(0.2, 0.1, 0.2)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xj5tx"]
+size = Vector3(0.55, 0.2, 0.3)
+
 [node name="light_box" type="Node3D"]
 script = ExtResource("1_cl744")
-mode = 1
 
 [node name="model" type="Node3D" parent="."]
 transform = Transform3D(-4, 6.03983e-07, 0, -6.03983e-07, -4, 0, 0, 0, 4, -1.08162e-09, 0.0247447, 0)
 
 [node name="cuboid" type="MeshInstance3D" parent="model"]
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_eg1a2")
 skeleton = NodePath("")
 
 [node name="cuboid2" type="MeshInstance3D" parent="model"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00625, 0)
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_5ynut")
 skeleton = NodePath("")
 
 [node name="cuboid3" type="MeshInstance3D" parent="model"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03125, 0)
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_glnxo")
 skeleton = NodePath("")
 
@@ -144,7 +151,22 @@ omni_range = 20.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="light"]
 transform = Transform3D(2.14917, 0, 0, 0, 0.388751, 0, 0, 0, 1, 3.84165e-09, 0.0439433, 0)
+cast_shadow = 0
 mesh = SubResource("BoxMesh_qnx4r")
 
 [node name="floor_aligning_ray" parent="." instance=ExtResource("3_nue43")]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -1.08162e-09, 0.0247447, 0)
+
+[node name="hitbox" type="StaticBody3D" parent="." node_paths=PackedStringArray("entity")]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("4_lxfpg")
+entity = NodePath("..")
+
+[node name="hitbox_col" type="CollisionShape3D" parent="hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0556069, 0)
+shape = SubResource("BoxShape3D_xj5tx")
+
+[node name="stats" type="Node" parent="."]
+script = ExtResource("5_27gg0")
+health_max = 20

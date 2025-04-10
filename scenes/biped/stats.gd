@@ -1,5 +1,7 @@
 extends Node
 
+enum element {kinetic, thermal, shock, holy}
+
 var entity
 
 var team
@@ -22,13 +24,15 @@ var poise_current
 var exp_current
 
 #defence
-#resistence is % based between 0 and 1
-#multiply that kind of damage by (1 - resistence)
-var physical_resistence = 0
-var fire_resistence = 0
-var shock_resistence = 0
-var ice_resistence = 0
-var holy_resistence = 0
+#resistance is % based between 0 and 1
+#multiply that kind of damage by (1 - resistance)
+#@export var physical_resistance = 0
+#@export var thermal_resistance = 0
+#@export var shock_resistance = 0
+#@export var holy_resistance = 0
+var resistance = []
+
+#FINISH THIS USING ELEMENTAL ENUM + IMPLEMENT DAMAGE TYPE0
 
 var level_current = 1
 var level_max = 10
@@ -86,7 +90,7 @@ var poise_regen = 10
 var exp_to_level
 var exp_multiplier
 
-var throw_force = 5
+var throw_force = 2
 
 # targetting level - more level = more hud elements. at 0 there is no hud.
 var targeting = 3
@@ -106,6 +110,9 @@ func apply_stats(stat_sheet:Resource):
 	agility = stat_sheet.agility #affects speed
 	intelligence = stat_sheet.intelligence #stat to use magic equipment
 	mind = stat_sheet.mind
+	team = stat_sheet.team
+	resistance = [stat_sheet.kinetic_resistance, stat_sheet.thermal_resistance, stat_sheet.shock_resistance, stat_sheet.holy_resistance]
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -121,7 +128,7 @@ func _ready() -> void:
 		apply_stats(entity_stat_sheet)
 	update_stats()
 	stat_init()
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -129,9 +136,16 @@ func _process(delta: float) -> void:
 	impulse(delta)
 
 
-func damage(damage:float , knockback: float, position: Vector3, hitbox_type: int): #physical, fire, ice, shock, mana, stagger):
+func damage(damage:float, damage_type: element, knockback: float, position: Vector3, hitbox_type: int): #physical, fire, ice, shock, mana, stagger):
 	print(str(damage) + str(" damage to ") + str(entity))
-	health_current -= damage
+	if hitbox_type == 0:
+		health_current -= damage * (1 - resistance[damage_type])
+	elif hitbox_type == 1:
+		health_current -= damage * (1 - resistance[damage_type]) * 2
+	elif hitbox_type == 2:
+		health_current -= damage * (1 - resistance[damage_type]) * 0.5
+	else:
+		push_error("there is an incorrect hitbox value")
 	health_current = clamp(health_current, -100, health_max)
 	if health_current <= 0 and health_current > -20:
 		KO()
@@ -284,7 +298,7 @@ func impulse(delta: float):
 	#print("oldvel.y: " + str(oldvel.y))
 	#print("velocity.y: " + str(velocity.y))
 	if oldvel.y < -10 and abs(oldvel.y - entity.velocity.y) > 10 and in_air_timer > 2:
-		damage(abs(oldvel.y - entity.velocity.y), 0, entity.global_position, 0)
+		damage(abs(oldvel.y - entity.velocity.y),0 , 0, entity.global_position, 0)
 	oldvel = entity.velocity
 	#else:
 		#if in_air_timer != 0:

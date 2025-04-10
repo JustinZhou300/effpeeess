@@ -1,25 +1,17 @@
-extends weapon_gun
-class_name revolver
+extends Node3D
+class_name interactable
 
-
-
+var stats
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	is_gun = true
-	base_item_ready()
-	weapon_ready()
-	#current_ammo = 1
 	
+	stats = $stats
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	#process_muzzle_flash(delta)
-	
 
-func fire():
-	shoot_hitscan()
-	gun_kickback(100)
-	current_ammo -= 1
+func interact():
+	pass

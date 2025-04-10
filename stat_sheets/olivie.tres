@@ -15,3 +15,6 @@ agility = 5
 intelligence = 5
 mind = 5
 luck = 5
+hitbox_res = [0, 0, 0, 0]
+critbox_res = [0, 0, 0, 0]
+shitbox_res = [0, 0, 0, 0]

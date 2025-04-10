@@ -6,5 +6,5 @@
 transparency = 1
 albedo_texture = ExtResource("1_m2wio")
 metallic = 1.0
-metallic_specular = 0.0
+metallic_specular = 1.0
 texture_filter = 2

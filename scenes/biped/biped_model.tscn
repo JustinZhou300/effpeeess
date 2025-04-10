@@ -1,127 +1,128 @@
-[gd_scene load_steps=252 format=3 uid="uid://bnp1uwq0n1qyi"]
+[gd_scene load_steps=253 format=3 uid="uid://bnp1uwq0n1qyi"]
 
 [ext_resource type="Script" path="res://scenes/biped/animation_handler.gd" id="1_0888q"]
-[ext_resource type="ArrayMesh" uid="uid://dxvi63032jo3n" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh.res" id="2_ufgpm"]
-[ext_resource type="ArrayMesh" uid="uid://ecele6qvllbi" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh2.res" id="3_bqdts"]
-[ext_resource type="ArrayMesh" uid="uid://c5vj0xiqe0eer" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh3.res" id="4_hhmhg"]
-[ext_resource type="ArrayMesh" uid="uid://bb4ari07qdn65" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh4.res" id="5_w1is6"]
-[ext_resource type="ArrayMesh" uid="uid://cep0b1dtighg2" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh5.res" id="6_mqv84"]
-[ext_resource type="ArrayMesh" uid="uid://cho2slek0paed" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh6.res" id="7_mfw8x"]
-[ext_resource type="ArrayMesh" uid="uid://dfo22d5ysb4bu" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh7.res" id="8_7b0ao"]
-[ext_resource type="ArrayMesh" uid="uid://cux1jrwbkgrc7" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh8.res" id="9_mkouo"]
-[ext_resource type="ArrayMesh" uid="uid://bmy55x1esoitq" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh9.res" id="10_jg32e"]
-[ext_resource type="ArrayMesh" uid="uid://c2kwm487vb78j" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh10.res" id="11_unsig"]
-[ext_resource type="ArrayMesh" uid="uid://dns2l8pjrco3m" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh11.res" id="12_y3a83"]
-[ext_resource type="ArrayMesh" uid="uid://djx6ftfctuj0m" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh12.res" id="13_hvm8l"]
-[ext_resource type="ArrayMesh" uid="uid://bc6fecp7ahim5" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh13.res" id="14_5f3a3"]
-[ext_resource type="ArrayMesh" uid="uid://36l6jm4litlf" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh14.res" id="15_cwf3g"]
-[ext_resource type="ArrayMesh" uid="uid://brkibwvry7b2k" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh15.res" id="16_ip5yj"]
-[ext_resource type="ArrayMesh" uid="uid://c7qjrfm4wkf4f" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh16.res" id="17_1bme7"]
-[ext_resource type="ArrayMesh" uid="uid://clnq7p1tmon8a" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh17.res" id="18_4s7l5"]
-[ext_resource type="ArrayMesh" uid="uid://7q8npk5u8ja4" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh18.res" id="19_rhb6h"]
-[ext_resource type="ArrayMesh" uid="uid://cmoosw2f6rkmq" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh19.res" id="20_gwfky"]
-[ext_resource type="ArrayMesh" uid="uid://b1kbq2wtfwx5k" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh20.res" id="21_txnmh"]
-[ext_resource type="ArrayMesh" uid="uid://dgjmn6iehc1c0" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh21.res" id="22_stymm"]
-[ext_resource type="ArrayMesh" uid="uid://bhudp6i8u6y48" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh22.res" id="23_t606f"]
-[ext_resource type="ArrayMesh" uid="uid://c2848jf8to3ro" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh23.res" id="24_vkchp"]
-[ext_resource type="ArrayMesh" uid="uid://d3q2oi8o2av8j" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh24.res" id="25_arn7i"]
-[ext_resource type="ArrayMesh" uid="uid://ducg64wft00sp" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh25.res" id="26_lv3ld"]
-[ext_resource type="ArrayMesh" uid="uid://o4vcprjg5oig" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh26.res" id="27_671me"]
-[ext_resource type="ArrayMesh" uid="uid://bkycv3ka7sw26" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh27.res" id="28_u8ngr"]
-[ext_resource type="ArrayMesh" uid="uid://crwx5mutta8pc" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh28.res" id="29_u0tp0"]
-[ext_resource type="Animation" uid="uid://csgv6iqj13xit" path="res://assets/models/character/olivie/anim/walk.res" id="29_vno85"]
-[ext_resource type="ArrayMesh" uid="uid://joc4kj85tmyw" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh29.res" id="30_21doh"]
-[ext_resource type="Animation" uid="uid://c7q77lfb006ii" path="res://assets/models/character/olivie/anim/torso_OH_idle.res" id="30_k21yj"]
-[ext_resource type="ArrayMesh" uid="uid://dwtreif8xxb88" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh30.res" id="31_ap2i7"]
-[ext_resource type="ArrayMesh" uid="uid://bwu2gkr1by8hw" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh31.res" id="32_a6ak2"]
-[ext_resource type="Animation" uid="uid://cg8h2omdyq772" path="res://assets/models/character/olivie/anim/torso_OH_reload.res" id="32_kr0g1"]
-[ext_resource type="Animation" uid="uid://bwgr8t4gwbokp" path="res://assets/models/character/olivie/anim/torso_OH_sprint.res" id="33_8v4pa"]
-[ext_resource type="ArrayMesh" uid="uid://c0fede47blnp3" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh32.res" id="33_c87k4"]
-[ext_resource type="ArrayMesh" uid="uid://cgfcgs0md747c" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh33.res" id="34_are2e"]
-[ext_resource type="Animation" uid="uid://bsewvulwqica4" path="res://assets/models/character/olivie/anim/torso_OH_stow.res" id="34_jfqae"]
-[ext_resource type="ArrayMesh" uid="uid://gwe0tp31q4pm" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh34.res" id="35_fvb77"]
-[ext_resource type="Animation" uid="uid://dqkc52lh7ohsd" path="res://assets/models/character/olivie/anim/torso_OH_draw.res" id="35_lovgf"]
-[ext_resource type="ArrayMesh" uid="uid://cyg36lc21t0q4" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh35.res" id="36_bekub"]
-[ext_resource type="Animation" uid="uid://b1bwo4lduqaoy" path="res://assets/models/character/olivie/anim/torso_OH_fireold.res" id="36_mb557"]
-[ext_resource type="Animation" uid="uid://c05ji2ocwhobc" path="res://assets/models/character/olivie/anim/torso_OH_fire.res" id="36_x0yyi"]
-[ext_resource type="ArrayMesh" uid="uid://divcu6e8i1pj3" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh36.res" id="37_6el7f"]
-[ext_resource type="Animation" uid="uid://doje2g2v5ocgk" path="res://assets/models/character/olivie/anim/torso_OH_walled.res" id="38_dog03"]
-[ext_resource type="ArrayMesh" uid="uid://cu0xs2o1b688f" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh37.res" id="38_vrc0x"]
-[ext_resource type="ArrayMesh" uid="uid://bdoekep48evg1" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh38.res" id="39_j60pp"]
-[ext_resource type="ArrayMesh" uid="uid://dh25nv2ati6j8" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh39.res" id="40_2sb2g"]
-[ext_resource type="Animation" uid="uid://bsrw1uu65jikp" path="res://assets/models/character/olivie/anim/torso_OH_punch2.res" id="41_comr4"]
-[ext_resource type="Animation" uid="uid://0rxeqmus7p3l" path="res://assets/models/character/olivie/anim/torso_turn_right.res" id="41_f2x3f"]
-[ext_resource type="ArrayMesh" uid="uid://b7bqihjsbprb3" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh40.res" id="41_kp00a"]
-[ext_resource type="Animation" uid="uid://b5fpmplc3ta2r" path="res://assets/models/character/olivie/anim/torso_turn_left.res" id="42_7wwjl"]
-[ext_resource type="ArrayMesh" uid="uid://6vpyynwk2x8f" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh41.res" id="42_svvjk"]
-[ext_resource type="Animation" uid="uid://b3j5t0iqpp7bu" path="res://assets/models/character/olivie/anim/torso_OH_punch.res" id="43_kkqjk"]
-[ext_resource type="ArrayMesh" uid="uid://bva2nq21epm5r" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh42.res" id="43_nvr8w"]
-[ext_resource type="Animation" uid="uid://duqb2wg6nakt3" path="res://assets/models/character/olivie/anim/idle.res" id="43_wbheg"]
-[ext_resource type="Animation" uid="uid://dkbgawuvc45l3" path="res://assets/models/character/olivie/anim/torso_OH_idle2.res" id="44_3kpcs"]
-[ext_resource type="Animation" uid="uid://ba6lu8aogouxr" path="res://assets/models/character/olivie/anim/no_anim.res" id="44_6vbdf"]
-[ext_resource type="Animation" uid="uid://b847kbucl40ee" path="res://assets/models/character/olivie/anim/torso_OH_reload4.res" id="45_ffrky"]
-[ext_resource type="Animation" uid="uid://cpmfxjmioft4q" path="res://assets/models/character/olivie/anim/torso_look_down.res" id="45_i0vpm"]
-[ext_resource type="Animation" uid="uid://cew82esw1b33c" path="res://assets/models/character/olivie/anim/torso_OH_reload2.res" id="46_gd5i1"]
-[ext_resource type="Animation" uid="uid://4pelj6pnuxnf" path="res://assets/models/character/olivie/anim/torso_look_up.res" id="46_isjr5"]
-[ext_resource type="Animation" uid="uid://gbquyyeykrhd" path="res://assets/models/character/olivie/anim/torso_OH_reload3.res" id="47_pwn4q"]
-[ext_resource type="Animation" uid="uid://b81gespmoioad" path="res://assets/models/character/olivie/anim/jump.res" id="47_qkar7"]
-[ext_resource type="Animation" uid="uid://dkri1amjqdbp4" path="res://assets/models/character/olivie/anim/falling.res" id="48_j1hho"]
-[ext_resource type="Animation" uid="uid://bwb6an2o26vh4" path="res://assets/models/character/olivie/anim/slide.res" id="49_p6o8c"]
-[ext_resource type="Animation" uid="uid://bbprq2ljn0jjg" path="res://assets/models/character/olivie/anim/torso_OH_sprint2.res" id="49_qdrnf"]
-[ext_resource type="Animation" uid="uid://c8ry72o44eipv" path="res://assets/models/character/olivie/anim/slide_2.res" id="50_e48qi"]
-[ext_resource type="Animation" uid="uid://citg43i6imie" path="res://assets/models/character/olivie/anim/crouch.res" id="51_b8jvl"]
-[ext_resource type="Animation" uid="uid://dcracygegf7vo" path="res://assets/models/character/olivie/anim/torso_OH_stow2.res" id="51_m86jd"]
-[ext_resource type="Animation" uid="uid://kb08ov7u24wj" path="res://assets/models/character/olivie/anim/crouch_walk.res" id="52_yp56y"]
-[ext_resource type="Animation" uid="uid://dt52a8mts0lsv" path="res://assets/models/character/olivie/anim/torso_OH_draw2.res" id="53_8ls2k"]
-[ext_resource type="Animation" uid="uid://vtveqvy2oi6s" path="res://assets/models/character/olivie/anim/arms_mantle.res" id="53_hsbpk"]
-[ext_resource type="Animation" uid="uid://p7y5oay0pdfa" path="res://assets/models/character/olivie/anim/run.res" id="54_8vndw"]
-[ext_resource type="Animation" uid="uid://bx3nrdpb5vu7v" path="res://assets/models/character/olivie/anim/leg_turn_right.res" id="55_n0ir6"]
-[ext_resource type="Animation" uid="uid://dci5uem6x6fcb" path="res://assets/models/character/olivie/anim/torso_OH_fire2.res" id="55_r3v2a"]
-[ext_resource type="Animation" uid="uid://b2ghtcabvw5u4" path="res://assets/models/character/olivie/anim/leg_turn_left.res" id="56_k0ma4"]
-[ext_resource type="Animation" uid="uid://dqeeecm3rhhkg" path="res://assets/models/character/olivie/anim/torso_OH_overheat.res" id="57_hoyl2"]
-[ext_resource type="Animation" uid="uid://bs2u3uh5rjbn0" path="res://assets/models/character/olivie/anim/head_look_down.res" id="57_u52nq"]
-[ext_resource type="Animation" uid="uid://db2un4it8hggo" path="res://assets/models/character/olivie/anim/torso_OH_overheat2.res" id="58_3v5dn"]
-[ext_resource type="Animation" uid="uid://ckpx6uip30xhq" path="res://assets/models/character/olivie/anim/head_look_up.res" id="58_rsdnb"]
-[ext_resource type="Animation" uid="uid://ck3lposux7bel" path="res://assets/models/character/olivie/anim/torso_lean_left.res" id="59_16rvl"]
-[ext_resource type="Animation" uid="uid://c77o1x7dqvk4q" path="res://assets/models/character/olivie/anim/torso_lean_right.res" id="60_m1o5r"]
-[ext_resource type="Animation" uid="uid://shy1nyir1gey" path="res://assets/models/character/olivie/anim/torso_OH_walled2.res" id="60_p7ctl"]
-[ext_resource type="Animation" uid="uid://dqs00ynxvfncb" path="res://assets/models/character/olivie/anim/torso_unarmed_idle.res" id="61_35utn"]
-[ext_resource type="Animation" uid="uid://656mlpuqvcov" path="res://assets/models/character/olivie/anim/torso_TH_idle.res" id="61_fdboa"]
-[ext_resource type="Animation" uid="uid://coymor2tb7poa" path="res://assets/models/character/olivie/anim/torso_unarmed_punch_left.res" id="62_eecc0"]
-[ext_resource type="Animation" uid="uid://b06dmrxye0wgk" path="res://assets/models/character/olivie/anim/torso_TH_stow.res" id="63_hq5qq"]
-[ext_resource type="Animation" uid="uid://pokfpvytd2v3" path="res://assets/models/character/olivie/anim/torso_unarmed_punch_right.res" id="63_pjws6"]
-[ext_resource type="Animation" uid="uid://ba83h22bn3v5f" path="res://assets/models/character/olivie/anim/torso_TH_draw.res" id="64_e8fen"]
-[ext_resource type="Animation" uid="uid://cxgqhvqint0bu" path="res://assets/models/character/olivie/anim/torso_TH_sprint.res" id="65_oh4gc"]
-[ext_resource type="Animation" uid="uid://btxlodeywcl8p" path="res://assets/models/character/olivie/anim/torso_TH_walled.res" id="66_8eljn"]
-[ext_resource type="Animation" uid="uid://cvi7bjgf25170" path="res://assets/models/character/olivie/anim/torso_TH_firing.res" id="67_5cycx"]
-[ext_resource type="Animation" uid="uid://dyb76e4iimuy7" path="res://assets/models/character/olivie/anim/torso_TH_reload.res" id="68_qh5xd"]
-[ext_resource type="Animation" uid="uid://h42rawrw36m2" path="res://assets/models/character/olivie/anim/torso_OH_throw2.res" id="78_kp1li"]
-[ext_resource type="Animation" uid="uid://byyggfp7gcxti" path="res://assets/models/character/olivie/anim/torso_TH_punch.res" id="83_kmf7x"]
-[ext_resource type="Animation" uid="uid://dxh0s1aiq6ew4" path="res://assets/models/character/olivie/anim/death.res" id="91_lqhs0"]
-[ext_resource type="Animation" uid="uid://u8jl1excf1m1" path="res://assets/models/character/olivie/anim/dead.res" id="92_pwyxu"]
-[ext_resource type="Animation" uid="uid://dbjwjrqcg4puy" path="res://assets/models/character/olivie/anim/stun.res" id="93_0htl2"]
-[ext_resource type="Animation" uid="uid://dmyqdya0dp1r7" path="res://assets/models/character/olivie/anim/stun_pos.res" id="94_1nmww"]
-[ext_resource type="Animation" uid="uid://bm4x4r4uu7x3d" path="res://assets/models/character/olivie/anim/torso_flashlight_idle.res" id="94_n2gvv"]
-[ext_resource type="Animation" uid="uid://dib8e3mcq1tcd" path="res://assets/models/character/olivie/anim/torso_flashlight_stow.res" id="95_0kcuj"]
-[ext_resource type="Animation" uid="uid://dvjpo6bndeku3" path="res://assets/models/character/olivie/anim/torso_flashlight_sprint.res" id="96_phliy"]
-[ext_resource type="Animation" uid="uid://dv8gu6kfj1v58" path="res://assets/models/character/olivie/anim/torso_flashlight_walled.res" id="97_2stql"]
-[ext_resource type="Animation" uid="uid://pu4aeaote613" path="res://assets/models/character/olivie/anim/torso_flashlight_reload.res" id="98_estox"]
-[ext_resource type="Animation" uid="uid://mbfwkd7cf5c6" path="res://assets/models/character/olivie/anim/invalid_anim.res" id="99_68qqg"]
-[ext_resource type="Animation" uid="uid://bowwgowefxnhb" path="res://assets/models/character/olivie/anim/torso_flashlight_draw.res" id="100_8kbv0"]
-[ext_resource type="Animation" uid="uid://gm81p7p87e1u" path="res://assets/models/character/olivie/anim/torso_TH_throw_item.res" id="100_qotuu"]
-[ext_resource type="Animation" uid="uid://b6bls45avpt77" path="res://assets/models/character/olivie/anim/torso_OH_throw.res" id="101_e81dq"]
-[ext_resource type="Animation" uid="uid://bvkklm1kqaw3w" path="res://assets/models/character/olivie/anim/torso_melee_swing.res" id="104_bpbdw"]
-[ext_resource type="Animation" uid="uid://c4464682mga7q" path="res://assets/models/character/olivie/anim/torso_melee_swing2.res" id="105_cu3ns"]
-[ext_resource type="Animation" uid="uid://bd8fbq51rfwj6" path="res://assets/models/character/olivie/anim/torso_melee_swing3.res" id="106_vx4n4"]
-[ext_resource type="Animation" uid="uid://dqvifvauk3up0" path="res://assets/models/character/olivie/anim/torso_melee_idle.res" id="107_0splx"]
-[ext_resource type="Animation" uid="uid://c745csjw074yt" path="res://assets/models/character/olivie/anim/torso_melee_walled.res" id="112_jokok"]
-[ext_resource type="Animation" uid="uid://b1dm2lvvoj4u8" path="res://assets/models/character/olivie/anim/torso_melee_stow.res" id="113_ka5wx"]
-[ext_resource type="Animation" uid="uid://bbso53a24jj81" path="res://assets/models/character/olivie/anim/torso_melee_draw.res" id="114_s6ljh"]
-[ext_resource type="Animation" uid="uid://bovlxdy1tx2kl" path="res://assets/models/character/olivie/anim/pose.res" id="115_2k6au"]
-[ext_resource type="Animation" uid="uid://d0c8o4mkflfml" path="res://assets/models/character/olivie/anim/torso_melee_charge.res" id="116_tcf5i"]
-[ext_resource type="Animation" uid="uid://br23bbac2bbor" path="res://assets/models/character/olivie/anim/torso_melee_release.res" id="117_oaird"]
-[ext_resource type="Animation" uid="uid://dtd3gvlotxv0w" path="res://assets/models/character/olivie/anim/torso_melee_swing4.res" id="118_rgttb"]
-[ext_resource type="Animation" uid="uid://bioyxeog7v5qx" path="res://assets/models/character/olivie/anim/animation.res" id="119_okkiq"]
+[ext_resource type="ArrayMesh" uid="uid://psbdl787oqmi" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh.res" id="2_ufgpm"]
+[ext_resource type="ArrayMesh" uid="uid://bntiobj6fgigt" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh2.res" id="3_bqdts"]
+[ext_resource type="ArrayMesh" uid="uid://b0vvfvyukr4p8" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh3.res" id="4_hhmhg"]
+[ext_resource type="ArrayMesh" uid="uid://1itfrjqkyea6" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh4.res" id="5_w1is6"]
+[ext_resource type="ArrayMesh" uid="uid://iu348vij1gwt" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh5.res" id="6_mqv84"]
+[ext_resource type="ArrayMesh" uid="uid://cnx8ucpmp7lup" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh6.res" id="7_mfw8x"]
+[ext_resource type="ArrayMesh" uid="uid://bwwcoptgj8x63" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh7.res" id="8_7b0ao"]
+[ext_resource type="ArrayMesh" uid="uid://dhql4nbwkisk6" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh8.res" id="9_mkouo"]
+[ext_resource type="ArrayMesh" uid="uid://dif5qweolgaqq" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh9.res" id="10_jg32e"]
+[ext_resource type="ArrayMesh" uid="uid://1ovv7sso22jo" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh10.res" id="11_unsig"]
+[ext_resource type="ArrayMesh" uid="uid://b5t3i26iu6eqd" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh11.res" id="12_y3a83"]
+[ext_resource type="ArrayMesh" uid="uid://ckc4665kgvyqm" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh12.res" id="13_hvm8l"]
+[ext_resource type="ArrayMesh" uid="uid://bo3nrm1nlcucn" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh13.res" id="14_5f3a3"]
+[ext_resource type="ArrayMesh" uid="uid://dcd8dxoh73sj5" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh14.res" id="15_cwf3g"]
+[ext_resource type="ArrayMesh" uid="uid://chasq5r8n056h" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh15.res" id="16_ip5yj"]
+[ext_resource type="ArrayMesh" uid="uid://dafcufasl5kdh" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh16.res" id="17_1bme7"]
+[ext_resource type="ArrayMesh" uid="uid://dcd4iam7snmec" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh17.res" id="18_4s7l5"]
+[ext_resource type="ArrayMesh" uid="uid://chuxhbvmnj17l" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh18.res" id="19_rhb6h"]
+[ext_resource type="ArrayMesh" uid="uid://bwrluyih2a4at" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh19.res" id="20_gwfky"]
+[ext_resource type="ArrayMesh" uid="uid://c10xwu4w3g3my" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh20.res" id="21_txnmh"]
+[ext_resource type="ArrayMesh" uid="uid://donmc4ygstq7v" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh21.res" id="22_stymm"]
+[ext_resource type="ArrayMesh" uid="uid://dyvwynei67bnj" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh22.res" id="23_t606f"]
+[ext_resource type="ArrayMesh" uid="uid://jqtweb8ue8y7" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh23.res" id="24_vkchp"]
+[ext_resource type="ArrayMesh" uid="uid://c3x8vbmdmnpjo" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh24.res" id="25_arn7i"]
+[ext_resource type="ArrayMesh" uid="uid://be5ugp0vkkqfe" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh25.res" id="26_lv3ld"]
+[ext_resource type="ArrayMesh" uid="uid://dsfsohop2nrrp" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh26.res" id="27_671me"]
+[ext_resource type="ArrayMesh" uid="uid://d55gpuwu0f3" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh27.res" id="28_u8ngr"]
+[ext_resource type="ArrayMesh" uid="uid://gqct0ifko81q" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh28.res" id="29_u0tp0"]
+[ext_resource type="Animation" uid="uid://lrrpxbus70pm" path="res://assets/models/character/olivie/anim/walk.res" id="29_vno85"]
+[ext_resource type="ArrayMesh" uid="uid://d2jmrjjva3aeb" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh29.res" id="30_21doh"]
+[ext_resource type="Animation" uid="uid://coil06q1novsm" path="res://assets/models/character/olivie/anim/torso_OH_idle.res" id="30_k21yj"]
+[ext_resource type="ArrayMesh" uid="uid://6652x1jm75we" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh30.res" id="31_ap2i7"]
+[ext_resource type="ArrayMesh" uid="uid://dkhn7f2lktgrg" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh31.res" id="32_a6ak2"]
+[ext_resource type="Animation" uid="uid://ckpru73s2k747" path="res://assets/models/character/olivie/anim/torso_OH_reload.res" id="32_kr0g1"]
+[ext_resource type="Animation" uid="uid://jj4lkbrmkted" path="res://assets/models/character/olivie/anim/torso_OH_sprint.res" id="33_8v4pa"]
+[ext_resource type="ArrayMesh" uid="uid://2fe1li7b8yxe" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh32.res" id="33_c87k4"]
+[ext_resource type="ArrayMesh" uid="uid://b7p1l2py7rorc" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh33.res" id="34_are2e"]
+[ext_resource type="Animation" uid="uid://bfq35qrq3ax4p" path="res://assets/models/character/olivie/anim/torso_OH_stow.res" id="34_jfqae"]
+[ext_resource type="ArrayMesh" uid="uid://raxog1atxmae" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh34.res" id="35_fvb77"]
+[ext_resource type="Animation" uid="uid://cm4xjol6dk246" path="res://assets/models/character/olivie/anim/torso_OH_draw.res" id="35_lovgf"]
+[ext_resource type="ArrayMesh" uid="uid://6u0dx0s6y1hj" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh35.res" id="36_bekub"]
+[ext_resource type="Animation" uid="uid://b5865v32cqifp" path="res://assets/models/character/olivie/anim/torso_OH_fireold.res" id="36_mb557"]
+[ext_resource type="Animation" uid="uid://cou4o66cr4cj6" path="res://assets/models/character/olivie/anim/torso_OH_fire.res" id="36_x0yyi"]
+[ext_resource type="ArrayMesh" uid="uid://dx5p186v5hjh0" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh36.res" id="37_6el7f"]
+[ext_resource type="Animation" uid="uid://u6yriql71t7m" path="res://assets/models/character/olivie/anim/torso_OH_walled.res" id="38_dog03"]
+[ext_resource type="ArrayMesh" uid="uid://bqe0gv3hqjlre" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh37.res" id="38_vrc0x"]
+[ext_resource type="ArrayMesh" uid="uid://dhyt7ex6d5ac3" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh38.res" id="39_j60pp"]
+[ext_resource type="ArrayMesh" uid="uid://du0d52batuiei" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh39.res" id="40_2sb2g"]
+[ext_resource type="Animation" uid="uid://cv3ll8grdfb53" path="res://assets/models/character/olivie/anim/torso_OH_punch2.res" id="41_comr4"]
+[ext_resource type="Animation" uid="uid://cl4tw4ucm4ohb" path="res://assets/models/character/olivie/anim/torso_turn_right.res" id="41_f2x3f"]
+[ext_resource type="ArrayMesh" uid="uid://dkcf8tlrc0glh" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh40.res" id="41_kp00a"]
+[ext_resource type="Animation" uid="uid://blm1xo1e7drtr" path="res://assets/models/character/olivie/anim/torso_turn_left.res" id="42_7wwjl"]
+[ext_resource type="ArrayMesh" uid="uid://cjpdssl7v4jjd" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh41.res" id="42_svvjk"]
+[ext_resource type="Animation" uid="uid://bfr6os6n701km" path="res://assets/models/character/olivie/anim/torso_OH_punch.res" id="43_kkqjk"]
+[ext_resource type="ArrayMesh" uid="uid://cmntc1b5k4v8p" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh42.res" id="43_nvr8w"]
+[ext_resource type="Animation" uid="uid://dhs4q67re0q7a" path="res://assets/models/character/olivie/anim/idle.res" id="43_wbheg"]
+[ext_resource type="Animation" uid="uid://bgt88gouhujyr" path="res://assets/models/character/olivie/anim/torso_OH_idle2.res" id="44_3kpcs"]
+[ext_resource type="Animation" uid="uid://b5x3fkkpgwhc0" path="res://assets/models/character/olivie/anim/no_anim.res" id="44_6vbdf"]
+[ext_resource type="Animation" uid="uid://g1ejy3r3c48d" path="res://assets/models/character/olivie/anim/torso_OH_reload4.res" id="45_ffrky"]
+[ext_resource type="Animation" uid="uid://bvlnq6wtsrjy8" path="res://assets/models/character/olivie/anim/torso_look_down.res" id="45_i0vpm"]
+[ext_resource type="Animation" uid="uid://goeodku8oooc" path="res://assets/models/character/olivie/anim/torso_OH_reload2.res" id="46_gd5i1"]
+[ext_resource type="Animation" uid="uid://c4ohbt3t828hl" path="res://assets/models/character/olivie/anim/torso_look_up.res" id="46_isjr5"]
+[ext_resource type="Animation" uid="uid://bu6dbhxuax6b5" path="res://assets/models/character/olivie/anim/torso_OH_reload3.res" id="47_pwn4q"]
+[ext_resource type="Animation" uid="uid://byn604pplta0g" path="res://assets/models/character/olivie/anim/jump.res" id="47_qkar7"]
+[ext_resource type="Animation" uid="uid://dvw3hwelv8h3e" path="res://assets/models/character/olivie/anim/falling.res" id="48_j1hho"]
+[ext_resource type="Animation" uid="uid://ci4n03eokiy4r" path="res://assets/models/character/olivie/anim/slide.res" id="49_p6o8c"]
+[ext_resource type="Animation" uid="uid://b2fh37gegccfu" path="res://assets/models/character/olivie/anim/torso_OH_sprint2.res" id="49_qdrnf"]
+[ext_resource type="Animation" uid="uid://bd70bx7ids5wv" path="res://assets/models/character/olivie/anim/slide_2.res" id="50_e48qi"]
+[ext_resource type="Animation" uid="uid://cc6vm38f0jmxc" path="res://assets/models/character/olivie/anim/crouch.res" id="51_b8jvl"]
+[ext_resource type="Animation" uid="uid://2eygc6a3excg" path="res://assets/models/character/olivie/anim/torso_OH_stow2.res" id="51_m86jd"]
+[ext_resource type="Animation" uid="uid://dxswkp6ouxutg" path="res://assets/models/character/olivie/anim/crouch_walk.res" id="52_yp56y"]
+[ext_resource type="Animation" uid="uid://bbgpw0vf6q7qr" path="res://assets/models/character/olivie/anim/torso_OH_draw2.res" id="53_8ls2k"]
+[ext_resource type="Animation" uid="uid://bbfdihcwisagt" path="res://assets/models/character/olivie/anim/arms_mantle.res" id="53_hsbpk"]
+[ext_resource type="Animation" uid="uid://e2qmfc6fyerj" path="res://assets/models/character/olivie/anim/run.res" id="54_8vndw"]
+[ext_resource type="Animation" uid="uid://3yv67ypi2ams" path="res://assets/models/character/olivie/anim/leg_turn_right.res" id="55_n0ir6"]
+[ext_resource type="Animation" uid="uid://wgi2it26kxj" path="res://assets/models/character/olivie/anim/torso_OH_fire2.res" id="55_r3v2a"]
+[ext_resource type="Animation" uid="uid://01t4abdt2o5w" path="res://assets/models/character/olivie/anim/leg_turn_left.res" id="56_k0ma4"]
+[ext_resource type="Animation" uid="uid://cp623v33a5gne" path="res://assets/models/character/olivie/anim/torso_OH_overheat.res" id="57_hoyl2"]
+[ext_resource type="Animation" uid="uid://cq77vtelh0q6v" path="res://assets/models/character/olivie/anim/head_look_down.res" id="57_u52nq"]
+[ext_resource type="Animation" uid="uid://ct5qyeob08vxm" path="res://assets/models/character/olivie/anim/torso_OH_overheat2.res" id="58_3v5dn"]
+[ext_resource type="Animation" uid="uid://d33jmvjrc6hu0" path="res://assets/models/character/olivie/anim/head_look_up.res" id="58_rsdnb"]
+[ext_resource type="Animation" uid="uid://ju5was6nd0cr" path="res://assets/models/character/olivie/anim/torso_lean_left.res" id="59_16rvl"]
+[ext_resource type="Animation" uid="uid://b45cxwvaqswes" path="res://assets/models/character/olivie/anim/torso_lean_right.res" id="60_m1o5r"]
+[ext_resource type="Animation" uid="uid://dta7hs8tkyh3a" path="res://assets/models/character/olivie/anim/torso_OH_walled2.res" id="60_p7ctl"]
+[ext_resource type="Animation" uid="uid://b5e7n0e23jbom" path="res://assets/models/character/olivie/anim/torso_unarmed_idle.res" id="61_35utn"]
+[ext_resource type="Animation" uid="uid://dj5avxa46qasn" path="res://assets/models/character/olivie/anim/torso_TH_idle.res" id="61_fdboa"]
+[ext_resource type="Animation" uid="uid://bd0gpv8di1ufp" path="res://assets/models/character/olivie/anim/torso_unarmed_punch_left.res" id="62_eecc0"]
+[ext_resource type="Animation" uid="uid://d2xx6nphi7kn8" path="res://assets/models/character/olivie/anim/torso_TH_stow.res" id="63_hq5qq"]
+[ext_resource type="Animation" uid="uid://fvkua424ru77" path="res://assets/models/character/olivie/anim/torso_unarmed_punch_right.res" id="63_pjws6"]
+[ext_resource type="Animation" uid="uid://blo6wd756oh7h" path="res://assets/models/character/olivie/anim/torso_TH_draw.res" id="64_e8fen"]
+[ext_resource type="Animation" uid="uid://bjotsajdh72ei" path="res://assets/models/character/olivie/anim/torso_TH_sprint.res" id="65_oh4gc"]
+[ext_resource type="Animation" uid="uid://dil186vsox5vy" path="res://assets/models/character/olivie/anim/torso_TH_walled.res" id="66_8eljn"]
+[ext_resource type="Animation" uid="uid://c44ufw7i71a5y" path="res://assets/models/character/olivie/anim/torso_TH_firing.res" id="67_5cycx"]
+[ext_resource type="Animation" uid="uid://b4ppjbxa075cg" path="res://assets/models/character/olivie/anim/torso_TH_reload.res" id="68_qh5xd"]
+[ext_resource type="Animation" uid="uid://c37lmx0lsb7s3" path="res://assets/models/character/olivie/anim/torso_OH_throw2.res" id="78_kp1li"]
+[ext_resource type="Animation" uid="uid://d1ax1wkcva1ms" path="res://assets/models/character/olivie/anim/torso_TH_punch.res" id="83_kmf7x"]
+[ext_resource type="Animation" uid="uid://b1e4lr2251lp7" path="res://assets/models/character/olivie/anim/death.res" id="91_lqhs0"]
+[ext_resource type="Animation" uid="uid://c4oafh4edwavn" path="res://assets/models/character/olivie/anim/dead.res" id="92_pwyxu"]
+[ext_resource type="Animation" uid="uid://wajamm7sffsf" path="res://assets/models/character/olivie/anim/stun.res" id="93_0htl2"]
+[ext_resource type="Animation" uid="uid://dsvho1tuu7ow6" path="res://assets/models/character/olivie/anim/stun_pos.res" id="94_1nmww"]
+[ext_resource type="Animation" uid="uid://c8ijwghb1yqtn" path="res://assets/models/character/olivie/anim/torso_flashlight_idle.res" id="94_n2gvv"]
+[ext_resource type="Animation" uid="uid://dunba4jh8mxs6" path="res://assets/models/character/olivie/anim/torso_flashlight_stow.res" id="95_0kcuj"]
+[ext_resource type="Animation" uid="uid://5y4yc3kx5mca" path="res://assets/models/character/olivie/anim/torso_flashlight_sprint.res" id="96_phliy"]
+[ext_resource type="Animation" uid="uid://cg4aroshqnvj4" path="res://assets/models/character/olivie/anim/torso_flashlight_walled.res" id="97_2stql"]
+[ext_resource type="Animation" uid="uid://btppyvbnda3ev" path="res://assets/models/character/olivie/anim/torso_flashlight_reload.res" id="98_estox"]
+[ext_resource type="Animation" uid="uid://mc4sx1ehxhfa" path="res://assets/models/character/olivie/anim/invalid_anim.res" id="99_68qqg"]
+[ext_resource type="Animation" uid="uid://bl4iesnupwy2h" path="res://assets/models/character/olivie/anim/torso_flashlight_draw.res" id="100_8kbv0"]
+[ext_resource type="Animation" uid="uid://dg6frjjf8lo03" path="res://assets/models/character/olivie/anim/torso_TH_throw_item.res" id="100_qotuu"]
+[ext_resource type="Animation" uid="uid://c3mpl4e2rce6d" path="res://assets/models/character/olivie/anim/torso_OH_throw.res" id="101_e81dq"]
+[ext_resource type="Animation" uid="uid://2omgg3itcdg6" path="res://assets/models/character/olivie/anim/torso_melee_swing.res" id="104_bpbdw"]
+[ext_resource type="Animation" uid="uid://b572rpb2scf1p" path="res://assets/models/character/olivie/anim/torso_melee_swing2.res" id="105_cu3ns"]
+[ext_resource type="Animation" uid="uid://dvuxyc7x6ryxl" path="res://assets/models/character/olivie/anim/torso_melee_swing3.res" id="106_vx4n4"]
+[ext_resource type="Animation" uid="uid://bmnwu5xykct0s" path="res://assets/models/character/olivie/anim/torso_melee_idle.res" id="107_0splx"]
+[ext_resource type="Animation" uid="uid://d0p6ybb0th4np" path="res://assets/models/character/olivie/anim/torso_melee_walled.res" id="112_jokok"]
+[ext_resource type="Animation" uid="uid://ccrflfqp8b00u" path="res://assets/models/character/olivie/anim/torso_melee_stow.res" id="113_ka5wx"]
+[ext_resource type="Animation" uid="uid://bsljbb1w0b24o" path="res://assets/models/character/olivie/anim/torso_melee_draw.res" id="114_s6ljh"]
+[ext_resource type="Animation" uid="uid://djir2xk1jysxg" path="res://assets/models/character/olivie/anim/pose.res" id="115_2k6au"]
+[ext_resource type="Animation" uid="uid://f7ss2vlx3i73" path="res://assets/models/character/olivie/anim/torso_melee_charge.res" id="116_tcf5i"]
+[ext_resource type="Animation" uid="uid://nnqr00a3arns" path="res://assets/models/character/olivie/anim/torso_melee_release.res" id="117_oaird"]
+[ext_resource type="Animation" uid="uid://b0u0ovnpy0w7e" path="res://assets/models/character/olivie/anim/torso_melee_swing4.res" id="118_rgttb"]
+[ext_resource type="Animation" uid="uid://byy5pf07l7lp5" path="res://assets/models/character/olivie/anim/torso_melee_swing_5.res" id="119_hroqc"]
+[ext_resource type="Animation" uid="uid://cplopqqxf8yg0" path="res://assets/models/character/olivie/anim/torso_overheat.res" id="120_5b51p"]
 
 [sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_k5cfv"]
 
@@ -148,7 +149,7 @@ animation = &"death"
 animation = &"dead"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pbeqv"]
-animation = &"torso_OH_overheat"
+animation = &"torso_overheat"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d4v7o"]
 animation = &"no_anim"
@@ -481,7 +482,7 @@ animation = &"torso_OH_punch"
 animation = &"torso_melee_swing4"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p60or"]
-animation = &"torso_melee_swing2"
+animation = &"torso_melee_swing_5"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hoq40"]
 animation = &"torso_melee_swing3"
@@ -619,7 +620,7 @@ filters = ["Node/hip/torso/arm_l2", "Node/hip/torso/arm_l2/forearm_l2", "Node/hi
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ebhgs"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_26uy8"]
-graph_offset = Vector2(-958.53, 517.058)
+graph_offset = Vector2(-17, 1022)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_3l8g3")
 nodes/Add2/position = Vector2(1320, 140)
 "nodes/Add2 2/node" = SubResource("AnimationNodeAdd2_k5cfv")
@@ -745,9 +746,8 @@ nodes/weapon_swing/node = SubResource("AnimationNodeOneShot_ebhgs")
 nodes/weapon_swing/position = Vector2(-1000, 860)
 node_connections = [&"Add2", 0, &"add_torso_rot", &"Add2", 1, &"Sub2", &"Add2 2", 0, &"Add2", &"Add2 2", 1, &"Sub2 2", &"Sub2", 0, &"legs_turn", &"Sub2", 1, &"Animation", &"Sub2 2", 0, &"lean_space", &"Sub2 2", 1, &"Animation 7", &"add_torso_rot", 0, &"weapon_blend", &"add_torso_rot", 1, &"torso_pos", &"crouch_blend", 0, &"run_scale", &"crouch_blend", 1, &"crouch_speed", &"death_blend", 0, &"stun_blend", &"death_blend", 1, &"death_oneshot", &"death_oneshot", 0, &"Animation 4", &"death_oneshot", 1, &"Animation 3", &"draw_timescale", 0, &"draw_set", &"firing_blend", 0, &"Animation 10", &"firing_blend", 1, &"Animation 12", &"firing_timescale", 0, &"firing_set", &"gun_draw", 0, &"gun_stow", &"gun_draw", 1, &"draw_timescale", &"gun_fire", 0, &"idle_set", &"gun_fire", 1, &"firing_timescale", &"gun_reload", 0, &"gun_draw", &"gun_reload", 1, &"reload_timescale", &"gun_stow", 0, &"weapon_swing", &"gun_stow", 1, &"stow_timescale", &"jump_blend", 0, &"slide_blend", &"jump_blend", 1, &"jump_space", &"mantle_oneshot", 0, &"punch_oneshot", &"mantle_oneshot", 1, &"mantle_timescale", &"mantle_timescale", 0, &"Animation 11", &"output", 0, &"death_blend", &"overheat_blend", 0, &"walled_blend", &"overheat_blend", 1, &"Animation 5", &"punch_oneshot", 0, &"unarmed_anim", &"punch_oneshot", 1, &"punch_timescale", &"punch_timescale", 0, &"punch_space", &"reload_timescale", 0, &"reload_set", &"run_scale", 0, &"walk_speed", &"slide_blend", 0, &"crouch_blend", &"slide_blend", 1, &"slide_anim", &"sprint_blend", 0, &"gun_reload", &"sprint_blend", 1, &"sprint_set", &"stow_timescale", 0, &"stow_set", &"stun_blend", 0, &"Add2 2", &"stun_blend", 1, &"Animation 2", &"swing_timescale", 0, &"swing_set", &"throw_oneshot", 0, &"overheat_blend", &"throw_oneshot", 1, &"throw_scale", &"throw_scale", 0, &"throw_set", &"unarmed_blend", 0, &"jump_blend", &"unarmed_blend", 1, &"mantle_oneshot", &"walled_blend", 0, &"sprint_blend", &"walled_blend", 1, &"walled_set", &"weapon_blend", 0, &"unarmed_blend", &"weapon_blend", 1, &"throw_oneshot", &"weapon_swing", 0, &"gun_fire", &"weapon_swing", 1, &"swing_timescale"]
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ikoxo"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mms28"]
 _data = {
-"animation": ExtResource("119_okkiq"),
 "arms_mantle": ExtResource("53_hsbpk"),
 "crouch": ExtResource("51_b8jvl"),
 "crouch_walk": ExtResource("52_yp56y"),
@@ -819,7 +819,9 @@ _data = {
 "torso_melee_swing2": ExtResource("105_cu3ns"),
 "torso_melee_swing3": ExtResource("106_vx4n4"),
 "torso_melee_swing4": ExtResource("118_rgttb"),
+"torso_melee_swing_5": ExtResource("119_hroqc"),
 "torso_melee_walled": ExtResource("112_jokok"),
+"torso_overheat": ExtResource("120_5b51p"),
 "torso_turn_left": ExtResource("42_7wwjl"),
 "torso_turn_right": ExtResource("41_f2x3f"),
 "torso_unarmed_idle": ExtResource("61_35utn"),
@@ -906,10 +908,10 @@ script = ExtResource("1_0888q")
 [node name="Node" type="Node3D" parent="."]
 
 [node name="hip2" type="Node3D" parent="Node"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05751, -0.05)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, -0.05)
 
 [node name="crotch" type="Node3D" parent="Node/hip2"]
-transform = Transform3D(0.925077, 0, 0.379779, 0, 1, 0, -0.379779, 0, 0.925077, 0, 0, 0.025)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.025)
 
 [node name="hip" type="MeshInstance3D" parent="Node/hip2/crotch"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0.025)
@@ -923,7 +925,7 @@ mesh = ExtResource("3_bqdts")
 skeleton = NodePath("")
 
 [node name="leg_r" type="Node3D" parent="Node/hip2/crotch"]
-transform = Transform3D(1, 0, 0, 0, 0.9797, 0.20047, 0, -0.20047, 0.9797, 0.075, -0.1375, 0.0125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.075, -0.1375, 0.0125)
 
 [node name="hitbox_thigh_r" type="MeshInstance3D" parent="Node/hip2/crotch/leg_r"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.325, 0.0125)
@@ -940,7 +942,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0.075, -0.225, 0)
 
 [node name="calf_r" type="Node3D" parent="Node/hip2/crotch/leg_r"]
-transform = Transform3D(1, 0, 0, 0, 0.632409, 0.774635, 0, -0.774635, 0.632409, -0.00625, -0.433655, -0.00577)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, -0.433655, -0.00577)
 
 [node name="hitbox_calf_r" type="MeshInstance3D" parent="Node/hip2/crotch/leg_r/calf_r"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.410095, 0.01827)
@@ -962,7 +964,7 @@ mesh = ExtResource("8_7b0ao")
 skeleton = NodePath("")
 
 [node name="leg_l" type="Node3D" parent="Node/hip2/crotch"]
-transform = Transform3D(1, 0, 0, 0, 0.372521, -0.928024, 0, 0.928024, 0.372521, -0.075, -0.1375, 0.0125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075, -0.1375, 0.0125)
 
 [node name="thigh_l" type="MeshInstance3D" parent="Node/hip2/crotch/leg_l"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.075, 0)
@@ -979,7 +981,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.075, -0.225, 0)
 
 [node name="calf_l" type="Node3D" parent="Node/hip2/crotch/leg_l"]
-transform = Transform3D(1, 0, 0, 0, 0.17883, 0.98388, 0, -0.98388, 0.17883, 0.00625, -0.433655, -0.00577)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.433655, -0.00577)
 
 [node name="calf_l_mesh" type="MeshInstance3D" parent="Node/hip2/crotch/leg_l/calf_l"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.10385, 0.01827)
@@ -1001,31 +1003,31 @@ mesh = ExtResource("13_hvm8l")
 skeleton = NodePath("")
 
 [node name="torso" type="Node3D" parent="Node/hip2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.05)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.025)
 
 [node name="chest" type="MeshInstance3D" parent="Node/hip2/torso"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0.025)
 mesh = ExtResource("14_5f3a3")
 skeleton = NodePath("")
 
+[node name="neck" type="MeshInstance3D" parent="Node/hip2/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.225, 0.0125)
+mesh = ExtResource("15_cwf3g")
+skeleton = NodePath("")
+
 [node name="hitbox_chest" type="MeshInstance3D" parent="Node/hip2/torso"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025, 0)
 visible = false
-mesh = ExtResource("15_cwf3g")
+mesh = ExtResource("16_ip5yj")
 skeleton = NodePath("")
 
 [node name="boob_r" type="MeshInstance3D" parent="Node/hip2/torso"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0625, 0.1875, -0.0375)
-mesh = ExtResource("16_ip5yj")
+mesh = ExtResource("17_1bme7")
 skeleton = NodePath("")
 
 [node name="boob_l" type="MeshInstance3D" parent="Node/hip2/torso"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, 0.1875, -0.0375)
-mesh = ExtResource("17_1bme7")
-skeleton = NodePath("")
-
-[node name="neck" type="MeshInstance3D" parent="Node/hip2/torso"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.225, 0.0125)
 mesh = ExtResource("18_4s7l5")
 skeleton = NodePath("")
 
@@ -1043,108 +1045,108 @@ skeleton = NodePath("")
 
 [node name="head_a" type="Node3D" parent="Node/hip2/torso/head2"]
 
-[node name="head" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.156587, -0.0353575)
-mesh = ExtResource("20_gwfky")
-skeleton = NodePath("")
-
-[node name="ear_l" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, -0.104687, 0.109472, -0.04453)
-mesh = ExtResource("21_txnmh")
-skeleton = NodePath("")
-
-[node name="ear_r" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0.104687, 0.109472, -0.04453)
-mesh = ExtResource("22_stymm")
-skeleton = NodePath("")
-
-[node name="nose" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05625, -0.13125)
-mesh = ExtResource("23_t606f")
-skeleton = NodePath("")
-
-[node name="hair" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.025)
-mesh = ExtResource("24_vkchp")
-skeleton = NodePath("")
-
 [node name="HAT" type="Node3D" parent="Node/hip2/torso/head2/head_a"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
 visible = false
 
 [node name="base" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a/HAT"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1125, -0.025)
-mesh = ExtResource("25_arn7i")
+mesh = ExtResource("20_gwfky")
 skeleton = NodePath("")
 
 [node name="dangle_l" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a/HAT"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1625, -0.05, 0.06875)
-mesh = ExtResource("26_lv3ld")
+mesh = ExtResource("21_txnmh")
 skeleton = NodePath("")
 
 [node name="dangle_r" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a/HAT"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1625, -0.05, 0.06875)
-mesh = ExtResource("27_671me")
+mesh = ExtResource("22_stymm")
 skeleton = NodePath("")
 
 [node name="flop_r" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a/HAT"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.075, 0.025, 0)
-mesh = ExtResource("28_u8ngr")
+mesh = ExtResource("23_t606f")
 skeleton = NodePath("")
 
 [node name="flop_l" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a/HAT"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075, 0.025, 0)
+mesh = ExtResource("24_vkchp")
+skeleton = NodePath("")
+
+[node name="ear_l" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
+transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, -0.104687, 0.109472, -0.04453)
+mesh = ExtResource("25_arn7i")
+skeleton = NodePath("")
+
+[node name="nose" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05625, -0.13125)
+mesh = ExtResource("26_lv3ld")
+skeleton = NodePath("")
+
+[node name="head" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.156587, -0.0353575)
+mesh = ExtResource("27_671me")
+skeleton = NodePath("")
+
+[node name="hair" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.025)
+mesh = ExtResource("28_u8ngr")
+skeleton = NodePath("")
+
+[node name="ear_r" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
+transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0.104687, 0.109472, -0.04453)
 mesh = ExtResource("29_u0tp0")
 skeleton = NodePath("")
 
 [node name="arm_l2" type="Node3D" parent="Node/hip2/torso"]
-transform = Transform3D(0.945261, 0.318652, 0.0703104, -0.282822, 0.692547, 0.663619, 0.16277, -0.647178, 0.74476, -0.15, 0.275, 0.025)
-
-[node name="arm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
-mesh = ExtResource("30_21doh")
-skeleton = NodePath("")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.275, 0.025)
 
 [node name="hitbox_arm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 visible = false
+mesh = ExtResource("30_21doh")
+skeleton = NodePath("")
+
+[node name="arm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
 mesh = ExtResource("31_ap2i7")
 skeleton = NodePath("")
 
 [node name="forearm_l2" type="Node3D" parent="Node/hip2/torso/arm_l2"]
-transform = Transform3D(1, 0, 0, 0, 0.382684, -0.92388, 0, 0.92388, 0.382684, 0, -0.25, 0)
-
-[node name="forearm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
-mesh = ExtResource("32_a6ak2")
-skeleton = NodePath("")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 
 [node name="hitbox_forearm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.275, 0)
 visible = false
+mesh = ExtResource("32_a6ak2")
+skeleton = NodePath("")
+
+[node name="forearm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
 mesh = ExtResource("33_c87k4")
 skeleton = NodePath("")
 
 [node name="hand_l" type="Node3D" parent="Node/hip2/torso/arm_l2/forearm_l2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0063925, -0.267897, -0.001705)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0063925, -0.292897, -0.001705)
 
-[node name="hand_l_hold" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2/hand_l"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.125, 0)
+[node name="hand_l_palm" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2/hand_l"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.1, 0)
 mesh = ExtResource("34_are2e")
 skeleton = NodePath("")
 
-[node name="hand_l_palm" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2/hand_l"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.125, 0)
+[node name="hand_l_fist" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2/hand_l"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.1, 0)
 mesh = ExtResource("35_fvb77")
 skeleton = NodePath("")
 
-[node name="hand_l_fist" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2/hand_l"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.125, 0)
+[node name="hand_l_hold" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2/hand_l"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.1, 0)
 mesh = ExtResource("36_bekub")
 skeleton = NodePath("")
 
 [node name="arm_r2" type="Node3D" parent="Node/hip2/torso"]
-transform = Transform3D(1, 0, 0, 0, 0.173648, -0.984808, 0, 0.984808, 0.173648, 0.15, 0.275, 0.025)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.275, 0.025)
 
 [node name="arm_r" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
@@ -1158,41 +1160,41 @@ mesh = ExtResource("38_vrc0x")
 skeleton = NodePath("")
 
 [node name="forearm_r2" type="Node3D" parent="Node/hip2/torso/arm_r2"]
-transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, -0.25, 0)
-
-[node name="forearm_r" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2/forearm_r2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
-mesh = ExtResource("39_j60pp")
-skeleton = NodePath("")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 
 [node name="hitbox_forearm_r" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2/forearm_r2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.275, 0)
 visible = false
+mesh = ExtResource("39_j60pp")
+skeleton = NodePath("")
+
+[node name="forearm_r" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2/forearm_r2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
 mesh = ExtResource("40_2sb2g")
 skeleton = NodePath("")
 
 [node name="hand_r" type="Node3D" parent="Node/hip2/torso/arm_r2/forearm_r2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0063925, -0.267897, -0.001705)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0063925, -0.292897, -0.001705)
 
-[node name="hand_r_hold" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2/forearm_r2/hand_r"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, -0.125, 0)
+[node name="hand_r_palm" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2/forearm_r2/hand_r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, -0.1, 0)
 mesh = ExtResource("41_kp00a")
 skeleton = NodePath("")
 
-[node name="hand_r_palm" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2/forearm_r2/hand_r"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, -0.125, 0)
+[node name="hand_r_fist" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2/forearm_r2/hand_r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, -0.1, 0)
 mesh = ExtResource("42_svvjk")
 skeleton = NodePath("")
 
-[node name="hand_r_fist" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2/forearm_r2/hand_r"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, -0.125, 0)
+[node name="hand_r_hold" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2/forearm_r2/hand_r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, -0.1, 0)
 mesh = ExtResource("43_nvr8w")
 skeleton = NodePath("")
 
 [node name="gun_loc_r" type="Node3D" parent="Node/hip2/torso/arm_r2/forearm_r2/hand_r"]
-transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, -0.0201425, -0.119603, -0.023295)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0201425, -0.0946025, -0.023295)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ikoxo")
+"": SubResource("AnimationLibrary_mms28")
 }

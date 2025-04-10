@@ -10,6 +10,9 @@ func enter():
 	biped.model_anim.reload()
 	timer = 0
 	has_reloaded = false
+	if biped.inventory.equipped.has_animations:
+		biped.inventory.equipped.model_anim.set_animation_speed("reload", reload_time)
+		biped.inventory.equipped.model_anim.reload()
 
 func exit():
 	pass

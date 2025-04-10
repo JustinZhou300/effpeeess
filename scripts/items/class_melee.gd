@@ -11,7 +11,9 @@ enum animation_sets {one_handed2, two_handed, one_handed, flashlight_handed, mel
 @export var has_animations = false
 @export var swings_num = 3
 @export var tracer_colour: Color
-@export var firing_location: Node3D
+
+@export var hit_cast: RayCast3D
+
 #weapon variables
 var current_ammo = 0
 
@@ -48,6 +50,10 @@ func _ready() -> void:
 #func _process(delta: float) -> void:
 	#pass
 
+func throw_hit():
+	item_ray.get_collider().entity.stats.damage(damage, 0, linear_velocity.length() * mass, global_position, item_ray.get_collider().hitbox_type)
+	linear_velocity = -linear_velocity/3
+
 func _process(delta: float) -> void:
 	pass
 
@@ -59,10 +65,9 @@ func primary_fire():
 func secondary_fire():
 	pass
 
-func fire():
+
+func hit():
 	pass
-
-
 
 func proc_reload():
 	pass

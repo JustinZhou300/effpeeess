@@ -1,5 +1,5 @@
 extends StaticBody3D
-class_name hitbox
+class_name object_hitbox
 #hitbox code
 
 var entity = null #make this so that it is placed in hitbox when generated

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/effects/blood.gd" id="2_fo8y4"]
 
 [sub_resource type="Gradient" id="Gradient_8mp06"]
-offsets = PackedFloat32Array(0, 0.337302, 0.68254)
+offsets = PackedFloat32Array(0, 0.861111, 1)
 colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_gfqup"]
@@ -58,3 +58,4 @@ trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_tqd5h")
 draw_pass_1 = SubResource("QuadMesh_y6csu")
 script = ExtResource("2_fo8y4")
+make_blood = true

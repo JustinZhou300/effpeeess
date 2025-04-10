@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=4 uid="uid://d8nr5jpj26t5"]
 
-[ext_resource type="Script" path="res://scripts/items/class_laser_weapon.gd" id="1_dinq5"]
+[ext_resource type="Script" path="res://scripts/items/class_energy_gun.gd" id="1_dinq5"]
 [ext_resource type="Texture2D" uid="uid://ivkfpa5hxyev" path="res://assets/models/weapon/laser_pistol/laser_pistol_0.png" id="2_xl5xh"]
 [ext_resource type="PackedScene" uid="uid://dp7p816k66vft" path="res://items/weapons/weapon_effects/laser_muzzle_flash.tscn" id="3_3qqf4"]
 

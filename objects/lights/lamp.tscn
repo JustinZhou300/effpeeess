@@ -1,9 +1,11 @@
-[gd_scene load_steps=25 format=4 uid="uid://bqblubv40c3lh"]
+[gd_scene load_steps=28 format=4 uid="uid://bqblubv40c3lh"]
 
 [ext_resource type="Script" path="res://scripts/objects/lamp.gd" id="1_pkikh"]
 [ext_resource type="Texture2D" uid="uid://c7luv0ff5l2n7" path="res://assets/models/scenery/lamppost/lamp_post_0.png" id="2_v008x"]
 [ext_resource type="Texture2D" uid="uid://b01ib5npn05ut" path="res://assets/models/scenery/lamppost/lamp_post_1.png" id="3_0i8uc"]
 [ext_resource type="PackedScene" uid="uid://cu1b0o73useim" path="res://floor_aligning_ray.tscn" id="4_3d35w"]
+[ext_resource type="Script" path="res://scripts/objects/object_stats.gd" id="5_oq1md"]
+[ext_resource type="Script" path="res://scripts/entities/object_hitbox.gd" id="6_25s3w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0aqvq"]
 emission_enabled = true
@@ -292,9 +294,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vst7c")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_epp34"]
+size = Vector3(0.649414, 0.843811, 0.648315)
+
 [node name="lamp" type="Node3D"]
 script = ExtResource("1_pkikh")
-mode = 1
 
 [node name="light" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.07867, 0)
@@ -357,3 +361,16 @@ mesh = SubResource("ArrayMesh_83j3g")
 skeleton = NodePath("")
 
 [node name="floor_aligning_ray" parent="." instance=ExtResource("4_3d35w")]
+
+[node name="stats" type="Node" parent="."]
+script = ExtResource("5_oq1md")
+health_max = 20
+
+[node name="hitbox" type="StaticBody3D" parent="."]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("6_25s3w")
+
+[node name="hitbox_col" type="CollisionShape3D" parent="hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00341797, 4.2402, -0.0151978)
+shape = SubResource("BoxShape3D_epp34")

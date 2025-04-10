@@ -14,3 +14,9 @@ class_name stat_sheet
 @export var intelligence: int = 0
 @export var mind: int = 0
 @export var luck: int = 0
+
+#resistences correspond to 4 elements (kinetic, thermal, shock, holy)
+@export var kinetic_resistance: float
+@export var thermal_resistance: float
+@export var shock_resistance: float
+@export var holy_resistance: float

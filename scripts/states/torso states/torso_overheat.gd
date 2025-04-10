@@ -8,14 +8,18 @@ class_name torso_overheat
 func enter():
 	#biped.model_anim.reload()
 	biped.model_anim.overheat_blend(true)
+	biped.inventory.equipped.venting = true
+	biped.inventory.equipped.overheat_effect.emitting = true
 	#timer = 0
 
 func exit():
 	biped.model_anim.overheat_blend(false)
+	biped.inventory.equipped.venting = false
+	biped.inventory.equipped.overheat_effect.emitting = false
 
 func update(delta):
 	#timer += delta
-	if biped.inventory.equipped.heat < 50:
+	if biped.inventory.equipped.heat < 0:
 		transition_to_state("torso_idle")
 
 func physics_update(delta):

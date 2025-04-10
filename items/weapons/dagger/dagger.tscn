@@ -148,11 +148,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_u8q23")
 
-[node name="dagger" type="RigidBody3D"]
+[node name="dagger" type="RigidBody3D" node_paths=PackedStringArray("hit_cast")]
 script = ExtResource("1_3cbr4")
 damage = 20
 firing_rpm = 100
 stagger_damage = 10
+hit_cast = NodePath("hit_cast")
 item_name = "dagger"
 
 [node name="collider" type="CollisionShape3D" parent="."]
@@ -182,3 +183,7 @@ skeleton = NodePath("")
 transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, 0, -0.0625, 0.0125)
 mesh = SubResource("ArrayMesh_mvcuk")
 skeleton = NodePath("")
+
+[node name="hit_cast" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0739406, 0.0114815)
+target_position = Vector3(0, 0.32, 0)
