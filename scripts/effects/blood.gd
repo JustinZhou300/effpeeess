@@ -17,7 +17,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	timer += delta
 	
-	if timer >= 0.7 * lifetime and !has_made_blood:
+	if timer >= 0.1 * lifetime and !has_made_blood:
 		if make_blood:
 			blood_decal = load("res://blood_decal.tscn").instantiate()
 			GAME.WORLD.SCENERY.add_child(blood_decal)

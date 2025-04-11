@@ -32,7 +32,6 @@ func manage_heat(delta: float):
 		heat -= delta * heat_disipation
 
 func primary_fire():
-	heat += heat_amount
 	if heat > 100:
 		biped.torso_handler.current_state.transition_to_state("torso_overheat")
 	elif battery >= 0:
@@ -43,6 +42,7 @@ func primary_fire():
 	
 
 func fire():
+	heat += heat_amount
 	shoot_hitscan()
 	battery -= battery_usage
 

@@ -298,7 +298,7 @@ func impulse(delta: float):
 	#print("oldvel.y: " + str(oldvel.y))
 	#print("velocity.y: " + str(velocity.y))
 	if oldvel.y < -10 and abs(oldvel.y - entity.velocity.y) > 10 and in_air_timer > 2:
-		damage(abs(oldvel.y - entity.velocity.y),0 , 0, entity.global_position, 0)
+		damage(4*abs(oldvel.y - entity.velocity.y),0 , 0, entity.global_position, 0)
 	oldvel = entity.velocity
 	#else:
 		#if in_air_timer != 0:

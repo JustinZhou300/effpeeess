@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dy7txmqmgm85l"]
+[gd_scene load_steps=4 format=3 uid="uid://dy7txmqmgm85l"]
 
 [ext_resource type="Texture2D" uid="uid://cy88vqx7546q" path="res://assets/textures/particles/blood_decal.png" id="1_wyjdx"]
 [ext_resource type="PackedScene" uid="uid://cu1b0o73useim" path="res://floor_aligning_ray.tscn" id="2_2ieiv"]
+[ext_resource type="Script" path="res://blood_decal.gd" id="2_18rov"]
 
 [node name="blood_decal" type="Decal"]
 size = Vector3(1, 0.1, 1)
 texture_albedo = ExtResource("1_wyjdx")
 cull_mask = 1
+script = ExtResource("2_18rov")
 
 [node name="floor_aligning_ray" parent="." instance=ExtResource("2_2ieiv")]
 target_position = Vector3(0, -3, 0)
