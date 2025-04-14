@@ -246,8 +246,8 @@ shadow_mesh = SubResource("ArrayMesh_aucdg")
 
 [node name="laser_pistol" type="RigidBody3D" node_paths=PackedStringArray("overheat_effect_pos", "firing_location")]
 script = ExtResource("1_nchxh")
-heat_disipation = 20.0
-heat_amount = 20.0
+heat_disipation = 25.0
+heat_amount = 50.0
 overheat_effect_pos = NodePath("model/cylinder")
 damage = 20
 elemental_type = 1

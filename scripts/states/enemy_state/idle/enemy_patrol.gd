@@ -21,13 +21,17 @@ func update(delta):
 
 func physics_update(delta):
 	if active:
+		if entity.alerts.size() != 0:
+			transition_to_state("enemy_alert")
+		elif entity.targets.size() != 0:
+			transition_to_state("enemy_combat")
 		entity.check_view()
 		
 		#if entity.global_position.distance_to(target) < 1:
 			#entity.patrols.remove_at(0)
 			#transition_to_state("enemy_idle")
 		if entity.nav.is_navigation_finished():
-			entity.remove_patrol_point(patrol_node)
+			#entity.remove_patrol_point(patrol_node)
 			transition_to_state("enemy_idle")
 		
 		target_position = entity.nav.get_next_path_position()

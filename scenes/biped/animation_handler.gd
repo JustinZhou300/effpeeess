@@ -7,7 +7,7 @@ var biped
 var desired_leg_angle: float
 var desired_torso_angle: float
 
-@onready var head_pos = $"../Node/hip2/torso/head2/head_a/head"
+@onready var head_pos = $"../Node/hip2/torso/head2/head_a/viewpoint"
 @onready var arm_pos = $"../Node/hip2/torso/arm_r2"
 @onready var gun_loc = $"../Node/hip2/torso/arm_r2/forearm_r2/hand_r/gun_loc_r"
 
@@ -188,7 +188,7 @@ func update_parameters(delta: float):
 	
 	#update_jump
 	set("parameters/jump_blend/blend_amount", jump_blend_amount)
-	set("parameters/jump_space/blend_position", jump_space_amount)
+	set("parameters/jump_space/blend_position", Vector2(jump_space_amount, crouch_blend_amount))
 	
 	
 	

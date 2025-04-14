@@ -9,6 +9,9 @@ var SOUNDS# = $SOUNDS
 var ENVIRONMENT
 var SCENERY
 
+var POWERED = []
+var LIGHTS = []
+
 var loaded = false
 
 

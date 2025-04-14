@@ -92,7 +92,7 @@ func base_item_ready():
 	#throw hit collision ray init
 	item_ray = RayCast3D.new()
 	item_ray.enabled = false
-	item_ray.target_position = Vector3(0, 0, -1)
+	item_ray.target_position = Vector3(0, 0, -0.5)
 	item_ray.set_collision_mask_value(1, false)
 	item_ray.set_collision_mask_value(4, true)
 	add_child(item_ray)

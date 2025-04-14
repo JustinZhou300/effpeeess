@@ -57,7 +57,7 @@ var VELOCITY_GRAVITY
 var playerSens = 0.002 #Sensitivity for the mouselook.
 var direction = Vector3() #the direction the player is facing
 var desired_lean: float = 0
-
+var viewbounds = [ 75.0, 75.0 ]
 
 
 var input_dir
@@ -127,7 +127,7 @@ func _unhandled_input(event):
 		x_val += -event.relative.y * playerSens
 		#playerViewCamera.rotation.x = clamp(playerViewCamera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 		
-		x_val = clamp(x_val, deg_to_rad(-80), deg_to_rad(80))
+		x_val = clamp(x_val, deg_to_rad(-viewbounds[0]), deg_to_rad(viewbounds[1]))
 		
 		playerView.rotation.y = y_val
 		playerViewRay.rotation.x = x_val
@@ -169,7 +169,7 @@ func process_input(delta):
 	look_input_dir = Input.get_vector("LookLeft", "LookRight", "LookUp", "LookDown")#look_input_dir = Input.get_vector("LookLeft", "LookRight", "LookUp", "LookDown")
 	y_val -= look_input_dir.x * 0.1
 	x_val -= look_input_dir.y * 0.05
-	x_val = clamp(x_val, deg_to_rad(-80), deg_to_rad(80))
+	x_val = clamp(x_val, deg_to_rad(-75), deg_to_rad(75))
 	playerView.rotation.y = y_val
 	playerViewRay.rotation.x = x_val
 	#playerViewCamera.rotation.x = x_val

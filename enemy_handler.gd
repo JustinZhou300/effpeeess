@@ -25,6 +25,7 @@ var state_handler
 var collider
 var model_anim
 var view
+var view_ray
 var nav
 
 
@@ -76,6 +77,7 @@ func _ready() -> void:
 	state_handler = $enemy_state
 	model_anim = $model/AnimationTree
 	view = $enemy_view
+	view_ray = $view_ray
 	nav = $nav 
 	collider = $collider
 
@@ -105,9 +107,13 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 	
+	#if targets:
+		#print("angle to target0 : " + str( angle_to_target ))
 
 func _process(delta: float) -> void:
 	update_visuals()
+	
+	
 
 func update_rotation(delta):
 	#print("current: " + str(CURRENT_ROTATION) + ", desired: " + str(DESIRED_ROTATION))
@@ -158,13 +164,21 @@ func getDistAng(targetPOS: Vector3):
 	var ang = Vector2(global_position.x, global_position.z).angle_to_point(Vector2(targetPOS.x, targetPOS.z))
 	return [dist, ang]
 
+var view_angle = 30
+
 func check_view():
 	if view.has_overlapping_bodies():
 		for i in view.get_overlapping_bodies():
-			if !targets.has(i) and i != self: #check if already in targets or is self
-				if i.stats.team != stats.team: #check if same team
-					print("appending: " + str(i))
-					targets.append(i)
+			var angle_to_target = rad_to_deg(Vector3(0, 0, -1).rotated(Vector3(0, 1, 0), global_rotation.y).angle_to(global_position.direction_to(i.global_position)) )
+			#print("angle_to_target" + str(angle_to_target))
+			view_ray.look_at(i.global_position)
+			#print("view_ray.get_collider()" + str(view_ray.get_collider()))
+			#print("i" + str((i)))
+			if view_ray.is_colliding() and view_ray.get_collider() == i:
+				if !targets.has(i) and i != self and angle_to_target < view_angle: #check if already in targets or is self
+					if i.stats.team != stats.team: #check if same team
+						print("appending: " + str(i))
+						targets.append(i)
 
 func add_patrol_point(point):
 	if !patrols.has(point):

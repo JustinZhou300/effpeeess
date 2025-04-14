@@ -145,12 +145,12 @@ mesh = SubResource("ArrayMesh_glnxo")
 skeleton = NodePath("")
 
 [node name="light" type="OmniLight3D" parent="."]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 2.16325e-09, -0.0123723, 0)
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 2.16325e-09, -0.0687488, 0)
 light_energy = 5.0
 omni_range = 20.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="light"]
-transform = Transform3D(2.14917, 0, 0, 0, 0.388751, 0, 0, 0, 1, 3.84165e-09, 0.0439433, 0)
+transform = Transform3D(2.36409, 0, 0, 1.42109e-14, 0.894127, 0, 0, 0, 1, -2.92856e-09, -0.0334988, 0)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_qnx4r")
 

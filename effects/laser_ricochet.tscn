@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwwmiam4fr0pn"]
+
+[ext_resource type="Texture2D" uid="uid://bcx0nvd84tb4j" path="res://assets/textures/particles/circle_sheet.png" id="1_nktdl"]
+[ext_resource type="Script" path="res://scripts/effects/ricochet.gd" id="2_uykn7"]
+
+[sub_resource type="Gradient" id="Gradient_fdkks"]
+offsets = PackedFloat32Array(0, 0.535714, 1)
+colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cu4ry"]
+gradient = SubResource("Gradient_fdkks")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u8l4m"]
+gravity = Vector3(0, 0, 0)
+color_ramp = SubResource("GradientTexture1D_cu4ry")
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mej2"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_nktdl")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+texture_filter = 0
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_sh3xx"]
+material = SubResource("StandardMaterial3D_2mej2")
+size = Vector2(0.1, 0.1)
+
+[node name="laser_ricochet" type="Node3D"]
+
+[node name="spark" type="GPUParticles3D" parent="."]
+lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_u8l4m")
+draw_pass_1 = SubResource("QuadMesh_sh3xx")
+script = ExtResource("2_uykn7")
+
+[node name="light" type="OmniLight3D" parent="."]
+light_color = Color(1, 0, 0, 1)

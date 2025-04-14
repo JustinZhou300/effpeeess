@@ -6,7 +6,7 @@ var melee_time = 1
 
 func enter():
 	timer = 0
-	entity.model_anim.melee_oneshot(1)
+	entity.model_anim.melee_oneshot(randi() % 3)
 	
 
 func exit():

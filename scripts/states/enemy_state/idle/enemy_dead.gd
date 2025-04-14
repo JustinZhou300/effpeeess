@@ -4,8 +4,11 @@ class_name enemy_dead
 
 
 func enter():
-	#entity.model_anim.death_blend(true)
-	entity.model_anim.die()
+	
+	if !entity.stats.is_KO:
+		entity.model_anim.die()
+	else:
+		entity.model_anim.death_blend(true)
 	entity.DESIRED_ROTATION = entity.CURRENT_ROTATION
 	entity.DESIRED_SPEED = 0
 	entity.stats.set_collider(false)

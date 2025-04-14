@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b05tmtdiq4yr4"]
+
+[ext_resource type="Script" path="res://generator.gd" id="1_xh1jx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_en8w4"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n1iva"]
+material = SubResource("StandardMaterial3D_en8w4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3dvbk"]
+
+[node name="Generator" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_xh1jx")
+power_grid = "backup"
+
+[node name="model" type="Node3D" parent="."]
+
+[node name="mesh" type="MeshInstance3D" parent="model"]
+mesh = SubResource("BoxMesh_n1iva")
+skeleton = NodePath("../..")
+
+[node name="interact_shape" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_3dvbk")

@@ -7,8 +7,10 @@ class_name lamp
 	"light_power" : 5,
 	"light_range" : 20,
 	"shadows_bool" : false,
-	"light_colour" : Color(255, 160, 113)
+	"light_colour" : Color(255, 160, 113),
+	"power_grid" : "backup"
 }
+
 
 func _func_godot_apply_properties(properties : Dictionary):
 	entProperties = properties
@@ -18,12 +20,21 @@ func _func_godot_apply_properties(properties : Dictionary):
 
 enum light_mode {normal, flashing, flickering}
 
+var power_grid: String
+
 @export var flash_period = 0.1
 @export var flicker_amount = 10
 var flash_timer = 0
 var light
 @export var mode: light_mode = 0 #0 = normal, 1 = flashing, 2 = flickering
 
+
+var has_init: bool = false
+func init():
+	#this function is like read, but runs when 
+	GAME.WORLD.POWERED.append(self)
+	GAME.WORLD.LIGHTS.append(self)
+	has_init = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,11 +46,14 @@ func _ready() -> void:
 	mode = entProperties.light_mode
 	light.omni_range = entProperties.light_range
 	light.light_color = entProperties.light_colour
-
+	power_grid = entProperties.power_grid
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if !stats.is_dead:
+	if GAME.WORLD.loaded and !has_init:
+		init()
+	
+	if !stats.is_dead and stats.is_powered:
 		if mode != 0:
 			flash_timer += delta
 		if mode == 2:

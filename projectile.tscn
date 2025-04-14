@@ -7,6 +7,8 @@
 transparency = 1
 vertex_color_use_as_albedo = true
 albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_k852j"]
 material = SubResource("StandardMaterial3D_5n532")
@@ -38,13 +40,12 @@ size = Vector2(0.5, 0.5)
 radius = 0.2
 
 [node name="projectile" type="Node3D"]
-visible = false
 script = ExtResource("1_sgnmn")
 colour = Color(1, 0, 0, 1)
-speed = 0.0
-size = 0.0
+speed = 10.0
 
 [node name="model" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00358498, 0.0104454, 0.00458229)
 mesh = SubResource("SphereMesh_k852j")
 
 [node name="effect" type="GPUParticles3D" parent="."]

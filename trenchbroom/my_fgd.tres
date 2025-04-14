@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=29 format=3 uid="uid://cdy5m5oqayyve"]
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=23 format=3 uid="uid://cdy5m5oqayyve"]
 
 [ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_hs2h4"]
 [ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_uk35p"]
@@ -7,9 +7,6 @@
 [ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="4_s50qx"]
 [ext_resource type="PackedScene" uid="uid://dyadpt7uelmry" path="res://light_box.tscn" id="5_k2gu1"]
 [ext_resource type="PackedScene" uid="uid://oxuqm85gh1fj" path="res://objects/pot_plant.tscn" id="6_mc10b"]
-[ext_resource type="PackedScene" uid="uid://bqblubv40c3lh" path="res://objects/lights/lamp.tscn" id="7_dsqb3"]
-[ext_resource type="PackedScene" uid="uid://dda88e81dd5qr" path="res://scenes/scenery/candlealbra.tscn" id="8_w0iv4"]
-[ext_resource type="PackedScene" uid="uid://ci4fl0lphw4u6" path="res://scenes/scenery/candlealbra_wall.tscn" id="9_u41sp"]
 [ext_resource type="PackedScene" uid="uid://e68vifxbhmst" path="res://objects/trees/tree_1.tscn" id="10_4wogi"]
 [ext_resource type="PackedScene" uid="uid://dk2ykp84eur0p" path="res://objects/trees/tree_2.tscn" id="11_vn121"]
 [ext_resource type="PackedScene" uid="uid://ci48qrmjmdriu" path="res://objects/trees/tree_3.tscn" id="12_42akj"]
@@ -49,6 +46,7 @@ class_properties = {
 "light_mode": 0,
 "light_power": 5.0,
 "light_range": 20,
+"power_grid": "backup",
 "shadows_bool": true
 }
 class_property_descriptions = {}
@@ -68,78 +66,6 @@ description = "pot plant"
 func_godot_internal = false
 base_classes = Array[Resource]([])
 class_properties = {}
-class_property_descriptions = {}
-meta_properties = {
-"color": Color(0.8, 0.8, 0.8, 1),
-"size": AABB(-8, -8, -8, 8, 8, 8)
-}
-node_class = ""
-name_property = ""
-
-[sub_resource type="Resource" id="Resource_e5k21"]
-resource_name = "lamp_post"
-script = ExtResource("4_s50qx")
-scene_file = ExtResource("7_dsqb3")
-apply_rotation_on_map_build = true
-classname = "lamp_post"
-description = "a box wth light"
-func_godot_internal = false
-base_classes = Array[Resource]([])
-class_properties = {
-"light_colour": Color(0, 0, 0, 1),
-"light_mode": 0,
-"light_power": 5.0,
-"light_range": 20,
-"shadows_bool": true
-}
-class_property_descriptions = {}
-meta_properties = {
-"color": Color(0.8, 0.8, 0.8, 1),
-"size": AABB(-8, -8, -8, 8, 8, 8)
-}
-node_class = ""
-name_property = ""
-
-[sub_resource type="Resource" id="Resource_sveuj"]
-resource_name = "candlealbra"
-script = ExtResource("4_s50qx")
-scene_file = ExtResource("8_w0iv4")
-apply_rotation_on_map_build = true
-classname = "candlealbra"
-description = "candle on a holder thing."
-func_godot_internal = false
-base_classes = Array[Resource]([])
-class_properties = {
-"light_colour": Color(1, 0.82029, 0.626245, 1),
-"light_mode": 0,
-"light_power": 3.0,
-"light_range": 10,
-"shadows_bool": true
-}
-class_property_descriptions = {}
-meta_properties = {
-"color": Color(0.8, 0.8, 0.8, 1),
-"size": AABB(-8, -8, -8, 8, 8, 8)
-}
-node_class = ""
-name_property = ""
-
-[sub_resource type="Resource" id="Resource_1lwih"]
-resource_name = "candlealbra_wall"
-script = ExtResource("4_s50qx")
-scene_file = ExtResource("9_u41sp")
-apply_rotation_on_map_build = true
-classname = "candlealbra_wall"
-description = "a box wth light"
-func_godot_internal = false
-base_classes = Array[Resource]([])
-class_properties = {
-"light_colour": Color(1, 0.82029, 0.626245, 1),
-"light_mode": 0,
-"light_power": 3.0,
-"light_range": 10,
-"shadows_bool": true
-}
 class_property_descriptions = {}
 meta_properties = {
 "color": Color(0.8, 0.8, 0.8, 1),
@@ -234,6 +160,7 @@ class_properties = {
 "light_mode": 0,
 "light_power": 5.0,
 "light_range": 20,
+"power_grid": "backup",
 "shadows_bool": true
 }
 class_property_descriptions = {}
@@ -269,4 +196,4 @@ export_file = false
 target_map_editor = 1
 fgd_name = "fps"
 base_fgd_files = Array[Resource]([ExtResource("1_hs2h4")])
-entity_definitions = Array[Resource]([ExtResource("2_dicsi"), SubResource("Resource_q1hdi"), SubResource("Resource_a4ooa"), SubResource("Resource_6tl24"), SubResource("Resource_e5k21"), SubResource("Resource_sveuj"), SubResource("Resource_1lwih"), SubResource("Resource_5uxjc"), SubResource("Resource_8myvo"), SubResource("Resource_f5dnr"), SubResource("Resource_lms3x"), SubResource("Resource_uk7yh"), SubResource("Resource_rt4ic")])
+entity_definitions = Array[Resource]([ExtResource("2_dicsi"), SubResource("Resource_q1hdi"), SubResource("Resource_a4ooa"), SubResource("Resource_6tl24"), SubResource("Resource_5uxjc"), SubResource("Resource_8myvo"), SubResource("Resource_f5dnr"), SubResource("Resource_lms3x"), SubResource("Resource_uk7yh"), SubResource("Resource_rt4ic")])

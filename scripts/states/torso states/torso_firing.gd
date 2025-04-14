@@ -5,12 +5,20 @@ var timer: float = 0
 var firing_period #the inverse of rpm
 var weapon #the weapon node
 var has_fired_again: bool = 0
+var has_primary_fired_again: bool = 0
+var has_secondary_fired_again: bool = 0
+
+
+
 var burst_timer: float = 0
 
 func enter():
 	timer = 0 
 	biped.model_anim.fire_weapon()
 	has_fired_again = false
+	has_primary_fired_again = false
+	has_secondary_fired_again = false
+	
 	weapon = biped.inventory.equipped
 	firing_period = (1 / float(weapon.firing_rpm)) * 60
 	biped.model_anim.set_animation_speed("firing", firing_period)
@@ -35,7 +43,9 @@ func update(delta):
 		
 	else:
 		if Input.is_action_just_pressed("Primary_Fire"):
-			has_fired_again = true
+			has_primary_fired_again = true
+		elif Input.is_action_just_pressed("Secondary_Fire"):
+			has_secondary_fired_again = true
 		
 		timer += delta
 		if timer >= firing_period:
@@ -43,8 +53,10 @@ func update(delta):
 				transition_to_state("torso_walled")
 			elif biped.stats.is_sprinting:
 				transition_to_state("torso_sprint")
-			elif has_fired_again and biped.inventory.equipped.current_ammo > 0:
+			elif has_primary_fired_again:# and biped.inventory.equipped.current_ammo > 0:
 				biped.inventory.equipped.primary_fire()
+			elif has_secondary_fired_again:
+				biped.inventory.equipped.secondary_fire()
 			elif biped.inventory.equipped.is_automatic and Input.is_action_pressed("Primary_Fire")and biped.inventory.equipped.current_ammo > 0:
 				transition_to_state("torso_firing")
 			else:

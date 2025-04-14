@@ -1,17 +1,22 @@
 extends AnimationTree
 
-@onready var hitbox_locs = [$"../Node/hip2/torso/head2/head_a/head_hitbox",
+@onready var hitbox_locs2 = [$"../Node/hip2/torso/head2/head_a/head_hitbox",
 $"../Node/hip2/torso/chest_hitbox",
 $"../Node/hip2/crotch/hip_hitbox",
 $"../Node/hip2/torso/arm_l2/arm_hitbox",
 $"../Node/hip2/torso/arm_l2/forearm_l2/forearm_hitbox"
 ]
+@export var glow_colour: Color = Color(0, 0, 0)
+@export var glow_meshes: Array[MeshInstance3D] = []
+@export var hitbox_locs: Array[MeshInstance3D]
+@export var critbox_locs: Array[MeshInstance3D]
+@export var shitbox_locs: Array[MeshInstance3D]
 
 #the points that give crit damage
-@onready var critbox_locs = [$"../Node/hip2/crotch/crit_hitbox"]
+@onready var critbox_locs2 = [$"../Node/hip2/crotch/crit_hitbox"]
 
 #the points that are resistent damage
-@onready var shitbox_locs = [$"../Node/hip2/crotch/leg_r/thigh_hitbox_r",
+@onready var shitbox_locs2 = [$"../Node/hip2/crotch/leg_r/thigh_hitbox_r",
 $"../Node/hip2/crotch/leg_r/calf_r/calf_hitbox_r",
 $"../Node/hip2/crotch/leg_l/thigh_hitbox_l",
 $"../Node/hip2/crotch/leg_l/calf_l/calf_hitbox_l"]
@@ -27,6 +32,7 @@ func create_hitboxes():
 			i.create_trimesh_collision()
 			i.get_child(0, false).set_collision_layer_value(1, false)
 			i.get_child(0, false).set_collision_layer_value(4, true)
+			i.get_child(0, false).set_collision_mask_value(1, false)
 			i.get_child(0, false).set_script(hitbox_script)
 			i.get_child(0, false).entity = entity
 			i.get_child(0, false).hitbox_type = 0
@@ -36,6 +42,7 @@ func create_hitboxes():
 			i.create_trimesh_collision()
 			i.get_child(0, false).set_collision_layer_value(1, false)
 			i.get_child(0, false).set_collision_layer_value(4, true)
+			i.get_child(0, false).set_collision_mask_value(1, false)
 			i.get_child(0, false).set_script(hitbox_script)
 			i.get_child(0, false).entity = entity
 			i.get_child(0, false).hitbox_type = 1
@@ -45,6 +52,7 @@ func create_hitboxes():
 			i.create_trimesh_collision()
 			i.get_child(0, false).set_collision_layer_value(1, false)
 			i.get_child(0, false).set_collision_layer_value(4, true)
+			i.get_child(0, false).set_collision_mask_value(1, false)
 			i.get_child(0, false).set_script(hitbox_script)
 			i.get_child(0, false).entity = entity
 			i.get_child(0, false).hitbox_type = 2
@@ -52,7 +60,14 @@ func create_hitboxes():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	create_hitboxes()
+	update_model_lights()
 
+func update_model_lights():
+	pass
+	#if glow_meshes != []:
+		#for i in glow_meshes:
+			#i.mesh.material.emission_enabled = true
+			#i.mesh.material.emission = glow_colour
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -101,6 +116,7 @@ func die():
 	
 
 func melee_oneshot(number: int):
+	number += 1
 	if number == 1:
 		set("parameters/melee_1/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	elif number == 2:

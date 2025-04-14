@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnjeetnugbgnh"]
+[gd_scene load_steps=8 format=3 uid="uid://cnjeetnugbgnh"]
 
 [ext_resource type="Texture2D" uid="uid://bcx0nvd84tb4j" path="res://assets/textures/particles/circle_sheet.png" id="1_b5kfq"]
+[ext_resource type="Script" path="res://scripts/effects/ricochet.gd" id="2_eek6h"]
 
 [sub_resource type="Gradient" id="Gradient_fdkks"]
 offsets = PackedFloat32Array(0, 0.535714, 1)
@@ -36,3 +37,4 @@ size = Vector2(0.1, 0.1)
 lifetime = 0.2
 process_material = SubResource("ParticleProcessMaterial_u8l4m")
 draw_pass_1 = SubResource("QuadMesh_sh3xx")
+script = ExtResource("2_eek6h")

@@ -144,13 +144,13 @@ mesh = ExtResource("6_juoey")
 skeleton = NodePath("")
 
 [node name="light_1" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_dead"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.125, 0, -1.09279e-09)
 light_color = Color(1, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
 
 [node name="light_2" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_dead"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.125, 0, 1.09279e-09)
 light_color = Color(1, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
@@ -161,13 +161,13 @@ mesh = ExtResource("7_2yvhq")
 skeleton = NodePath("")
 
 [node name="light_1" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_functional"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.125, 0, -1.09279e-09)
 light_color = Color(0, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
 
 [node name="light_2" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_functional"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.125, 0, 1.09279e-09)
 light_color = Color(0, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
@@ -179,13 +179,13 @@ mesh = ExtResource("8_acfv7")
 skeleton = NodePath("")
 
 [node name="light_1" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_locked"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.125, 0, -1.09279e-09)
 light_color = Color(0, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
 
 [node name="light_2" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_locked"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.125, 0, 1.09279e-09)
 light_color = Color(0, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
@@ -197,13 +197,13 @@ mesh = ExtResource("9_kdpje")
 skeleton = NodePath("")
 
 [node name="light_1" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_broken"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.125, 0, -1.09279e-09)
 light_color = Color(1, 0, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
 
 [node name="light_2" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_broken"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.125, 0, 1.09279e-09)
 light_color = Color(1, 0, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
@@ -234,8 +234,8 @@ shape = SubResource("BoxShape3D_f5fkj")
 [node name="floor_aligning_ray" parent="." instance=ExtResource("13_2moa5")]
 
 [node name="nav_link" type="NavigationLink3D" parent="."]
-start_position = Vector3(0, 0, 1)
-end_position = Vector3(0, 0, -1)
+start_position = Vector3(0, 0, 1.5)
+end_position = Vector3(0, 0, -1.5)
 
 [node name="hitbox" type="StaticBody3D" parent="."]
 collision_layer = 8

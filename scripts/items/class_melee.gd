@@ -53,6 +53,7 @@ func _ready() -> void:
 func throw_hit():
 	item_ray.get_collider().entity.stats.damage(damage, 0, linear_velocity.length() * mass, global_position, item_ray.get_collider().hitbox_type)
 	linear_velocity = -linear_velocity/3
+	print("hitbox: " + str(item_ray.get_collider()) + ", entity: " + str(item_ray.get_collider().entity))
 
 func _process(delta: float) -> void:
 	pass

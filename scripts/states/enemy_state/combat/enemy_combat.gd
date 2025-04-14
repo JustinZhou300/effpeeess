@@ -18,7 +18,11 @@ func physics_update(delta):
 	if entity.targets == []:
 		transition_to_state("enemy_idle")
 	
+	
+	#if out of range, approach
 	if entity.targets[0].global_position.distance_to(entity.global_position) > 1:
 		transition_to_state("enemy_approach")
+	
+	#else melee
 	else:
 		transition_to_state("enemy_melee")

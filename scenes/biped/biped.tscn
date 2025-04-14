@@ -94,6 +94,7 @@ state_crouch = "leg_slide"
 [node name="leg_sprint_airbourne" type="Node" parent="leg_state"]
 script = ExtResource("9_ftooo")
 state_no_movement = "leg_airbourne"
+state_crouch = "leg_crouch_airbourne"
 
 [node name="leg_crouch_airbourne" type="Node" parent="leg_state"]
 script = ExtResource("10_tbto0")
@@ -169,7 +170,6 @@ shape = SubResource("CapsuleShape3D_yyo8o")
 
 [node name="crouch_col" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
-visible = false
 shape = SubResource("CapsuleShape3D_momvj")
 
 [node name="grounded_ray" type="RayCast3D" parent="."]
