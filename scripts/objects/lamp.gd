@@ -8,7 +8,8 @@ class_name lamp
 	"light_range" : 20,
 	"shadows_bool" : false,
 	"light_colour" : Color(255, 160, 113),
-	"power_grid" : "backup"
+	"power_grid" : "backup",
+	"starting_state": "lamp_on"
 }
 
 
@@ -21,7 +22,8 @@ func _func_godot_apply_properties(properties : Dictionary):
 enum light_mode {normal, flashing, flickering}
 
 var power_grid: String
-
+var starting_state: String
+@onready var state_handler = $lamp_state
 @export var flash_period = 0.1
 @export var flicker_amount = 10
 var flash_timer = 0
@@ -31,7 +33,7 @@ var light
 
 var has_init: bool = false
 func init():
-	#this function is like read, but runs when 
+	#this function is like ready, but runs when world is loaded
 	GAME.WORLD.POWERED.append(self)
 	GAME.WORLD.LIGHTS.append(self)
 	has_init = true
@@ -47,49 +49,50 @@ func _ready() -> void:
 	light.omni_range = entProperties.light_range
 	light.light_color = entProperties.light_colour
 	power_grid = entProperties.power_grid
+	starting_state = entProperties.starting_state
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if GAME.WORLD.loaded and !has_init:
 		init()
 	
-	if !stats.is_dead and stats.is_powered:
-		if mode != 0:
-			flash_timer += delta
-		if mode == 2:
-			flicker()
-		elif mode == 1:
-			flash()
-		elif mode == 0:
-			normal()
-		else:
-			print("invalid light mode")
-	else:
-		broken()
+	#if !stats.is_dead and stats.is_powered:
+		#if mode != 0:
+			#flash_timer += delta
+		#if mode == 2:
+			#flicker()
+		#elif mode == 1:
+			#flash()
+		#elif mode == 0:
+			#normal()
+		#else:
+			#print("invalid light mode")
+	#else:
+		#broken()
 
-func flicker():
-	var roll = randi_range(0,flicker_amount) #whether to turn off this frame
-	if flash_timer >= flash_period and roll == 0:
-		if light.visible == true:
-			light.visible = false
-		elif flash_timer >= flash_period:
-			light.visible = true
-		else:
-			light.visible = true
-		flash_timer = 0
-
-func flash():
-	if flash_timer >= flash_period:
-		if light.visible == true:
-			light.visible = false
-		else:
-			light.visible = true
-		flash_timer = 0
-
-func normal():
-	if light.visible == false:
-		light.visible = true
-
-func broken():
-	if light.visible != false:
-		light.visible = false
+#func flicker():
+	#var roll = randi_range(0,flicker_amount) #whether to turn off this frame
+	#if flash_timer >= flash_period and roll == 0:
+		#if light.visible == true:
+			#light.visible = false
+		#elif flash_timer >= flash_period:
+			#light.visible = true
+		#else:
+			#light.visible = true
+		#flash_timer = 0
+#
+#func flash():
+	#if flash_timer >= flash_period:
+		#if light.visible == true:
+			#light.visible = false
+		#else:
+			#light.visible = true
+		#flash_timer = 0
+#
+#func normal():
+	#if light.visible == false:
+		#light.visible = true
+#
+#func broken():
+	#if light.visible != false:
+		#light.visible = false

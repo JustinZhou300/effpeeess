@@ -3,16 +3,20 @@ class_name weapon_melee
 
 enum animation_sets {one_handed2, two_handed, one_handed, flashlight_handed, melee}
 
+enum element {kinetic, thermal, shock, holy}
+
 @export_subgroup("Weapon Parameters")
 @export var animation_set: animation_sets = 4
 @export var damage: int = 0
+@export var elemental_type: element = 0
 @export var firing_rpm: int = 200
 @export var stagger_damage: int = 0
 @export var has_animations = false
 @export var swings_num = 3
 @export var tracer_colour: Color
 
-@export var hit_cast: RayCast3D
+
+@export var damage_ray: RayCast3D
 
 #weapon variables
 var current_ammo = 0
@@ -62,6 +66,13 @@ func _process(delta: float) -> void:
 func primary_fire():
 	biped.torso_handler.current_state.transition_to_state("torso_swing")
 	
+	
+
+func swing():
+	if biped.torso_handler.current_state.name != "torso_swing":
+		biped.torso_handler.current_state.swing_anim = 0
+	else:
+		biped.torso_handler.current_state.swing_anim += 1
 
 func secondary_fire():
 	pass

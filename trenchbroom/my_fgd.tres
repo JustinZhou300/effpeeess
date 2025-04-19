@@ -47,7 +47,8 @@ class_properties = {
 "light_power": 5.0,
 "light_range": 20,
 "power_grid": "backup",
-"shadows_bool": true
+"shadows_bool": true,
+"starting_state": "lamp_on"
 }
 class_property_descriptions = {}
 meta_properties = {
@@ -161,7 +162,8 @@ class_properties = {
 "light_power": 5.0,
 "light_range": 20,
 "power_grid": "backup",
-"shadows_bool": true
+"shadows_bool": true,
+"starting_state": "lamp_on"
 }
 class_property_descriptions = {}
 meta_properties = {
@@ -181,7 +183,10 @@ description = "its a door
 "
 func_godot_internal = false
 base_classes = Array[Resource]([])
-class_properties = {}
+class_properties = {
+"power_grid": "backup",
+"starting_state": "door_closed"
+}
 class_property_descriptions = {}
 meta_properties = {
 "color": Color(0.8, 0.8, 0.8, 1),

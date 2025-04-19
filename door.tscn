@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bkec0cvtiraio"]
+[gd_scene load_steps=38 format=3 uid="uid://bkec0cvtiraio"]
 
 [ext_resource type="Script" path="res://door.gd" id="1_ig1s2"]
 [ext_resource type="ArrayMesh" uid="uid://cw6tb5objuwip" path="res://assets/models/scenery/door/mesh/blockbench_export_mesh.res" id="2_qn0c6"]
@@ -15,6 +15,13 @@
 [ext_resource type="PackedScene" uid="uid://cu1b0o73useim" path="res://floor_aligning_ray.tscn" id="13_2moa5"]
 [ext_resource type="Script" path="res://scripts/entities/object_hitbox.gd" id="14_yofj3"]
 [ext_resource type="Script" path="res://scripts/objects/object_stats.gd" id="15_2ehgf"]
+[ext_resource type="Script" path="res://scripts/states/door_state_handler.gd" id="16_43uij"]
+[ext_resource type="Script" path="res://scripts/states/door_state/door_spawn.gd" id="17_p602i"]
+[ext_resource type="Script" path="res://scripts/states/door_state/door_broken.gd" id="18_iq38t"]
+[ext_resource type="Script" path="res://scripts/states/door_state/door_closed.gd" id="19_o80xj"]
+[ext_resource type="Script" path="res://scripts/states/door_state/door_dead.gd" id="20_1uojx"]
+[ext_resource type="Script" path="res://scripts/states/door_state/door_locked.gd" id="21_kmj5u"]
+[ext_resource type="Script" path="res://scripts/states/door_state/door_open.gd" id="22_j00s8"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fkosw"]
 data = PackedVector3Array(0.0313, 0.25, -0.125, 0.0313, -0.25, 0.125, 0.0313, 0.25, 0.125, 0.0313, 0.25, -0.125, 0.0313, -0.25, -0.125, 0.0313, -0.25, 0.125, -0.0313, -0.25, 0.125, -0.0313, 0.25, -0.125, -0.0313, 0.25, 0.125, -0.0313, -0.25, 0.125, -0.0313, -0.25, -0.125, -0.0313, 0.25, -0.125, -0.0313, 0.25, 0.125, 0.0313, 0.25, -0.125, 0.0313, 0.25, 0.125, -0.0313, 0.25, 0.125, -0.0313, 0.25, -0.125, 0.0313, 0.25, -0.125, 0.0313, -0.25, -0.125, -0.0313, -0.25, 0.125, 0.0313, -0.25, 0.125, 0.0313, -0.25, -0.125, -0.0313, -0.25, -0.125, -0.0313, -0.25, 0.125, 0.0313, -0.25, 0.125, -0.0313, 0.25, 0.125, 0.0313, 0.25, 0.125, 0.0313, -0.25, 0.125, -0.0313, -0.25, 0.125, -0.0313, 0.25, 0.125, -0.0313, 0.25, -0.125, 0.0313, -0.25, -0.125, 0.0313, 0.25, -0.125, -0.0313, 0.25, -0.125, -0.0313, -0.25, -0.125, 0.0313, -0.25, -0.125)
@@ -144,13 +151,13 @@ mesh = ExtResource("6_juoey")
 skeleton = NodePath("")
 
 [node name="light_1" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_dead"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.125, 0, -1.09279e-09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0, -1.09279e-09)
 light_color = Color(1, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
 
 [node name="light_2" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_dead"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.125, 0, 1.09279e-09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0, 1.09279e-09)
 light_color = Color(1, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
@@ -161,13 +168,13 @@ mesh = ExtResource("7_2yvhq")
 skeleton = NodePath("")
 
 [node name="light_1" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_functional"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.125, 0, -1.09279e-09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0, -1.09279e-09)
 light_color = Color(0, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
 
 [node name="light_2" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_functional"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.125, 0, 1.09279e-09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0, 1.09279e-09)
 light_color = Color(0, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
@@ -179,13 +186,13 @@ mesh = ExtResource("8_acfv7")
 skeleton = NodePath("")
 
 [node name="light_1" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_locked"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.125, 0, -1.09279e-09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0, -1.09279e-09)
 light_color = Color(0, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
 
 [node name="light_2" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_locked"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.125, 0, 1.09279e-09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0, 1.09279e-09)
 light_color = Color(0, 1, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
@@ -197,13 +204,13 @@ mesh = ExtResource("9_kdpje")
 skeleton = NodePath("")
 
 [node name="light_1" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_broken"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.125, 0, -1.09279e-09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0, -1.09279e-09)
 light_color = Color(1, 0, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
 
 [node name="light_2" type="OmniLight3D" parent="model/Node/door/bottom_door/screen_broken"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.125, 0, 1.09279e-09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0, 1.09279e-09)
 light_color = Color(1, 0, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
@@ -249,3 +256,25 @@ shape = SubResource("BoxShape3D_j6sh7")
 [node name="stats" type="Node" parent="."]
 script = ExtResource("15_2ehgf")
 health_max = 20
+
+[node name="door_state" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("16_43uij")
+initial_state = NodePath("door_spawn")
+
+[node name="door_spawn" type="Node" parent="door_state"]
+script = ExtResource("17_p602i")
+
+[node name="door_broken" type="Node" parent="door_state"]
+script = ExtResource("18_iq38t")
+
+[node name="door_closed" type="Node" parent="door_state"]
+script = ExtResource("19_o80xj")
+
+[node name="door_dead" type="Node" parent="door_state"]
+script = ExtResource("20_1uojx")
+
+[node name="door_locked" type="Node" parent="door_state"]
+script = ExtResource("21_kmj5u")
+
+[node name="door_open" type="Node" parent="door_state"]
+script = ExtResource("22_j00s8")

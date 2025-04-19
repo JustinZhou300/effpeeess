@@ -1,131 +1,133 @@
-[gd_scene load_steps=261 format=3 uid="uid://bnp1uwq0n1qyi"]
+[gd_scene load_steps=267 format=3 uid="uid://bnp1uwq0n1qyi"]
 
 [ext_resource type="Script" path="res://scenes/biped/animation_handler.gd" id="1_0888q"]
-[ext_resource type="ArrayMesh" uid="uid://cvjbq41r3rubu" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh.res" id="2_ufgpm"]
-[ext_resource type="ArrayMesh" uid="uid://b6im03267ikys" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh2.res" id="3_bqdts"]
-[ext_resource type="ArrayMesh" uid="uid://cua1veeowg6se" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh3.res" id="4_hhmhg"]
-[ext_resource type="ArrayMesh" uid="uid://g3727oygvc6m" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh4.res" id="5_w1is6"]
-[ext_resource type="ArrayMesh" uid="uid://drffj4c1yyo11" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh5.res" id="6_mqv84"]
-[ext_resource type="ArrayMesh" uid="uid://ijx8luvuj80i" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh6.res" id="7_mfw8x"]
-[ext_resource type="ArrayMesh" uid="uid://bwn70qbojb5db" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh7.res" id="8_7b0ao"]
-[ext_resource type="ArrayMesh" uid="uid://ip2amer7eq38" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh8.res" id="9_mkouo"]
-[ext_resource type="ArrayMesh" uid="uid://bn41blyg7s3ub" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh9.res" id="10_jg32e"]
-[ext_resource type="ArrayMesh" uid="uid://dvrioir01vl4f" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh10.res" id="11_unsig"]
-[ext_resource type="ArrayMesh" uid="uid://bun2jttnh7qf4" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh11.res" id="12_y3a83"]
-[ext_resource type="ArrayMesh" uid="uid://j3drohrk4y0k" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh12.res" id="13_hvm8l"]
-[ext_resource type="ArrayMesh" uid="uid://dhhq8yyli7woh" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh13.res" id="14_5f3a3"]
-[ext_resource type="ArrayMesh" uid="uid://b4pu87tr1hakb" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh14.res" id="15_cwf3g"]
-[ext_resource type="ArrayMesh" uid="uid://c0dwilvkyl2j4" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh15.res" id="16_ip5yj"]
-[ext_resource type="ArrayMesh" uid="uid://caq7jcy8b4nby" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh16.res" id="17_1bme7"]
-[ext_resource type="ArrayMesh" uid="uid://ryqsa58525fn" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh17.res" id="18_4s7l5"]
-[ext_resource type="ArrayMesh" uid="uid://c31gpbtgv1ljg" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh18.res" id="19_rhb6h"]
-[ext_resource type="ArrayMesh" uid="uid://dydl1qwfiljix" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh19.res" id="20_gwfky"]
-[ext_resource type="ArrayMesh" uid="uid://bxhekw4fv4v27" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh20.res" id="21_txnmh"]
-[ext_resource type="ArrayMesh" uid="uid://c44ohs8ms0srq" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh21.res" id="22_stymm"]
-[ext_resource type="ArrayMesh" uid="uid://dpqxlsptyfc34" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh22.res" id="23_t606f"]
-[ext_resource type="ArrayMesh" uid="uid://bh3022swnjipl" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh23.res" id="24_vkchp"]
-[ext_resource type="ArrayMesh" uid="uid://cjbipisy2g4v" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh24.res" id="25_arn7i"]
-[ext_resource type="ArrayMesh" uid="uid://ensobr2oufmc" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh25.res" id="26_lv3ld"]
-[ext_resource type="ArrayMesh" uid="uid://bu4eptyj7fh23" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh26.res" id="27_671me"]
-[ext_resource type="ArrayMesh" uid="uid://be347vo4eswjr" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh27.res" id="28_u8ngr"]
-[ext_resource type="ArrayMesh" uid="uid://che684l3dyxlm" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh28.res" id="29_u0tp0"]
-[ext_resource type="Animation" uid="uid://cpkgxpj6p8prr" path="res://assets/models/character/olivie/anim/walk.res" id="29_vno85"]
-[ext_resource type="ArrayMesh" uid="uid://c7qys80nnlrcy" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh29.res" id="30_21doh"]
-[ext_resource type="Animation" uid="uid://durmbgsnno4yb" path="res://assets/models/character/olivie/anim/torso_OH_idle.res" id="30_k21yj"]
-[ext_resource type="ArrayMesh" uid="uid://ct7x8ghkoiy03" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh30.res" id="31_ap2i7"]
-[ext_resource type="ArrayMesh" uid="uid://c30uwy05vv1e0" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh31.res" id="32_a6ak2"]
-[ext_resource type="Animation" uid="uid://bx663bkji8vqw" path="res://assets/models/character/olivie/anim/torso_OH_reload.res" id="32_kr0g1"]
-[ext_resource type="Animation" uid="uid://dk3uwo2sii6wh" path="res://assets/models/character/olivie/anim/torso_OH_sprint.res" id="33_8v4pa"]
-[ext_resource type="ArrayMesh" uid="uid://xyptu7vuwqe4" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh32.res" id="33_c87k4"]
-[ext_resource type="ArrayMesh" uid="uid://d3caf2lok26b7" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh33.res" id="34_are2e"]
-[ext_resource type="Animation" uid="uid://c5vwxuvel5msn" path="res://assets/models/character/olivie/anim/torso_OH_stow.res" id="34_jfqae"]
-[ext_resource type="ArrayMesh" uid="uid://dh82a1t3xgvda" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh34.res" id="35_fvb77"]
-[ext_resource type="Animation" uid="uid://dywvv4txjehuv" path="res://assets/models/character/olivie/anim/torso_OH_draw.res" id="35_lovgf"]
-[ext_resource type="ArrayMesh" uid="uid://851eyax6k1ob" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh35.res" id="36_bekub"]
-[ext_resource type="Animation" uid="uid://b0isbbx65m6em" path="res://assets/models/character/olivie/anim/torso_OH_fireold.res" id="36_mb557"]
-[ext_resource type="Animation" uid="uid://p8ba2c50brsy" path="res://assets/models/character/olivie/anim/torso_OH_fire.res" id="36_x0yyi"]
-[ext_resource type="ArrayMesh" uid="uid://5h5grshsekga" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh36.res" id="37_6el7f"]
-[ext_resource type="Animation" uid="uid://dp6jg4dtivudk" path="res://assets/models/character/olivie/anim/torso_OH_walled.res" id="38_dog03"]
-[ext_resource type="ArrayMesh" uid="uid://bemipgk1bvw3f" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh37.res" id="38_vrc0x"]
-[ext_resource type="ArrayMesh" uid="uid://baa0od5lei1ku" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh38.res" id="39_j60pp"]
-[ext_resource type="ArrayMesh" uid="uid://ccfux8ernqk3i" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh39.res" id="40_2sb2g"]
-[ext_resource type="Animation" uid="uid://drhjgkhgw7u3u" path="res://assets/models/character/olivie/anim/torso_OH_punch2.res" id="41_comr4"]
-[ext_resource type="Animation" uid="uid://hds4n7c4oggo" path="res://assets/models/character/olivie/anim/torso_turn_right.res" id="41_f2x3f"]
-[ext_resource type="ArrayMesh" uid="uid://bvgxyk8n3n68h" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh40.res" id="41_kp00a"]
-[ext_resource type="Animation" uid="uid://xaxweexw2nx4" path="res://assets/models/character/olivie/anim/torso_turn_left.res" id="42_7wwjl"]
-[ext_resource type="ArrayMesh" uid="uid://dv0ng8hl5fvep" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh41.res" id="42_svvjk"]
-[ext_resource type="Animation" uid="uid://ccig4rp5rq6gb" path="res://assets/models/character/olivie/anim/torso_OH_punch.res" id="43_kkqjk"]
-[ext_resource type="ArrayMesh" uid="uid://bagc7srb0uydp" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh42.res" id="43_nvr8w"]
-[ext_resource type="Animation" uid="uid://c6eug7hq51juk" path="res://assets/models/character/olivie/anim/idle.res" id="43_wbheg"]
-[ext_resource type="Animation" uid="uid://474aqlubi5v1" path="res://assets/models/character/olivie/anim/torso_OH_idle2.res" id="44_3kpcs"]
-[ext_resource type="Animation" uid="uid://dcjbnklylu6p6" path="res://assets/models/character/olivie/anim/no_anim.res" id="44_6vbdf"]
-[ext_resource type="Animation" uid="uid://c87sqip7wcjbf" path="res://assets/models/character/olivie/anim/torso_OH_reload4.res" id="45_ffrky"]
-[ext_resource type="Animation" uid="uid://fb7vvdswj1pi" path="res://assets/models/character/olivie/anim/torso_look_down.res" id="45_i0vpm"]
-[ext_resource type="Animation" uid="uid://mji5prc31kdk" path="res://assets/models/character/olivie/anim/torso_OH_punch_new.res" id="45_ovm2f"]
-[ext_resource type="Animation" uid="uid://dvlhog7v0i0kl" path="res://assets/models/character/olivie/anim/torso_OH_reload2.res" id="46_gd5i1"]
-[ext_resource type="Animation" uid="uid://cslxrw6gn8ywg" path="res://assets/models/character/olivie/anim/torso_look_up.res" id="46_isjr5"]
-[ext_resource type="Animation" uid="uid://dqjujbslxmxiy" path="res://assets/models/character/olivie/anim/torso_OH_punch_new_2.res" id="47_pcocm"]
-[ext_resource type="Animation" uid="uid://i4kls70sjkti" path="res://assets/models/character/olivie/anim/torso_OH_reload3.res" id="47_pwn4q"]
-[ext_resource type="Animation" uid="uid://bwv0c4jn2e8nm" path="res://assets/models/character/olivie/anim/jump.res" id="47_qkar7"]
-[ext_resource type="Animation" uid="uid://ccxjgf31p0ioi" path="res://assets/models/character/olivie/anim/falling.res" id="48_j1hho"]
-[ext_resource type="Animation" uid="uid://btr5itkp8hebj" path="res://assets/models/character/olivie/anim/slide.res" id="49_p6o8c"]
-[ext_resource type="Animation" uid="uid://b2n2xejrwb2mp" path="res://assets/models/character/olivie/anim/torso_OH_sprint2.res" id="49_qdrnf"]
-[ext_resource type="Animation" uid="uid://clo2ev24b7c3u" path="res://assets/models/character/olivie/anim/slide_2.res" id="50_e48qi"]
-[ext_resource type="Animation" uid="uid://dulvx7mc1u0gj" path="res://assets/models/character/olivie/anim/crouch.res" id="51_b8jvl"]
-[ext_resource type="Animation" uid="uid://cb5dkxwpu3r3x" path="res://assets/models/character/olivie/anim/torso_OH_stow2.res" id="51_m86jd"]
-[ext_resource type="Animation" uid="uid://coyygofejjwmu" path="res://assets/models/character/olivie/anim/crouch_walk.res" id="52_yp56y"]
-[ext_resource type="Animation" uid="uid://di5r1x613j55h" path="res://assets/models/character/olivie/anim/torso_OH_draw2.res" id="53_8ls2k"]
-[ext_resource type="Animation" uid="uid://cji7jv3p7aekf" path="res://assets/models/character/olivie/anim/arms_mantle.res" id="53_hsbpk"]
-[ext_resource type="Animation" uid="uid://dplbcj4cc4l5u" path="res://assets/models/character/olivie/anim/run.res" id="54_8vndw"]
-[ext_resource type="Animation" uid="uid://cnudwv20fieqm" path="res://assets/models/character/olivie/anim/leg_turn_right.res" id="55_n0ir6"]
-[ext_resource type="Animation" uid="uid://i3mplyw0uya8" path="res://assets/models/character/olivie/anim/torso_OH_fire2.res" id="55_r3v2a"]
-[ext_resource type="Animation" uid="uid://btmrnk2vxlwgc" path="res://assets/models/character/olivie/anim/leg_turn_left.res" id="56_k0ma4"]
-[ext_resource type="Animation" uid="uid://stun1krk4rvm" path="res://assets/models/character/olivie/anim/torso_OH_overheat.res" id="57_hoyl2"]
-[ext_resource type="Animation" uid="uid://ccbcwgl0hfrex" path="res://assets/models/character/olivie/anim/head_look_down.res" id="57_u52nq"]
-[ext_resource type="Animation" uid="uid://bd74twinm37w6" path="res://assets/models/character/olivie/anim/torso_OH_overheat2.res" id="58_3v5dn"]
-[ext_resource type="Animation" uid="uid://dtp42f84ygux" path="res://assets/models/character/olivie/anim/head_look_up.res" id="58_rsdnb"]
-[ext_resource type="Animation" uid="uid://cejhgby3xcwnb" path="res://assets/models/character/olivie/anim/torso_lean_left.res" id="59_16rvl"]
-[ext_resource type="Animation" uid="uid://c6elhc5a34anl" path="res://assets/models/character/olivie/anim/torso_lean_right.res" id="60_m1o5r"]
-[ext_resource type="Animation" uid="uid://dj1pwugo6lhmt" path="res://assets/models/character/olivie/anim/torso_OH_walled2.res" id="60_p7ctl"]
-[ext_resource type="Animation" uid="uid://cm8paiqq8rcto" path="res://assets/models/character/olivie/anim/torso_unarmed_idle.res" id="61_35utn"]
-[ext_resource type="Animation" uid="uid://bcccc73g18l0" path="res://assets/models/character/olivie/anim/torso_TH_idle.res" id="61_fdboa"]
-[ext_resource type="Animation" uid="uid://cvemtxl2jj210" path="res://assets/models/character/olivie/anim/torso_unarmed_punch_left.res" id="62_eecc0"]
-[ext_resource type="Animation" uid="uid://dit74ghh5qde2" path="res://assets/models/character/olivie/anim/torso_TH_stow.res" id="63_hq5qq"]
-[ext_resource type="Animation" uid="uid://5npagvyddnt8" path="res://assets/models/character/olivie/anim/torso_unarmed_punch_right.res" id="63_pjws6"]
-[ext_resource type="Animation" uid="uid://rdbbqgdfwow7" path="res://assets/models/character/olivie/anim/torso_TH_draw.res" id="64_e8fen"]
-[ext_resource type="Animation" uid="uid://bfm1hu8q0iecb" path="res://assets/models/character/olivie/anim/torso_TH_sprint.res" id="65_oh4gc"]
-[ext_resource type="Animation" uid="uid://dm61cx63tvn8b" path="res://assets/models/character/olivie/anim/torso_TH_walled.res" id="66_8eljn"]
-[ext_resource type="Animation" uid="uid://llk508husahm" path="res://assets/models/character/olivie/anim/torso_TH_firing.res" id="67_5cycx"]
-[ext_resource type="Animation" uid="uid://q083xlf6leio" path="res://assets/models/character/olivie/anim/torso_TH_reload.res" id="68_qh5xd"]
-[ext_resource type="Animation" uid="uid://ccdigi7602nr6" path="res://assets/models/character/olivie/anim/crouch_jump.res" id="74_v4wue"]
-[ext_resource type="Animation" uid="uid://cu5bp02odtleu" path="res://assets/models/character/olivie/anim/torso_OH_throw2.res" id="78_kp1li"]
-[ext_resource type="Animation" uid="uid://b73rw63d34u4f" path="res://assets/models/character/olivie/anim/torso_TH_punch.res" id="83_kmf7x"]
-[ext_resource type="Animation" uid="uid://bmi8cry7y32l1" path="res://assets/models/character/olivie/anim/death.res" id="91_lqhs0"]
-[ext_resource type="Animation" uid="uid://c86lexa6cl14a" path="res://assets/models/character/olivie/anim/dead.res" id="92_pwyxu"]
-[ext_resource type="Animation" uid="uid://b0mmkjix35fuf" path="res://assets/models/character/olivie/anim/stun.res" id="93_0htl2"]
-[ext_resource type="Animation" uid="uid://dwxkendatoihp" path="res://assets/models/character/olivie/anim/stun_pos.res" id="94_1nmww"]
-[ext_resource type="Animation" uid="uid://ba85ur7xe7wjr" path="res://assets/models/character/olivie/anim/torso_flashlight_idle.res" id="94_n2gvv"]
-[ext_resource type="Animation" uid="uid://bb61t4sf1pwbs" path="res://assets/models/character/olivie/anim/torso_flashlight_stow.res" id="95_0kcuj"]
-[ext_resource type="Animation" uid="uid://da3rl2hlcbxbi" path="res://assets/models/character/olivie/anim/torso_flashlight_sprint.res" id="96_phliy"]
-[ext_resource type="Animation" uid="uid://dj2884o2184nr" path="res://assets/models/character/olivie/anim/torso_flashlight_walled.res" id="97_2stql"]
-[ext_resource type="Animation" uid="uid://caksbiyol4ng" path="res://assets/models/character/olivie/anim/torso_flashlight_reload.res" id="98_estox"]
-[ext_resource type="Animation" uid="uid://cncknvaimu0dd" path="res://assets/models/character/olivie/anim/invalid_anim.res" id="99_68qqg"]
-[ext_resource type="Animation" uid="uid://caeor8vu8qkvg" path="res://assets/models/character/olivie/anim/torso_flashlight_draw.res" id="100_8kbv0"]
-[ext_resource type="Animation" uid="uid://dl0mc1kvpj3u6" path="res://assets/models/character/olivie/anim/torso_TH_throw_item.res" id="100_qotuu"]
-[ext_resource type="Animation" uid="uid://2vcjih3voi2r" path="res://assets/models/character/olivie/anim/torso_OH_throw.res" id="101_e81dq"]
-[ext_resource type="Animation" uid="uid://dnlwhpul1vpgq" path="res://assets/models/character/olivie/anim/torso_melee_swing.res" id="104_bpbdw"]
-[ext_resource type="Animation" uid="uid://ba3tgjspouymh" path="res://assets/models/character/olivie/anim/torso_melee_swing2.res" id="105_cu3ns"]
-[ext_resource type="Animation" uid="uid://dur6mp4vrhmsg" path="res://assets/models/character/olivie/anim/torso_melee_swing3.res" id="106_vx4n4"]
-[ext_resource type="Animation" uid="uid://tswbe4g3n87s" path="res://assets/models/character/olivie/anim/torso_melee_idle.res" id="107_0splx"]
-[ext_resource type="Animation" uid="uid://h8gealsbitxh" path="res://assets/models/character/olivie/anim/torso_melee_walled.res" id="112_jokok"]
-[ext_resource type="Animation" uid="uid://cy2cmtcvokutp" path="res://assets/models/character/olivie/anim/torso_melee_stow.res" id="113_ka5wx"]
-[ext_resource type="Animation" uid="uid://4p6gmrqlh43p" path="res://assets/models/character/olivie/anim/torso_melee_draw.res" id="114_s6ljh"]
-[ext_resource type="Animation" uid="uid://cvp1pmndq5vkd" path="res://assets/models/character/olivie/anim/pose.res" id="115_2k6au"]
-[ext_resource type="Animation" uid="uid://cpb6t8lmd2c12" path="res://assets/models/character/olivie/anim/torso_melee_charge.res" id="116_tcf5i"]
-[ext_resource type="Animation" uid="uid://bjuxh678ectsa" path="res://assets/models/character/olivie/anim/torso_melee_release.res" id="117_oaird"]
-[ext_resource type="Animation" uid="uid://cy8s0vgcv6ymf" path="res://assets/models/character/olivie/anim/torso_melee_swing4.res" id="118_rgttb"]
-[ext_resource type="Animation" uid="uid://dji244e2vvp6p" path="res://assets/models/character/olivie/anim/torso_melee_swing_5.res" id="119_hroqc"]
-[ext_resource type="Animation" uid="uid://c01xt3wjy5ri8" path="res://assets/models/character/olivie/anim/torso_overheat.res" id="120_5b51p"]
+[ext_resource type="ArrayMesh" uid="uid://55hh0w8m1nn2" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh.res" id="2_ufgpm"]
+[ext_resource type="ArrayMesh" uid="uid://xp8d8ehx2nax" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh2.res" id="3_bqdts"]
+[ext_resource type="ArrayMesh" uid="uid://b866aqh80ooph" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh3.res" id="4_hhmhg"]
+[ext_resource type="ArrayMesh" uid="uid://cso0uevo4j6w2" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh4.res" id="5_w1is6"]
+[ext_resource type="ArrayMesh" uid="uid://c8h45up0g73qa" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh5.res" id="6_mqv84"]
+[ext_resource type="ArrayMesh" uid="uid://1gu623huwy6q" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh6.res" id="7_mfw8x"]
+[ext_resource type="ArrayMesh" uid="uid://jq52cabmptc2" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh7.res" id="8_7b0ao"]
+[ext_resource type="ArrayMesh" uid="uid://baxlb4g2u15fl" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh8.res" id="9_mkouo"]
+[ext_resource type="ArrayMesh" uid="uid://cxq0qqa5lmwwj" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh9.res" id="10_jg32e"]
+[ext_resource type="ArrayMesh" uid="uid://cdhl0xydvqpbc" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh10.res" id="11_unsig"]
+[ext_resource type="ArrayMesh" uid="uid://b03vrwnneu84w" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh11.res" id="12_y3a83"]
+[ext_resource type="ArrayMesh" uid="uid://qjunoejin343" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh12.res" id="13_hvm8l"]
+[ext_resource type="ArrayMesh" uid="uid://cmvlqku4mupe6" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh13.res" id="14_5f3a3"]
+[ext_resource type="ArrayMesh" uid="uid://breekqkfirruo" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh14.res" id="15_cwf3g"]
+[ext_resource type="ArrayMesh" uid="uid://b46qfljlw1ogx" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh15.res" id="16_ip5yj"]
+[ext_resource type="ArrayMesh" uid="uid://dgt11dn7gfvxg" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh16.res" id="17_1bme7"]
+[ext_resource type="ArrayMesh" uid="uid://bx32jdt2jyhm8" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh17.res" id="18_4s7l5"]
+[ext_resource type="ArrayMesh" uid="uid://by07ywwpdamnt" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh18.res" id="19_rhb6h"]
+[ext_resource type="ArrayMesh" uid="uid://cnpgoaprhj8jy" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh19.res" id="20_gwfky"]
+[ext_resource type="ArrayMesh" uid="uid://dfq0qm7yhekd3" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh20.res" id="21_txnmh"]
+[ext_resource type="ArrayMesh" uid="uid://bmmj4nqri23rd" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh21.res" id="22_stymm"]
+[ext_resource type="ArrayMesh" uid="uid://b5ft6ko6st26y" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh22.res" id="23_t606f"]
+[ext_resource type="ArrayMesh" uid="uid://crlnswx6q6vma" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh23.res" id="24_vkchp"]
+[ext_resource type="ArrayMesh" uid="uid://wekmdxsbj4os" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh24.res" id="25_arn7i"]
+[ext_resource type="ArrayMesh" uid="uid://djdyjvkbmmfqk" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh25.res" id="26_lv3ld"]
+[ext_resource type="ArrayMesh" uid="uid://cqnxawajf57s3" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh26.res" id="27_671me"]
+[ext_resource type="ArrayMesh" uid="uid://ccyk5tuarim56" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh27.res" id="28_u8ngr"]
+[ext_resource type="ArrayMesh" uid="uid://glii813p1xay" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh28.res" id="29_u0tp0"]
+[ext_resource type="Animation" uid="uid://1kx8lbeq1y1j" path="res://assets/models/character/olivie/anim/walk.res" id="29_vno85"]
+[ext_resource type="ArrayMesh" uid="uid://0qfcd47hbf60" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh29.res" id="30_21doh"]
+[ext_resource type="Animation" uid="uid://dwf6jbbg00rua" path="res://assets/models/character/olivie/anim/torso_OH_idle.res" id="30_k21yj"]
+[ext_resource type="ArrayMesh" uid="uid://cp3slc51wtmbu" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh30.res" id="31_ap2i7"]
+[ext_resource type="ArrayMesh" uid="uid://bv42jh3p8rifa" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh31.res" id="32_a6ak2"]
+[ext_resource type="Animation" uid="uid://cifuggsucmyda" path="res://assets/models/character/olivie/anim/torso_OH_reload.res" id="32_kr0g1"]
+[ext_resource type="Animation" uid="uid://byela80imtbh" path="res://assets/models/character/olivie/anim/torso_OH_sprint.res" id="33_8v4pa"]
+[ext_resource type="ArrayMesh" uid="uid://cg4y8paiqgk5j" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh32.res" id="33_c87k4"]
+[ext_resource type="ArrayMesh" uid="uid://dwc3ly7wbfpsj" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh33.res" id="34_are2e"]
+[ext_resource type="Animation" uid="uid://xu1cw3t4s5a4" path="res://assets/models/character/olivie/anim/torso_OH_stow.res" id="34_jfqae"]
+[ext_resource type="ArrayMesh" uid="uid://djvsxtp1fpajt" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh34.res" id="35_fvb77"]
+[ext_resource type="Animation" uid="uid://kpxliodbbm8b" path="res://assets/models/character/olivie/anim/torso_OH_draw.res" id="35_lovgf"]
+[ext_resource type="ArrayMesh" uid="uid://c02u3313536x5" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh35.res" id="36_bekub"]
+[ext_resource type="Animation" uid="uid://dd7f05dxumyxv" path="res://assets/models/character/olivie/anim/torso_OH_fireold.res" id="36_mb557"]
+[ext_resource type="Animation" uid="uid://cw6ca78fskrcs" path="res://assets/models/character/olivie/anim/torso_OH_fire.res" id="36_x0yyi"]
+[ext_resource type="ArrayMesh" uid="uid://dpoish3fl8rul" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh36.res" id="37_6el7f"]
+[ext_resource type="Animation" uid="uid://cj7v86n6bi6sh" path="res://assets/models/character/olivie/anim/torso_OH_walled.res" id="38_dog03"]
+[ext_resource type="ArrayMesh" uid="uid://b1tqjsw10g3qw" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh37.res" id="38_vrc0x"]
+[ext_resource type="ArrayMesh" uid="uid://cjqhh2ycl7801" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh38.res" id="39_j60pp"]
+[ext_resource type="ArrayMesh" uid="uid://gvbee42rxkau" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh39.res" id="40_2sb2g"]
+[ext_resource type="Animation" uid="uid://b3bo3vlsn8gbh" path="res://assets/models/character/olivie/anim/torso_OH_punch2.res" id="41_comr4"]
+[ext_resource type="Animation" uid="uid://dafmxtwgv6q1o" path="res://assets/models/character/olivie/anim/torso_turn_right.res" id="41_f2x3f"]
+[ext_resource type="ArrayMesh" uid="uid://bkbinumbytg3i" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh40.res" id="41_kp00a"]
+[ext_resource type="Animation" uid="uid://csnpibxw7150x" path="res://assets/models/character/olivie/anim/torso_turn_left.res" id="42_7wwjl"]
+[ext_resource type="ArrayMesh" uid="uid://bh6bt015poqe7" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh41.res" id="42_svvjk"]
+[ext_resource type="Animation" uid="uid://dx78sevh4lf4o" path="res://assets/models/character/olivie/anim/torso_OH_punch.res" id="43_kkqjk"]
+[ext_resource type="ArrayMesh" uid="uid://cb2whd53ar7v" path="res://assets/models/character/olivie/mesh/blockbench_export_mesh42.res" id="43_nvr8w"]
+[ext_resource type="Animation" uid="uid://5ra7ofj80j4i" path="res://assets/models/character/olivie/anim/idle.res" id="43_wbheg"]
+[ext_resource type="Animation" uid="uid://csreiggduvwss" path="res://assets/models/character/olivie/anim/torso_OH_idle2.res" id="44_3kpcs"]
+[ext_resource type="Animation" uid="uid://dqkngfm3uixfx" path="res://assets/models/character/olivie/anim/no_anim.res" id="44_6vbdf"]
+[ext_resource type="Animation" uid="uid://cb3kr80vtpx2c" path="res://assets/models/character/olivie/anim/torso_OH_reload4.res" id="45_ffrky"]
+[ext_resource type="Animation" uid="uid://y28dc1yxppwa" path="res://assets/models/character/olivie/anim/torso_look_down.res" id="45_i0vpm"]
+[ext_resource type="Animation" uid="uid://dhjdibdsx5ih1" path="res://assets/models/character/olivie/anim/torso_OH_punch_new.res" id="45_ovm2f"]
+[ext_resource type="Animation" uid="uid://4ay1y48jeduo" path="res://assets/models/character/olivie/anim/torso_OH_reload2.res" id="46_gd5i1"]
+[ext_resource type="Animation" uid="uid://c7ewt41bm7ajg" path="res://assets/models/character/olivie/anim/torso_look_up.res" id="46_isjr5"]
+[ext_resource type="Animation" uid="uid://creovmnmfkuol" path="res://assets/models/character/olivie/anim/torso_OH_punch_new_2.res" id="47_pcocm"]
+[ext_resource type="Animation" uid="uid://st3e7vxs601c" path="res://assets/models/character/olivie/anim/torso_OH_reload3.res" id="47_pwn4q"]
+[ext_resource type="Animation" uid="uid://tqfyc3r1ifsg" path="res://assets/models/character/olivie/anim/jump.res" id="47_qkar7"]
+[ext_resource type="Animation" uid="uid://b3r7eam0bj5ht" path="res://assets/models/character/olivie/anim/falling.res" id="48_j1hho"]
+[ext_resource type="Animation" uid="uid://b7bxaamr37bd6" path="res://assets/models/character/olivie/anim/slide.res" id="49_p6o8c"]
+[ext_resource type="Animation" uid="uid://dxdkyye4iomsj" path="res://assets/models/character/olivie/anim/torso_OH_sprint2.res" id="49_qdrnf"]
+[ext_resource type="Animation" uid="uid://c3v47swwi4cmt" path="res://assets/models/character/olivie/anim/slide_2.res" id="50_e48qi"]
+[ext_resource type="Animation" uid="uid://cmadv0wic3rf3" path="res://assets/models/character/olivie/anim/crouch.res" id="51_b8jvl"]
+[ext_resource type="Animation" uid="uid://bu7dhcciluko0" path="res://assets/models/character/olivie/anim/torso_OH_stow2.res" id="51_m86jd"]
+[ext_resource type="Animation" uid="uid://1vqgjmetcdi" path="res://assets/models/character/olivie/anim/crouch_walk.res" id="52_yp56y"]
+[ext_resource type="Animation" uid="uid://mc101u4in331" path="res://assets/models/character/olivie/anim/torso_OH_draw2.res" id="53_8ls2k"]
+[ext_resource type="Animation" uid="uid://n5iqeg2kktlk" path="res://assets/models/character/olivie/anim/arms_mantle.res" id="53_hsbpk"]
+[ext_resource type="Animation" uid="uid://b4ayds5kqhpvf" path="res://assets/models/character/olivie/anim/run.res" id="54_8vndw"]
+[ext_resource type="Animation" uid="uid://frjdsqeys1bu" path="res://assets/models/character/olivie/anim/leg_turn_right.res" id="55_n0ir6"]
+[ext_resource type="Animation" uid="uid://pgvrbl8ioe57" path="res://assets/models/character/olivie/anim/torso_OH_fire2.res" id="55_r3v2a"]
+[ext_resource type="Animation" uid="uid://bmphi38xc61bo" path="res://assets/models/character/olivie/anim/leg_turn_left.res" id="56_k0ma4"]
+[ext_resource type="Animation" uid="uid://b8exqwat7pep4" path="res://assets/models/character/olivie/anim/torso_OH_overheat.res" id="57_hoyl2"]
+[ext_resource type="Animation" uid="uid://dgr2j5pg6lnt6" path="res://assets/models/character/olivie/anim/head_look_down.res" id="57_u52nq"]
+[ext_resource type="Animation" uid="uid://bkv6j10fx5nvp" path="res://assets/models/character/olivie/anim/torso_OH_overheat2.res" id="58_3v5dn"]
+[ext_resource type="Animation" uid="uid://488pxs66x0hh" path="res://assets/models/character/olivie/anim/head_look_up.res" id="58_rsdnb"]
+[ext_resource type="Animation" uid="uid://g3a6ap3kisex" path="res://assets/models/character/olivie/anim/torso_lean_left.res" id="59_16rvl"]
+[ext_resource type="Animation" uid="uid://cm4rsdcw4ygas" path="res://assets/models/character/olivie/anim/torso_lean_right.res" id="60_m1o5r"]
+[ext_resource type="Animation" uid="uid://dis3ia2de4uuq" path="res://assets/models/character/olivie/anim/torso_OH_walled2.res" id="60_p7ctl"]
+[ext_resource type="Animation" uid="uid://ci5tqydvwkh65" path="res://assets/models/character/olivie/anim/torso_unarmed_idle.res" id="61_35utn"]
+[ext_resource type="Animation" uid="uid://bxbf8si8vhogr" path="res://assets/models/character/olivie/anim/torso_TH_idle.res" id="61_fdboa"]
+[ext_resource type="Animation" uid="uid://dnbbnc5qe5dy4" path="res://assets/models/character/olivie/anim/torso_unarmed_punch_left.res" id="62_eecc0"]
+[ext_resource type="Animation" uid="uid://emhstqtry6r8" path="res://assets/models/character/olivie/anim/torso_TH_stow.res" id="63_hq5qq"]
+[ext_resource type="Animation" uid="uid://d2ahtn5wv8b4e" path="res://assets/models/character/olivie/anim/torso_unarmed_punch_right.res" id="63_pjws6"]
+[ext_resource type="Animation" uid="uid://ba812afv3qy5x" path="res://assets/models/character/olivie/anim/torso_TH_draw.res" id="64_e8fen"]
+[ext_resource type="Animation" uid="uid://b2qehjme48kex" path="res://assets/models/character/olivie/anim/torso_TH_sprint.res" id="65_oh4gc"]
+[ext_resource type="Animation" uid="uid://4wnl48k63l3c" path="res://assets/models/character/olivie/anim/torso_TH_walled.res" id="66_8eljn"]
+[ext_resource type="Animation" uid="uid://dmt2pch2yf8sc" path="res://assets/models/character/olivie/anim/torso_TH_firing.res" id="67_5cycx"]
+[ext_resource type="Animation" uid="uid://ce4mymkj6s1vv" path="res://assets/models/character/olivie/anim/torso_TH_reload.res" id="68_qh5xd"]
+[ext_resource type="Animation" uid="uid://d3odmrcadrsb1" path="res://assets/models/character/olivie/anim/crouch_jump.res" id="74_v4wue"]
+[ext_resource type="Animation" uid="uid://dh4oteryoyf4n" path="res://assets/models/character/olivie/anim/torso_OH_throw2.res" id="78_kp1li"]
+[ext_resource type="Animation" uid="uid://bd364cwcn118" path="res://assets/models/character/olivie/anim/torso_TH_punch.res" id="83_kmf7x"]
+[ext_resource type="Animation" uid="uid://b1l8aupwn4o2l" path="res://assets/models/character/olivie/anim/death.res" id="91_lqhs0"]
+[ext_resource type="Animation" uid="uid://ddolx8dsdk5ad" path="res://assets/models/character/olivie/anim/dead.res" id="92_pwyxu"]
+[ext_resource type="Animation" uid="uid://4xp8gv235uqi" path="res://assets/models/character/olivie/anim/stun.res" id="93_0htl2"]
+[ext_resource type="Animation" uid="uid://dt605ebo3t7xg" path="res://assets/models/character/olivie/anim/stun_pos.res" id="94_1nmww"]
+[ext_resource type="Animation" uid="uid://dvy15qv58x7vs" path="res://assets/models/character/olivie/anim/torso_flashlight_idle.res" id="94_n2gvv"]
+[ext_resource type="Animation" uid="uid://yjv8epumoxkx" path="res://assets/models/character/olivie/anim/torso_flashlight_stow.res" id="95_0kcuj"]
+[ext_resource type="Animation" uid="uid://cbimkx70uucsg" path="res://assets/models/character/olivie/anim/torso_flashlight_sprint.res" id="96_phliy"]
+[ext_resource type="Animation" uid="uid://d3gvrvnscg4va" path="res://assets/models/character/olivie/anim/torso_flashlight_walled.res" id="97_2stql"]
+[ext_resource type="Animation" uid="uid://bve6tbqlrvm1l" path="res://assets/models/character/olivie/anim/torso_flashlight_reload.res" id="98_estox"]
+[ext_resource type="Animation" uid="uid://b2hy8fktllibe" path="res://assets/models/character/olivie/anim/invalid_anim.res" id="99_68qqg"]
+[ext_resource type="Animation" uid="uid://bwggocxq6qkp5" path="res://assets/models/character/olivie/anim/torso_flashlight_draw.res" id="100_8kbv0"]
+[ext_resource type="Animation" uid="uid://4frvvqge0qps" path="res://assets/models/character/olivie/anim/torso_TH_throw_item.res" id="100_qotuu"]
+[ext_resource type="Animation" uid="uid://bnky0iijf0ki6" path="res://assets/models/character/olivie/anim/torso_OH_throw.res" id="101_e81dq"]
+[ext_resource type="Animation" uid="uid://ck4vo0kgo3mm1" path="res://assets/models/character/olivie/anim/torso_melee_swing.res" id="104_bpbdw"]
+[ext_resource type="Animation" uid="uid://bkcyrw8pbvc8l" path="res://assets/models/character/olivie/anim/torso_melee_swing2.res" id="105_cu3ns"]
+[ext_resource type="Animation" uid="uid://c4wef7eqcde0g" path="res://assets/models/character/olivie/anim/torso_melee_swing3.res" id="106_vx4n4"]
+[ext_resource type="Animation" uid="uid://h506a8uk1a6q" path="res://assets/models/character/olivie/anim/torso_melee_idle.res" id="107_0splx"]
+[ext_resource type="Animation" uid="uid://1ap86ifwmjt4" path="res://assets/models/character/olivie/anim/torso_melee_walled.res" id="112_jokok"]
+[ext_resource type="Animation" uid="uid://cc6ibot6x0x7v" path="res://assets/models/character/olivie/anim/torso_melee_stow.res" id="113_ka5wx"]
+[ext_resource type="Animation" uid="uid://dcpcvv0p2pslt" path="res://assets/models/character/olivie/anim/torso_melee_draw.res" id="114_s6ljh"]
+[ext_resource type="Animation" uid="uid://c60v2qrueth2h" path="res://assets/models/character/olivie/anim/pose.res" id="115_2k6au"]
+[ext_resource type="Animation" uid="uid://kwgw5fnhs0o" path="res://assets/models/character/olivie/anim/torso_melee_charge.res" id="116_tcf5i"]
+[ext_resource type="Animation" uid="uid://cmics5shvhmij" path="res://assets/models/character/olivie/anim/torso_melee_release.res" id="117_oaird"]
+[ext_resource type="Animation" uid="uid://fcf56ebstd53" path="res://assets/models/character/olivie/anim/torso_melee_swing4.res" id="118_rgttb"]
+[ext_resource type="Animation" uid="uid://dvxraci564jvw" path="res://assets/models/character/olivie/anim/torso_melee_swing_5.res" id="119_hroqc"]
+[ext_resource type="Animation" uid="uid://xnlpkaljtycg" path="res://assets/models/character/olivie/anim/torso_overheat.res" id="120_5b51p"]
+[ext_resource type="Animation" uid="uid://bbc7x201aiobr" path="res://assets/models/character/olivie/anim/torso_melee_charge_pos.res" id="120_7l7gj"]
+[ext_resource type="Animation" uid="uid://qttwum8lhg2k" path="res://assets/models/character/olivie/anim/torso_melee_swing_6.res" id="124_ea1hs"]
 
 [sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_k5cfv"]
 
@@ -154,11 +156,19 @@ animation = &"dead"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pbeqv"]
 animation = &"torso_overheat"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_30civ"]
+animation = &"torso_melee_charge"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d4v7o"]
 animation = &"no_anim"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wdrg2"]
+animation = &"torso_melee_release"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nmief"]
 animation = &"no_anim"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_j7xop"]
 
 [sub_resource type="AnimationNodeSub2" id="AnimationNodeSub2_cm58l"]
 filter_enabled = true
@@ -492,6 +502,8 @@ max_space = 4.0
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_8lodb"]
 
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_7ygmk"]
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ds6qe"]
 animation = &"torso_OH_punch"
 
@@ -646,7 +658,7 @@ filters = ["Node/hip/torso/arm_l2", "Node/hip/torso/arm_l2/forearm_l2", "Node/hi
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ebhgs"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_26uy8"]
-graph_offset = Vector2(-331.529, 16.2397)
+graph_offset = Vector2(-1096.4, 541.522)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_3l8g3")
 nodes/Add2/position = Vector2(1320, 140)
 "nodes/Add2 2/node" = SubResource("AnimationNodeAdd2_k5cfv")
@@ -667,8 +679,14 @@ nodes/Animation/position = Vector2(1060, 660)
 "nodes/Animation 4/position" = Vector2(2300, 500)
 "nodes/Animation 5/node" = SubResource("AnimationNodeAnimation_pbeqv")
 "nodes/Animation 5/position" = Vector2(480, 1000)
+"nodes/Animation 6/node" = SubResource("AnimationNodeAnimation_30civ")
+"nodes/Animation 6/position" = Vector2(-1340, 1500)
 "nodes/Animation 7/node" = SubResource("AnimationNodeAnimation_d4v7o")
 "nodes/Animation 7/position" = Vector2(1480, 700)
+"nodes/Animation 8/node" = SubResource("AnimationNodeAnimation_wdrg2")
+"nodes/Animation 8/position" = Vector2(-1080, 1500)
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_j7xop")
+nodes/OneShot/position = Vector2(-880, 1200)
 nodes/Sub2/node = SubResource("AnimationNodeSub2_0sc86")
 nodes/Sub2/position = Vector2(1240, 560)
 "nodes/Sub2 2/node" = SubResource("AnimationNodeSub2_cm58l")
@@ -684,7 +702,7 @@ nodes/death_blend/position = Vector2(2660, 280)
 nodes/death_oneshot/node = SubResource("AnimationNodeOneShot_w8a2m")
 nodes/death_oneshot/position = Vector2(2500, 480)
 nodes/draw_set/node = SubResource("AnimationNodeBlendSpace1D_hj4eq")
-nodes/draw_set/position = Vector2(-720, 1360)
+nodes/draw_set/position = Vector2(-580, 1400)
 nodes/draw_timescale/node = SubResource("AnimationNodeTimeScale_v4ogn")
 nodes/draw_timescale/position = Vector2(-480, 1180)
 nodes/firing_blend/node = SubResource("AnimationNodeBlend2_h2wge")
@@ -741,15 +759,17 @@ nodes/sprint_blend/position = Vector2(20, 840)
 nodes/sprint_set/node = SubResource("AnimationNodeBlendSpace1D_fs283")
 nodes/sprint_set/position = Vector2(-60, 1380)
 nodes/stow_set/node = SubResource("AnimationNodeBlendSpace1D_oy4gq")
-nodes/stow_set/position = Vector2(-1060, 1260)
+nodes/stow_set/position = Vector2(-980, 1640)
 nodes/stow_timescale/node = SubResource("AnimationNodeTimeScale_qy002")
-nodes/stow_timescale/position = Vector2(-820, 1160)
+nodes/stow_timescale/position = Vector2(-740, 1540)
 nodes/stun_blend/node = SubResource("AnimationNodeBlend2_8lodb")
 nodes/stun_blend/position = Vector2(2280, 260)
+nodes/swing_charge/node = SubResource("AnimationNodeBlend2_7ygmk")
+nodes/swing_charge/position = Vector2(-840, 940)
 nodes/swing_set/node = SubResource("AnimationNodeBlendSpace2D_uv4sp")
-nodes/swing_set/position = Vector2(-1340, 1180)
+nodes/swing_set/position = Vector2(-1420, 1280)
 nodes/swing_timescale/node = SubResource("AnimationNodeTimeScale_q1v78")
-nodes/swing_timescale/position = Vector2(-1180, 1060)
+nodes/swing_timescale/position = Vector2(-1260, 1160)
 nodes/throw_oneshot/node = SubResource("AnimationNodeOneShot_mvkoi")
 nodes/throw_oneshot/position = Vector2(580, 320)
 nodes/throw_scale/node = SubResource("AnimationNodeTimeScale_07el6")
@@ -771,10 +791,10 @@ nodes/walled_set/position = Vector2(180, 1120)
 nodes/weapon_blend/node = SubResource("AnimationNodeBlend2_7jieo")
 nodes/weapon_blend/position = Vector2(800, 0)
 nodes/weapon_swing/node = SubResource("AnimationNodeOneShot_ebhgs")
-nodes/weapon_swing/position = Vector2(-1000, 860)
-node_connections = [&"Add2", 0, &"add_torso_rot", &"Add2", 1, &"Sub2", &"Add2 2", 0, &"Add2", &"Add2 2", 1, &"Sub2 2", &"Sub2", 0, &"legs_turn", &"Sub2", 1, &"Animation", &"Sub2 2", 0, &"lean_space", &"Sub2 2", 1, &"Animation 7", &"add_torso_rot", 0, &"weapon_blend", &"add_torso_rot", 1, &"torso_pos", &"crouch_blend", 0, &"run_scale", &"crouch_blend", 1, &"crouch_speed", &"death_blend", 0, &"stun_blend", &"death_blend", 1, &"death_oneshot", &"death_oneshot", 0, &"Animation 4", &"death_oneshot", 1, &"Animation 3", &"draw_timescale", 0, &"draw_set", &"firing_blend", 0, &"Animation 10", &"firing_blend", 1, &"Animation 12", &"firing_timescale", 0, &"firing_set", &"gun_draw", 0, &"gun_stow", &"gun_draw", 1, &"draw_timescale", &"gun_fire", 0, &"idle_set", &"gun_fire", 1, &"firing_timescale", &"gun_reload", 0, &"gun_draw", &"gun_reload", 1, &"reload_timescale", &"gun_stow", 0, &"weapon_swing", &"gun_stow", 1, &"stow_timescale", &"jump_blend", 0, &"slide_blend", &"jump_blend", 1, &"jump_space", &"mantle_oneshot", 0, &"punch_oneshot", &"mantle_oneshot", 1, &"mantle_timescale", &"mantle_timescale", 0, &"Animation 11", &"output", 0, &"death_blend", &"overheat_blend", 0, &"walled_blend", &"overheat_blend", 1, &"Animation 5", &"punch_oneshot", 0, &"unarmed_anim", &"punch_oneshot", 1, &"punch_timescale", &"punch_timescale", 0, &"punch_space", &"reload_timescale", 0, &"reload_set", &"run_scale", 0, &"walk_speed", &"slide_blend", 0, &"crouch_blend", &"slide_blend", 1, &"slide_anim", &"sprint_blend", 0, &"gun_reload", &"sprint_blend", 1, &"sprint_set", &"stow_timescale", 0, &"stow_set", &"stun_blend", 0, &"Add2 2", &"stun_blend", 1, &"Animation 2", &"swing_timescale", 0, &"swing_set", &"throw_oneshot", 0, &"overheat_blend", &"throw_oneshot", 1, &"throw_scale", &"throw_scale", 0, &"throw_set", &"unarmed_blend", 0, &"jump_blend", &"unarmed_blend", 1, &"mantle_oneshot", &"walled_blend", 0, &"sprint_blend", &"walled_blend", 1, &"walled_set", &"weapon_blend", 0, &"unarmed_blend", &"weapon_blend", 1, &"throw_oneshot", &"weapon_swing", 0, &"gun_fire", &"weapon_swing", 1, &"swing_timescale"]
+nodes/weapon_swing/position = Vector2(-1080, 960)
+node_connections = [&"Add2", 0, &"add_torso_rot", &"Add2", 1, &"Sub2", &"Add2 2", 0, &"Add2", &"Add2 2", 1, &"Sub2 2", &"OneShot", 0, &"Animation 6", &"OneShot", 1, &"Animation 8", &"Sub2", 0, &"legs_turn", &"Sub2", 1, &"Animation", &"Sub2 2", 0, &"lean_space", &"Sub2 2", 1, &"Animation 7", &"add_torso_rot", 0, &"weapon_blend", &"add_torso_rot", 1, &"torso_pos", &"crouch_blend", 0, &"run_scale", &"crouch_blend", 1, &"crouch_speed", &"death_blend", 0, &"stun_blend", &"death_blend", 1, &"death_oneshot", &"death_oneshot", 0, &"Animation 4", &"death_oneshot", 1, &"Animation 3", &"draw_timescale", 0, &"draw_set", &"firing_blend", 0, &"Animation 10", &"firing_blend", 1, &"Animation 12", &"firing_timescale", 0, &"firing_set", &"gun_draw", 0, &"gun_stow", &"gun_draw", 1, &"draw_timescale", &"gun_fire", 0, &"idle_set", &"gun_fire", 1, &"firing_timescale", &"gun_reload", 0, &"gun_draw", &"gun_reload", 1, &"reload_timescale", &"gun_stow", 0, &"swing_charge", &"gun_stow", 1, &"stow_timescale", &"jump_blend", 0, &"slide_blend", &"jump_blend", 1, &"jump_space", &"mantle_oneshot", 0, &"punch_oneshot", &"mantle_oneshot", 1, &"mantle_timescale", &"mantle_timescale", 0, &"Animation 11", &"output", 0, &"death_blend", &"overheat_blend", 0, &"walled_blend", &"overheat_blend", 1, &"Animation 5", &"punch_oneshot", 0, &"unarmed_anim", &"punch_oneshot", 1, &"punch_timescale", &"punch_timescale", 0, &"punch_space", &"reload_timescale", 0, &"reload_set", &"run_scale", 0, &"walk_speed", &"slide_blend", 0, &"crouch_blend", &"slide_blend", 1, &"slide_anim", &"sprint_blend", 0, &"gun_reload", &"sprint_blend", 1, &"sprint_set", &"stow_timescale", 0, &"stow_set", &"stun_blend", 0, &"Add2 2", &"stun_blend", 1, &"Animation 2", &"swing_charge", 0, &"weapon_swing", &"swing_charge", 1, &"OneShot", &"swing_timescale", 0, &"swing_set", &"throw_oneshot", 0, &"overheat_blend", &"throw_oneshot", 1, &"throw_scale", &"throw_scale", 0, &"throw_set", &"unarmed_blend", 0, &"jump_blend", &"unarmed_blend", 1, &"mantle_oneshot", &"walled_blend", 0, &"sprint_blend", &"walled_blend", 1, &"walled_set", &"weapon_blend", 0, &"unarmed_blend", &"weapon_blend", 1, &"throw_oneshot", &"weapon_swing", 0, &"gun_fire", &"weapon_swing", 1, &"swing_timescale"]
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xvw2v"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x16ui"]
 _data = {
 "arms_mantle": ExtResource("53_hsbpk"),
 "crouch": ExtResource("51_b8jvl"),
@@ -842,6 +862,7 @@ _data = {
 "torso_look_down": ExtResource("45_i0vpm"),
 "torso_look_up": ExtResource("46_isjr5"),
 "torso_melee_charge": ExtResource("116_tcf5i"),
+"torso_melee_charge_pos": ExtResource("120_7l7gj"),
 "torso_melee_draw": ExtResource("114_s6ljh"),
 "torso_melee_idle": ExtResource("107_0splx"),
 "torso_melee_release": ExtResource("117_oaird"),
@@ -851,6 +872,7 @@ _data = {
 "torso_melee_swing3": ExtResource("106_vx4n4"),
 "torso_melee_swing4": ExtResource("118_rgttb"),
 "torso_melee_swing_5": ExtResource("119_hroqc"),
+"torso_melee_swing_6": ExtResource("124_ea1hs"),
 "torso_melee_walled": ExtResource("112_jokok"),
 "torso_overheat": ExtResource("120_5b51p"),
 "torso_turn_left": ExtResource("42_7wwjl"),
@@ -868,6 +890,9 @@ tree_root = SubResource("AnimationNodeBlendTree_26uy8")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Add2/add_amount = 1.0
 "parameters/Add2 2/add_amount" = 1.0
+parameters/OneShot/active = false
+parameters/OneShot/internal_active = false
+parameters/OneShot/request = 0
 parameters/Sub2/sub_amount = 1.0
 "parameters/Sub2 2/sub_amount" = 1.0
 parameters/add_torso_rot/add_amount = 1.0
@@ -895,7 +920,7 @@ parameters/gun_stow/active = false
 parameters/gun_stow/internal_active = false
 parameters/gun_stow/request = 0
 parameters/idle_set/blend_position = 2.0
-parameters/jump_blend/blend_amount = 1.0
+parameters/jump_blend/blend_amount = 0.0
 parameters/jump_space/blend_position = Vector2(1, 1)
 "parameters/jump_space_2 2/blend_position" = 0
 parameters/lean_space/blend_position = 0.0
@@ -919,16 +944,17 @@ parameters/sprint_set/blend_position = 3.90985
 parameters/stow_set/blend_position = 0.00250417
 parameters/stow_timescale/scale = 1.0
 parameters/stun_blend/blend_amount = 0.0
-parameters/swing_set/blend_position = Vector2(0, 0)
+parameters/swing_charge/blend_amount = 0.0
+parameters/swing_set/blend_position = Vector2(4, 2)
 parameters/swing_timescale/scale = 1.0
 parameters/throw_oneshot/active = false
 parameters/throw_oneshot/internal_active = false
 parameters/throw_oneshot/request = 0
 parameters/throw_scale/scale = 1.0
 parameters/throw_set/blend_position = 3.00167
-parameters/torso_pos/blend_position = 0.0
+parameters/torso_pos/blend_position = -1.0
 parameters/unarmed_blend/blend_amount = 0.0
-parameters/walk_speed/blend_position = 1.0
+parameters/walk_speed/blend_position = 0.0
 parameters/walled_blend/blend_amount = 0.0
 parameters/walled_set/blend_position = 2.9975
 parameters/weapon_blend/blend_amount = 1.0
@@ -940,7 +966,7 @@ script = ExtResource("1_0888q")
 [node name="Node" type="Node3D" parent="."]
 
 [node name="hip2" type="Node3D" parent="Node"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, 0.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, -0.05)
 
 [node name="crotch" type="Node3D" parent="Node/hip2"]
 transform = Transform3D(0.925077, 0, 0.379779, 0, 1, 0, -0.379779, 0, 0.925077, 0, 0, 0.025)
@@ -956,7 +982,7 @@ mesh = ExtResource("3_bqdts")
 skeleton = NodePath("")
 
 [node name="leg_r" type="Node3D" parent="Node/hip2/crotch"]
-transform = Transform3D(0.980974, -0.156356, 0.115075, 0.080778, -0.210267, -0.974301, 0.176534, 0.96506, -0.193637, 0.075, -0.1375, 0.0125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.075, -0.1375, 0.0125)
 
 [node name="hitbox_thigh_r" type="MeshInstance3D" parent="Node/hip2/crotch/leg_r"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.325, 0.0125)
@@ -972,7 +998,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0.075, -0.225, 0)
 
 [node name="calf_r" type="Node3D" parent="Node/hip2/crotch/leg_r"]
-transform = Transform3D(1, 0, 0, 0, -0.819152, 0.573576, 0, -0.573576, -0.819152, -0.00625, -0.433655, -0.00577)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, -0.433655, -0.00577)
 
 [node name="hitbox_calf_r" type="MeshInstance3D" parent="Node/hip2/crotch/leg_r/calf_r"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.410095, 0.01827)
@@ -993,7 +1019,7 @@ mesh = ExtResource("8_7b0ao")
 skeleton = NodePath("")
 
 [node name="leg_l" type="Node3D" parent="Node/hip2/crotch"]
-transform = Transform3D(0.984808, 0.173648, 0, -0.0664523, 0.37687, -0.92388, -0.16043, 0.909844, 0.382684, -0.075, -0.1375, 0.0125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075, -0.1375, 0.0125)
 
 [node name="thigh_l" type="MeshInstance3D" parent="Node/hip2/crotch/leg_l"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.075, 0)
@@ -1009,7 +1035,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.075, -0.225, 0)
 
 [node name="calf_l" type="Node3D" parent="Node/hip2/crotch/leg_l"]
-transform = Transform3D(1, 0, 0, 0, -0.67559, 0.737277, 0, -0.737277, -0.67559, 0.00625, -0.433655, -0.00577)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.433655, -0.00577)
 
 [node name="calf_l_mesh" type="MeshInstance3D" parent="Node/hip2/crotch/leg_l/calf_l"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.10385, 0.01827)
@@ -1022,7 +1048,7 @@ mesh = ExtResource("12_y3a83")
 skeleton = NodePath("")
 
 [node name="foot_l" type="Node3D" parent="Node/hip2/crotch/leg_l/calf_l"]
-transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, -0.4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
 
 [node name="foot_l_mesh" type="MeshInstance3D" parent="Node/hip2/crotch/leg_l/calf_l/foot_l"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1, 0)
@@ -1030,7 +1056,7 @@ mesh = ExtResource("13_hvm8l")
 skeleton = NodePath("")
 
 [node name="torso" type="Node3D" parent="Node/hip2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.05)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0.05)
 
 [node name="chest" type="MeshInstance3D" parent="Node/hip2/torso"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0.025)
@@ -1069,7 +1095,6 @@ mesh = ExtResource("19_rhb6h")
 skeleton = NodePath("")
 
 [node name="head_a" type="Node3D" parent="Node/hip2/torso/head2"]
-transform = Transform3D(1, 0, 0, 0, 0.461749, -0.887011, 0, 0.887011, 0.461749, 0, 0, 0)
 
 [node name="ear_l" type="MeshInstance3D" parent="Node/hip2/torso/head2/head_a"]
 transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, -0.104687, 0.109472, -0.04453)
@@ -1095,6 +1120,9 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0.104687, 0.109472, -0.04453)
 mesh = ExtResource("24_vkchp")
 skeleton = NodePath("")
+
+[node name="viewpoint" type="Node3D" parent="Node/hip2/torso/head2/head_a"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, -0.1)
 
 [node name="HAT" type="Node3D" parent="Node/hip2/torso/head2/head_a"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
@@ -1125,11 +1153,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075, 0.025, 0)
 mesh = ExtResource("29_u0tp0")
 skeleton = NodePath("")
 
-[node name="viewpoint" type="Node3D" parent="Node/hip2/torso/head2/head_a"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, -0.1)
-
 [node name="arm_l2" type="Node3D" parent="Node/hip2/torso"]
-transform = Transform3D(0.945261, 0.318652, 0.0703104, -0.282822, 0.692547, 0.663619, 0.16277, -0.647178, 0.74476, -0.15, 0.275, 0.025)
+transform = Transform3D(0.945261, 0.175604, 0.275037, -0.282822, 0.0204555, 0.958954, 0.16277, -0.984248, 0.0690004, -0.15, 0.275, 0.025)
 
 [node name="hitbox_arm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
@@ -1144,13 +1169,13 @@ skeleton = NodePath("")
 [node name="forearm_l2" type="Node3D" parent="Node/hip2/torso/arm_l2"]
 transform = Transform3D(1, 0, 0, 0, 0.382683, -0.92388, 0, 0.92388, 0.382683, 0, -0.25, 0)
 
-[node name="forearm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
+[node name="hitbox_forearm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.275, 0)
 mesh = ExtResource("32_a6ak2")
 skeleton = NodePath("")
 
-[node name="hitbox_forearm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.275, 0)
+[node name="forearm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
 mesh = ExtResource("33_c87k4")
 skeleton = NodePath("")
 
@@ -1173,7 +1198,7 @@ mesh = ExtResource("36_bekub")
 skeleton = NodePath("")
 
 [node name="arm_r2" type="Node3D" parent="Node/hip2/torso"]
-transform = Transform3D(1, 0, 0, 0, 0.173648, -0.984808, 0, 0.984808, 0.173648, 0.15, 0.275, 0.025)
+transform = Transform3D(1, 0, 0, 0, 0.819152, -0.573577, 0, 0.573577, 0.819152, 0.15, 0.275, 0.025)
 
 [node name="arm_r" type="MeshInstance3D" parent="Node/hip2/torso/arm_r2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
@@ -1221,5 +1246,5 @@ transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, -0.020
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_xvw2v")
+"": SubResource("AnimationLibrary_x16ui")
 }

@@ -105,6 +105,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= delta * GRAVITY
 		#print(velocity)
 	
+	wallslidefix()
 	move_and_slide()
 	
 	#if targets:
@@ -156,6 +157,13 @@ func fix_angle(angle):
 		angle -= 360
 	return angle
 
+var undesiredMotion = Vector3()
+func wallslidefix():
+	if self.is_on_wall():
+		undesiredMotion = self.get_wall_normal() * (velocity.dot(self.get_wall_normal()));
+		if rad_to_deg(acos(velocity.normalized().dot(self.get_wall_normal()))) > 90:
+			velocity = velocity - undesiredMotion;
+
 func getDistAng(targetPOS: Vector3):
 	# gets the distance and the angle to the object from the current objects orientation
 	# input: location of target
@@ -187,3 +195,18 @@ func add_patrol_point(point):
 func remove_patrol_point(point):
 	if point in patrols: #patrols.has(point):
 		patrols.erase(point)
+
+#======================
+#TARGETTING FUNCTIONS
+#======================
+
+var current_target: CharacterBody3D = null
+func manage_targetting():
+	#set target if none
+	if current_target == null and targets != []:
+		current_target = targets[0]
+	
+
+#update depending on the scariness (dependant on level? stat total?)
+func update_target():
+	pass

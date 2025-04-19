@@ -1425,7 +1425,7 @@ mesh = SubResource("ArrayMesh_ncyxf")
 skeleton = NodePath("")
 
 [node name="torso" type="Node3D" parent="model/Node/hip2"]
-transform = Transform3D(0.896438, 0.415683, 0.153646, -0.440077, 0.794078, 0.41925, 0.0522685, -0.443448, 0.894774, 0, 0, 0.0375)
+transform = Transform3D(0.970924, 0.234871, 0.0462956, -0.238951, 0.939137, 0.246824, 0.0144941, -0.25071, 0.967953, 0, 0, 0.0375)
 
 [node name="cylinder3" type="MeshInstance3D" parent="model/Node/hip2/torso"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0.0125)
@@ -1447,7 +1447,7 @@ skeleton = NodePath("")
 transform = Transform3D(0.953717, -0.300706, 0, 0.300706, 0.953717, 0, 0, 0, 1, 0, 0.387583, 0.0135275)
 
 [node name="head_a" type="Node3D" parent="model/Node/hip2/torso/head2"]
-transform = Transform3D(0.934023, 0.00170659, -0.357211, -0.00725378, 0.999873, -0.01419, 0.357141, 0.0158449, 0.933917, 0, 0, 0)
+transform = Transform3D(0.922802, 0.200325, -0.329101, 0.0589101, 0.770785, 0.634367, 0.380745, -0.604781, 0.699481, 0, 0, 0)
 
 [node name="head" type="MeshInstance3D" parent="model/Node/hip2/torso/head2/head_a"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.156587, -0.0353575)
@@ -1481,7 +1481,7 @@ mesh = SubResource("ArrayMesh_yknts")
 skeleton = NodePath("")
 
 [node name="arm_l2" type="Node3D" parent="model/Node/hip2/torso"]
-transform = Transform3D(0.938455, -0.329815, 0.102597, 0.345131, 0.883575, -0.316512, 0.0137385, 0.332441, 0.943023, -0.2, 0.325, 0.0125)
+transform = Transform3D(0.984394, -0.175011, 0.0184594, 0.173826, 0.983337, 0.0532197, -0.0274659, -0.0491805, 0.998411, -0.2, 0.325, 0.0125)
 
 [node name="arm_l" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, -0.275, 0)
@@ -1495,7 +1495,7 @@ mesh = SubResource("ArrayMesh_8e1mi")
 skeleton = NodePath("")
 
 [node name="forearm_l2" type="Node3D" parent="model/Node/hip2/torso/arm_l2"]
-transform = Transform3D(0.940422, 0.335779, -0.053461, -0.326152, 0.84645, -0.420889, -0.0960736, 0.413251, 0.905535, -0.1, -0.3, 0)
+transform = Transform3D(0.941204, 0.32226, -0.101406, -0.318953, 0.748667, -0.581177, -0.11137, 0.579351, 0.807434, -0.1, -0.3, 0)
 
 [node name="forearm_l" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2/forearm_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
