@@ -117,11 +117,11 @@ func apply_stats(stat_sheet:Resource):
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if hit_effect == null:
-		hit_effect = load("res://effects/blood/blood_spatter.tscn")
+		hit_effect = load("res://blood_spawn.tscn")
 	if crit_effect == null:
-		crit_effect = load("res://effects/blood/blood_spatter.tscn")
+		crit_effect = load("res://blood_spawn.tscn")
 	if shit_effect == null:
-		shit_effect = load("res://effects/blood/blood_spatter.tscn")
+		shit_effect = load("res://blood_spawn.tscn")
 	entity = get_parent()
 	print("entity_stat_sheet: " + str(entity_stat_sheet))
 	if entity_stat_sheet != null:
@@ -136,7 +136,7 @@ func _process(delta: float) -> void:
 	impulse(delta)
 
 
-func damage(damage:float, damage_type: element, knockback: float, position: Vector3, hitbox_type: int): #physical, fire, ice, shock, mana, stagger):
+func damage(damage:float, damage_type: element, knockback: float, position: Vector3, hitbox_type: int, hit_dir:Vector3): #physical, fire, ice, shock, mana, stagger):
 	print(str(damage) + str(" damage to ") + str(entity))
 	if hitbox_type == 0:
 		health_current -= damage * (1 - resistance[damage_type])
@@ -168,7 +168,7 @@ func damage(damage:float, damage_type: element, knockback: float, position: Vect
 			damage_effect_instance = crit_effect.instantiate()
 		elif hitbox_type == 2:
 			damage_effect_instance = shit_effect.instantiate()
-		
+		damage_effect_instance.velocity = -hit_dir.normalized() * damage / 20
 		damage_effect_instance.global_position = position
 		GAME.WORLD.PROJECTILES.add_child(damage_effect_instance)
 
@@ -298,7 +298,7 @@ func impulse(delta: float):
 	#print("oldvel.y: " + str(oldvel.y))
 	#print("velocity.y: " + str(velocity.y))
 	if oldvel.y < -10 and abs(oldvel.y - entity.velocity.y) > 10 and in_air_timer > 2:
-		damage(4*abs(oldvel.y - entity.velocity.y),0 , 0, entity.global_position, 0)
+		damage(4*abs(oldvel.y - entity.velocity.y),0 , 0, entity.global_position, 0, Vector3(0, 0, 0))
 	oldvel = entity.velocity
 	#else:
 		#if in_air_timer != 0:

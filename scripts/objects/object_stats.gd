@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 	process_stats(delta)
 
 
-func damage(damage:float , damage_type: element, knockback: float, position: Vector3, hitbox_type: int): #physical, fire, ice, shock, mana, stagger):
+func damage(damage:float , damage_type: element, knockback: float, position: Vector3, hitbox_type: int, hit_dir:Vector3): #physical, fire, ice, shock, mana, stagger):
 	print(str(damage) + str(" damage to ") + str(entity))
 	health_current -= damage * (1 - resistence[damage_type])
 	health_current = clamp(health_current, -100, health_max)

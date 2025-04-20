@@ -104,6 +104,7 @@ func shoot_hitscan():
 		print(biped.shoot_ray.get_collider())
 		var tracer_instance = tracer.instantiate()
 		tracer_instance.firing_pos = current_firing_location.global_position
+		
 		#tracer_instance.firing_rot = biped.playerViewRay.global_rotation
 		tracer_instance.hit_pos = biped.shoot_ray.get_collision_point()
 		tracer_instance.colour = tracer_colour
@@ -128,7 +129,7 @@ func shoot_hitscan():
 			print("hit_entity")
 			print(biped.shoot_ray.get_collider())
 			print(biped.shoot_ray.get_collider().entity.stats)
-			biped.shoot_ray.get_collider().entity.stats.damage(damage, elemental_type, stagger_damage, biped.shoot_ray.get_collision_point(), biped.shoot_ray.get_collider().hitbox_type)
+			biped.shoot_ray.get_collider().entity.stats.damage(damage, elemental_type, stagger_damage, biped.shoot_ray.get_collision_point(), biped.shoot_ray.get_collider().hitbox_type, current_firing_location.global_position - biped.shoot_ray.get_collision_point())
 			#biped.shoot_ray.get_collider().
 			#PUT FUNCTION IN STATS FOR THE TYPE OF BLOOD
 

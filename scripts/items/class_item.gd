@@ -36,7 +36,7 @@ func _ready() -> void:
 	
 
 func throw_hit():
-	item_ray.get_collider().entity.stats.damage(0, 0, linear_velocity.length() * mass, global_position, item_ray.get_collider().hitbox_type)
+	item_ray.get_collider().entity.stats.damage(0, 0, linear_velocity.length() * mass, global_position, item_ray.get_collider().hitbox_type, linear_velocity)
 	linear_velocity = -linear_velocity/3
 
 func base_item_physics(delta):

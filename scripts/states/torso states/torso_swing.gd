@@ -70,7 +70,7 @@ func physics_update(delta):
 		elif weapon.damage_ray.get_collider().get_collision_layer() == 8:
 			if weapon.damage_ray.get_collider().entity not in has_hit:
 				#print("damage to: " + str(weapon.damage_ray.get_collider().entity))
-				weapon.damage_ray.get_collider().entity.stats.damage(weapon.damage, weapon.elemental_type, weapon.stagger_damage, weapon.damage_ray.get_collision_point(), weapon.damage_ray.get_collider().hitbox_type)
+				weapon.damage_ray.get_collider().entity.stats.damage(weapon.damage, weapon.elemental_type, weapon.stagger_damage, weapon.damage_ray.get_collision_point(), weapon.damage_ray.get_collider().hitbox_type, biped.velocity)
 				has_hit.append(weapon.damage_ray.get_collider().entity)
 				
 				
