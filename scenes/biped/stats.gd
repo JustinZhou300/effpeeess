@@ -158,6 +158,8 @@ func damage(damage:float, damage_type: element, knockback: float, position: Vect
 		is_stunned = true
 	clamp(poise_current, 0, poise_max)
 	
+	#knockback
+	entity.velocity -= hit_dir.normalized() * knockback / 10
 	
 	#visual 
 	if damage > 0:
@@ -170,6 +172,7 @@ func damage(damage:float, damage_type: element, knockback: float, position: Vect
 			damage_effect_instance = shit_effect.instantiate()
 		damage_effect_instance.velocity = -hit_dir.normalized() * damage / 20
 		damage_effect_instance.global_position = position
+		damage_effect_instance.blood_amount = int(ceil(damage / 5.0))
 		GAME.WORLD.PROJECTILES.add_child(damage_effect_instance)
 
 func die():

@@ -505,13 +505,13 @@ max_space = 4.0
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_7ygmk"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ds6qe"]
-animation = &"torso_OH_punch"
+animation = &"torso_OH_punch_new"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wykoa"]
 animation = &"torso_TH_punch"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ld0et"]
-animation = &"torso_OH_punch2"
+animation = &"torso_OH_punch_new_2"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tbw87"]
 animation = &"torso_OH_punch"
@@ -658,7 +658,7 @@ filters = ["Node/hip/torso/arm_l2", "Node/hip/torso/arm_l2/forearm_l2", "Node/hi
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ebhgs"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_26uy8"]
-graph_offset = Vector2(-1096.4, 541.522)
+graph_offset = Vector2(-1276.77, 851.485)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_3l8g3")
 nodes/Add2/position = Vector2(1320, 140)
 "nodes/Add2 2/node" = SubResource("AnimationNodeAdd2_k5cfv")
@@ -1167,7 +1167,7 @@ mesh = ExtResource("31_ap2i7")
 skeleton = NodePath("")
 
 [node name="forearm_l2" type="Node3D" parent="Node/hip2/torso/arm_l2"]
-transform = Transform3D(1, 0, 0, 0, 0.382683, -0.92388, 0, 0.92388, 0.382683, 0, -0.25, 0)
+transform = Transform3D(1, 0, 0, 0, 0.382684, -0.92388, 0, 0.92388, 0.382684, 0, -0.25, 0)
 
 [node name="hitbox_forearm_l" type="MeshInstance3D" parent="Node/hip2/torso/arm_l2/forearm_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.275, 0)

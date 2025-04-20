@@ -12,6 +12,7 @@ func enter():
 	
 	#create weapon model attached to player hand
 	weapon_model = item.model.duplicate()
+	weapon_model.rotation = Vector3(0, 0, 0)
 	weapon_model_anim = weapon_model.get_child(0)
 	if item.is_gun:
 		weapon_model_firing_loc = item.firing_location.duplicate()

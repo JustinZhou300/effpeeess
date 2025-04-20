@@ -20,7 +20,7 @@ func enter():
 		print("reseting anim")
 	biped.model_anim.set_weapon_swing(swing_anim)
 	timer = 0 
-	firing_period = (1 / float(weapon.firing_rpm)) * 60
+	firing_period = (1 / float(weapon.melee_rpm)) * 60
 	biped.model_anim.set_animation_speed("swing", firing_period)
 	biped.model_anim.swing_weapon()
 	
@@ -70,7 +70,7 @@ func physics_update(delta):
 		elif weapon.damage_ray.get_collider().get_collision_layer() == 8:
 			if weapon.damage_ray.get_collider().entity not in has_hit:
 				#print("damage to: " + str(weapon.damage_ray.get_collider().entity))
-				weapon.damage_ray.get_collider().entity.stats.damage(weapon.damage, weapon.elemental_type, weapon.stagger_damage, weapon.damage_ray.get_collision_point(), weapon.damage_ray.get_collider().hitbox_type, biped.velocity)
+				weapon.damage_ray.get_collider().entity.stats.damage(weapon.melee_damage, weapon.melee_elemental_type, weapon.melee_stagger_damage, weapon.damage_ray.get_collision_point(), weapon.damage_ray.get_collider().hitbox_type, Vector3(0, 0, -1).rotated(Vector3.UP, biped.playerView.rotation.y).rotated(Vector3(1, 0, 0), biped.playerView.rotation.x))
 				has_hit.append(weapon.damage_ray.get_collider().entity)
 				
 				

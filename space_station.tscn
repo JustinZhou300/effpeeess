@@ -1,7 +1,7 @@
 [gd_scene load_steps=48 format=4 uid="uid://b8304jhv6ccaq"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_7tl5s"]
-[ext_resource type="PackedScene" uid="uid://jnt6md3uefvc" path="res://items/weapons/9mm/9_mm.tscn" id="2_6apqf"]
+[ext_resource type="PackedScene" uid="uid://jnt6md3uefvc" path="res://items/weapons/9mm/9mm.tscn" id="2_6apqf"]
 [ext_resource type="PackedScene" uid="uid://c8yi1xw757huf" path="res://items/weapons/flashlight.tscn" id="3_lbo75"]
 [ext_resource type="PackedScene" uid="uid://bmu5ekiano2pd" path="res://scenes/biped/biped.tscn" id="4_j7oou"]
 [ext_resource type="PackedScene" uid="uid://bsyy4m63uj1g4" path="res://entities/blade_cyborg/blade_cyborg.tscn" id="5_8qfie"]

@@ -14,6 +14,7 @@
 [ext_resource type="Animation" uid="uid://c81h82qmu228c" path="res://assets/models/character/blade_cyborg/animations/firing_pos.res" id="17_nevgg"]
 [ext_resource type="Animation" uid="uid://da7gs78lhuw0f" path="res://assets/models/character/blade_cyborg/animations/firing.res" id="18_1n7el"]
 [ext_resource type="Animation" uid="uid://cmoprbxu47k8a" path="res://assets/models/character/blade_cyborg/animations/walk.res" id="18_2vsnm"]
+[ext_resource type="PackedScene" uid="uid://dhh04tsb5320x" path="res://blood_spark_spawn.tscn" id="32_30tgs"]
 [ext_resource type="Animation" uid="uid://dhahmoprm47mo" path="res://assets/models/character/blade_cyborg/animations/death.res" id="32_bvrfy"]
 [ext_resource type="Script" path="res://scripts/states/enemy_state_handler.gd" id="37_ipy87"]
 [ext_resource type="Animation" uid="uid://duk3hywtj31m" path="res://assets/models/character/blade_cyborg/animations/dead.res" id="38_085ok"]
@@ -31,7 +32,6 @@
 [ext_resource type="Script" path="res://scripts/states/enemy_state/combat/enemy_melee.gd" id="49_pgs7e"]
 [ext_resource type="Script" path="res://scripts/states/enemy_state/idle/enemy_patrol.gd" id="50_aagrg"]
 [ext_resource type="Resource" uid="uid://bgbus30m6vbf2" path="res://stat_sheets/blade_cyborg.tres" id="51_lrdor"]
-[ext_resource type="PackedScene" uid="uid://bd5d8nku47hg7" path="res://effects/blood/spark.tscn" id="52_i2nmd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o06tf"]
 radius = 0.3
@@ -153,7 +153,7 @@ blend_point_2/node = SubResource("AnimationNodeAnimation_61b2n")
 blend_point_2/pos = -1.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_q2cxj"]
-graph_offset = Vector2(-903.92, 298.144)
+graph_offset = Vector2(-92.7506, 160.726)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_j0vid")
 nodes/Add2/position = Vector2(-240, 80)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_op5yk")
@@ -1284,8 +1284,8 @@ shape = SubResource("CapsuleShape3D_o06tf")
 tree_root = SubResource("AnimationNodeBlendTree_q2cxj")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Add2/add_amount = 1.0
-parameters/OneShot/active = false
-parameters/OneShot/internal_active = false
+parameters/OneShot/active = true
+parameters/OneShot/internal_active = true
 parameters/OneShot/request = 0
 "parameters/OneShot 2/active" = false
 "parameters/OneShot 2/internal_active" = false
@@ -1296,7 +1296,7 @@ parameters/OneShot/request = 0
 parameters/alert/add_amount = 0.0
 parameters/alert_add/add_amount = 0.0
 parameters/charging/blend_position = 0.0
-parameters/death_blend/blend_amount = 0.0
+parameters/death_blend/blend_amount = 1.0
 parameters/death_oneshot/active = false
 parameters/death_oneshot/internal_active = false
 parameters/death_oneshot/request = 0
@@ -1325,7 +1325,7 @@ shitbox_locs = [NodePath("../Node/hip2/crotch/leg_r/thigh_hitbox_r"), NodePath("
 [node name="Node" type="Node3D" parent="model"]
 
 [node name="hip2" type="Node3D" parent="model/Node"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, -0.05)
+transform = Transform3D(1, 0, 0, 0, -0.5, 0.866025, 0, -0.866025, -0.5, 0, 0.05, -0.05)
 
 [node name="crotch" type="Node3D" parent="model/Node/hip2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.025)
@@ -1353,7 +1353,7 @@ mesh = SubResource("ArrayMesh_hhpnc")
 skeleton = NodePath("")
 
 [node name="leg_r" type="Node3D" parent="model/Node/hip2/crotch"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, -0.1375, 0.0125)
+transform = Transform3D(0.0871557, 1.49012e-08, -0.996195, -0.640342, 0.766044, -0.0560226, 0.763129, 0.642788, 0.0667652, 0.15, -0.1375, 0.0125)
 
 [node name="sphere2" type="MeshInstance3D" parent="model/Node/hip2/crotch/leg_r"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.075, 0)
@@ -1367,7 +1367,7 @@ mesh = SubResource("ArrayMesh_p7tmd")
 skeleton = NodePath("")
 
 [node name="calf_r" type="Node3D" parent="model/Node/hip2/crotch/leg_r"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.433655, -0.00577)
+transform = Transform3D(1, 0, 0, 0, 0.608761, 0.793353, 0, -0.793353, 0.608761, 0, -0.433655, -0.00577)
 
 [node name="cylinder" type="MeshInstance3D" parent="model/Node/hip2/crotch/leg_r/calf_r"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.10385, 0.01827)
@@ -1389,7 +1389,7 @@ mesh = SubResource("ArrayMesh_2hp40")
 skeleton = NodePath("")
 
 [node name="leg_l" type="Node3D" parent="model/Node/hip2/crotch"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175, -0.1375, 0.0125)
+transform = Transform3D(1, 0, 0, 0, 0.67559, -0.737277, 0, 0.737277, 0.67559, -0.175, -0.1375, 0.0125)
 
 [node name="sphere3" type="MeshInstance3D" parent="model/Node/hip2/crotch/leg_l"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01875, -0.075, 0)
@@ -1403,7 +1403,7 @@ mesh = SubResource("ArrayMesh_8wmvn")
 skeleton = NodePath("")
 
 [node name="calf_l" type="Node3D" parent="model/Node/hip2/crotch/leg_l"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, -0.433655, -0.00577)
+transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 0.00625, -0.433655, -0.00577)
 
 [node name="cylinder2" type="MeshInstance3D" parent="model/Node/hip2/crotch/leg_l/calf_l"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01875, -1.10385, 0.01827)
@@ -1425,7 +1425,7 @@ mesh = SubResource("ArrayMesh_ncyxf")
 skeleton = NodePath("")
 
 [node name="torso" type="Node3D" parent="model/Node/hip2"]
-transform = Transform3D(0.970924, 0.234871, 0.0462956, -0.238951, 0.939137, 0.246824, 0.0144941, -0.25071, 0.967953, 0, 0, 0.0375)
+transform = Transform3D(1, 0, 0, 0, 0.819151, -0.573576, 0, 0.573576, 0.819151, 0, 0, 0.0375)
 
 [node name="cylinder3" type="MeshInstance3D" parent="model/Node/hip2/torso"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0.0125)
@@ -1447,7 +1447,7 @@ skeleton = NodePath("")
 transform = Transform3D(0.953717, -0.300706, 0, 0.300706, 0.953717, 0, 0, 0, 1, 0, 0.387583, 0.0135275)
 
 [node name="head_a" type="Node3D" parent="model/Node/hip2/torso/head2"]
-transform = Transform3D(0.922802, 0.200325, -0.329101, 0.0589101, 0.770785, 0.634367, 0.380745, -0.604781, 0.699481, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.906308, -0.422619, 0, 0.422618, 0.906309, 0, 0, 0)
 
 [node name="head" type="MeshInstance3D" parent="model/Node/hip2/torso/head2/head_a"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.156587, -0.0353575)
@@ -1481,7 +1481,7 @@ mesh = SubResource("ArrayMesh_yknts")
 skeleton = NodePath("")
 
 [node name="arm_l2" type="Node3D" parent="model/Node/hip2/torso"]
-transform = Transform3D(0.984394, -0.175011, 0.0184594, 0.173826, 0.983337, 0.0532197, -0.0274659, -0.0491805, 0.998411, -0.2, 0.325, 0.0125)
+transform = Transform3D(1, 0, 0, 0, -0.976296, -0.216439, 0, 0.21644, -0.976295, -0.2, 0.325, 0.0125)
 
 [node name="arm_l" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, -0.275, 0)
@@ -1495,7 +1495,7 @@ mesh = SubResource("ArrayMesh_8e1mi")
 skeleton = NodePath("")
 
 [node name="forearm_l2" type="Node3D" parent="model/Node/hip2/torso/arm_l2"]
-transform = Transform3D(0.941204, 0.32226, -0.101406, -0.318953, 0.748667, -0.581177, -0.11137, 0.579351, 0.807434, -0.1, -0.3, 0)
+transform = Transform3D(0.734976, -0.676093, 0.0520536, 0.675417, 0.736729, 0.0322944, -0.0601834, 0.0114223, 0.998122, -0.1, -0.3, 0)
 
 [node name="forearm_l" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2/forearm_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
@@ -1509,7 +1509,7 @@ mesh = SubResource("ArrayMesh_1upp4")
 skeleton = NodePath("")
 
 [node name="hand_l2" type="Node3D" parent="model/Node/hip2/torso/arm_l2/forearm_l2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0063925, -0.267897, -0.001705)
+transform = Transform3D(0.843391, -0.5373, 0, 0.5373, 0.843391, 0, 0, 0, 1, -0.0063925, -0.267897, -0.001705)
 
 [node name="hand_l" type="MeshInstance3D" parent="model/Node/hip2/torso/arm_l2/forearm_l2/hand_l2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0063925, -1.0321, 0.001705)
@@ -1582,5 +1582,5 @@ shape = SubResource("SphereShape3D_y7sj3")
 [node name="stats" type="Node" parent="."]
 script = ExtResource("46_utekh")
 entity_stat_sheet = ExtResource("51_lrdor")
-crit_effect = ExtResource("52_i2nmd")
-shit_effect = ExtResource("52_i2nmd")
+crit_effect = ExtResource("32_30tgs")
+shit_effect = ExtResource("32_30tgs")

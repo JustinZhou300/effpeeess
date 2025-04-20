@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhh04tsb5320x"]
+
+[ext_resource type="Script" path="res://blood_spawn.gd" id="1_c2akj"]
+[ext_resource type="PackedScene" uid="uid://m6e3qwa8qdpl" path="res://blood_metal.tscn" id="2_ftoty"]
+
+[node name="blood_spawn" type="Node3D"]
+script = ExtResource("1_c2akj")
+blood = ExtResource("2_ftoty")
+blood_amount = 5

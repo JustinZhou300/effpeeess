@@ -244,7 +244,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_aucdg")
 
-[node name="laser_pistol" type="RigidBody3D" node_paths=PackedStringArray("overheat_effect_pos", "firing_location")]
+[node name="laser_pistol" type="RigidBody3D" node_paths=PackedStringArray("overheat_effect_pos", "firing_location", "damage_ray")]
 script = ExtResource("1_nchxh")
 heat_disipation = 25.0
 heat_amount = 50.0
@@ -253,6 +253,7 @@ damage = 20
 elemental_type = 1
 tracer_colour = Color(1, 0, 0, 1)
 firing_location = NodePath("model/firing_loc")
+damage_ray = NodePath("melee_ray")
 recoil_amount = 0
 sound = ExtResource("2_jnysb")
 is_gun = true
@@ -302,3 +303,8 @@ skeleton = NodePath("")
 
 [node name="firing_loc" type="Node3D" parent="model"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0344859, -0.271846)
+
+[node name="melee_ray" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0361119, 0.0398205)
+target_position = Vector3(0, 0, -0.3)
+collision_mask = 9

@@ -511,14 +511,16 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_rv4dx"]
 size = Vector3(0.08, 0.191, 0.366)
 
-[node name="revolver" type="RigidBody3D" node_paths=PackedStringArray("firing_location")]
+[node name="revolver" type="RigidBody3D" node_paths=PackedStringArray("firing_location", "damage_ray")]
 script = ExtResource("1_a4yam")
 animation_set = 2
 damage = 50
 stagger_damage = 100
+melee_stagger_damage = 100
 firing_rpm = 140
 magazine_size = 7
 firing_location = NodePath("model/Node/gun/barrel/firing_loc")
+damage_ray = NodePath("melee_ray")
 recoil_amount = 400
 stow_speed = 0.7
 draw_speed = 0.7
@@ -632,3 +634,8 @@ libraries = {
 [node name="collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.0013, 0, 0, 0, 1.0013, 0, 0, 0, 1.0013, 0, 0.00695625, -0.0893006)
 shape = SubResource("BoxShape3D_rv4dx")
+
+[node name="melee_ray" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0431779, 0.0337358)
+target_position = Vector3(0, 0, -0.3)
+collision_mask = 9

@@ -151,7 +151,6 @@ shadow_mesh = SubResource("ArrayMesh_u8q23")
 [node name="dagger" type="RigidBody3D" node_paths=PackedStringArray("damage_ray")]
 script = ExtResource("1_3cbr4")
 damage = 20
-firing_rpm = 100
 stagger_damage = 10
 damage_ray = NodePath("model/damage_cast")
 item_name = "dagger"

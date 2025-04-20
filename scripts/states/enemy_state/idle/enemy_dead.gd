@@ -21,7 +21,5 @@ func update(delta):
 	pass
 	
 func physics_update(delta):
-	entity.DESIRED_SPEED = 0
-	entity.DESIRED_ROTATION = entity.CURRENT_ROTATION
-	entity.velocity = Vector3(0, 0, 0)
+	entity.velocity = lerp(entity.velocity, Vector3(0, entity.velocity.y, 0), 0.05)
 	

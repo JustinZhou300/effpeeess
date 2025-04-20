@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://m6e3qwa8qdpl"]
+
+[ext_resource type="Script" path="res://blood_splatter_new.gd" id="1_1iqf4"]
+
+[sub_resource type="Gradient" id="Gradient_xsyeb"]
+offsets = PackedFloat32Array(0.845238, 0.992063)
+colors = PackedColorArray(1, 1, 0, 1, 1, 1, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_euex2"]
+gradient = SubResource("Gradient_xsyeb")
+
+[sub_resource type="Curve" id="Curve_84k6m"]
+_data = [Vector2(2e-05, 0), 0.0, 0.0, 0, 0, Vector2(0.260714, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jat6w"]
+curve = SubResource("Curve_84k6m")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cq031"]
+particle_flag_align_y = true
+angle_min = 1.07288e-05
+angle_max = 360.0
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+scale_curve = SubResource("CurveTexture_jat6w")
+color_ramp = SubResource("GradientTexture1D_euex2")
+
+[sub_resource type="Curve" id="Curve_7svxt"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jxekk"]
+transparency = 1
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+emission_enabled = true
+emission = Color(1, 1, 0, 1)
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_gekiy"]
+material = SubResource("StandardMaterial3D_jxekk")
+size = 0.01
+curve = SubResource("Curve_7svxt")
+
+[node name="blood_splatter" type="Node3D"]
+script = ExtResource("1_1iqf4")
+make_blood = false
+
+[node name="blood" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005476, 0.00802779, -0.00323868)
+emitting = false
+amount = 10
+lifetime = 0.1
+one_shot = true
+explosiveness = 0.5
+process_material = SubResource("ParticleProcessMaterial_cq031")
+draw_pass_1 = SubResource("RibbonTrailMesh_gekiy")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="blood"]
+light_color = Color(1, 1, 0, 1)
+
+[node name="blood_ray" type="RayCast3D" parent="."]
+target_position = Vector3(0, -2142.94, -4)
+hit_from_inside = true

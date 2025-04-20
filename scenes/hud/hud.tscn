@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://diyk5squwtwu1"]
+[gd_scene load_steps=6 format=3 uid="uid://diyk5squwtwu1"]
 
 [ext_resource type="Script" path="res://scripts/hud/hud.gd" id="1_tdtnc"]
 [ext_resource type="FontFile" uid="uid://bd4uwx5kk070u" path="res://assets/misc/font/RasterForgeRegular-JpBgm.ttf" id="2_5ci34"]
 [ext_resource type="FontFile" uid="uid://drbwae8ucdd2a" path="res://assets/misc/font/PublicPixel-rv0pA.ttf" id="2_bk22i"]
+[ext_resource type="Texture2D" uid="uid://rqyg6a6cbrd1" path="res://assets/textures/reticle/reticle_point.png" id="4_vwcsu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8h2s"]
 bg_color = Color(0, 1, 0, 1)
@@ -178,24 +179,23 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="ColorRect" type="ColorRect" parent="Crosshair"]
+[node name="TextureRect" type="TextureRect" parent="Crosshair"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 1.0
-offset_bottom = 1.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
-color = Color(0, 1, 0, 1)
+texture = ExtResource("4_vwcsu")
+stretch_mode = 3
 
 [node name="Crosshair_shoot" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

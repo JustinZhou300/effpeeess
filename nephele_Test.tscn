@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://world.gd" id="1_ns6e7"]
 [ext_resource type="Script" path="res://mission.gd" id="2_bpm1b"]
-[ext_resource type="PackedScene" uid="uid://jnt6md3uefvc" path="res://items/weapons/9mm/9_mm.tscn" id="3_hd2yo"]
+[ext_resource type="PackedScene" uid="uid://jnt6md3uefvc" path="res://items/weapons/9mm/9mm.tscn" id="3_hd2yo"]
 [ext_resource type="PackedScene" uid="uid://c8yi1xw757huf" path="res://items/weapons/flashlight.tscn" id="4_eexks"]
 [ext_resource type="PackedScene" uid="uid://blvsvrljqnsuh" path="res://items/weapons/revolver/revolver.tscn" id="5_qhnvm"]
 [ext_resource type="PackedScene" uid="uid://1n6fj58tp4qv" path="res://items/weapons/dagger/dagger.tscn" id="6_xrdwh"]

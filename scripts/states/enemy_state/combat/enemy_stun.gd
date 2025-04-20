@@ -21,7 +21,7 @@ func update(delta):
 	
 func physics_update(delta):
 	if active:
-		entity.velocity = lerp(entity.velocity, Vector3(0, entity.velocity.y, 0), 0.1)
+		entity.velocity = lerp(entity.velocity, Vector3(0, entity.velocity.y, 0), 0.05)
 		stun_timer += delta
 		print(stun_timer)
 		if stun_timer >= stun_time:

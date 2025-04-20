@@ -8,9 +8,13 @@ enum element {kinetic, thermal, shock, holy}
 @export_subgroup("Weapon Parameters")
 @export var animation_set: animation_sets = 0
 @export var damage: int = 0
+@export var melee_damage: int = 0
 @export var elemental_type: element = 0
+@export var melee_elemental_type: element = 0
 @export var stagger_damage: int = 0
+@export var melee_stagger_damage: int = 0
 @export var firing_rpm: int = 200
+@export var melee_rpm: int = 60
 @export var is_automatic: bool = false
 @export var burst_amount: int = 1 #the amount fired per trigger pull.
 @export var burst_time: float = 0.1 #the amount of time between burst shots
@@ -32,6 +36,8 @@ var current_ammo = 0
 var balance #analogous to stability
 var weight #analogous to handling
 
+#damage_ray for melee
+@export var damage_ray: RayCast3D
 
 #dependant variables
 @export var recoil_amount: int = 100 #the amount of recoil (stablity)

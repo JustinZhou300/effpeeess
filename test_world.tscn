@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c8yi1xw757huf" path="res://items/weapons/flashlight.tscn" id="4_pj0ri"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="5_hxhpc"]
 [ext_resource type="PackedScene" uid="uid://1n6fj58tp4qv" path="res://items/weapons/dagger/dagger.tscn" id="5_i02pd"]
-[ext_resource type="PackedScene" uid="uid://jnt6md3uefvc" path="res://items/weapons/9mm/9_mm.tscn" id="6_he73q"]
+[ext_resource type="PackedScene" uid="uid://jnt6md3uefvc" path="res://items/weapons/9mm/9mm.tscn" id="6_he73q"]
 [ext_resource type="PackedScene" uid="uid://blvsvrljqnsuh" path="res://items/weapons/revolver/revolver.tscn" id="7_jqumu"]
 [ext_resource type="PackedScene" uid="uid://c7o7ux3c5nsha" path="res://void.tscn" id="8_lm1oo"]
 [ext_resource type="Texture2D" uid="uid://bhhg7x22bo3l2" path="res://assets/textures/sprites/earth.png" id="8_n6mlt"]
@@ -2770,7 +2770,7 @@ power_grid = "science"
 [node name="ITEMS" type="Node" parent="."]
 
 [node name="9mm" parent="ITEMS" instance=ExtResource("6_he73q")]
-transform = Transform3D(-0.0684506, -0.997654, 0, 0.997654, -0.0684506, 0, 0, 0, 1, 11.1412, 2.20595, 13.7445)
+transform = Transform3D(-0.0684506, -0.997654, 0, 0.997654, -0.0684506, 0, 0, 0, 1, 11.1412, 2.20595, 3.72042)
 
 [node name="flashlight" parent="ITEMS" instance=ExtResource("4_pj0ri")]
 transform = Transform3D(0.999989, -0.00278227, 0.00365497, 0.00280535, 0.999976, -0.00632239, -0.00363729, 0.00633258, 0.999973, 5.99913, 0.940922, 12.4987)

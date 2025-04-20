@@ -176,7 +176,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_60h4l")
 
-[node name="9mm" type="RigidBody3D" node_paths=PackedStringArray("firing_location")]
+[node name="9mm" type="RigidBody3D" node_paths=PackedStringArray("firing_location", "damage_ray")]
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("1_gmhkp")
@@ -184,6 +184,7 @@ damage = 20
 stagger_damage = 40
 firing_rpm = 180
 firing_location = NodePath("model/firing_loc")
+damage_ray = NodePath("melee_ray")
 reload_speed = 3.0
 item_name = "9mm Pistol"
 item_description = "It's a pistol that 9mms."
@@ -223,3 +224,8 @@ skeleton = NodePath("")
 
 [node name="firing_loc" type="Node3D" parent="model"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0428524, -0.165977)
+
+[node name="melee_ray" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0431779, 0.0337358)
+target_position = Vector3(0, 0, -0.3)
+collision_mask = 9

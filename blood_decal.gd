@@ -14,7 +14,7 @@ var floor_aligned: bool = false
 func _ready() -> void:
 	texture_albedo = floor_textures[randi() % floor_textures.size()]
 	size = Vector3(start_size, 0.1, start_size)
-	end_size = randf_range(1, 2)
+	end_size = randf_range(0.8, 1.2)
 	
 	
 	
@@ -27,8 +27,6 @@ func _process(delta: float) -> void:
 	print("norm is: " + str(norm))
 	if !floor_aligned and norm != null:
 		print("code run")
-		if norm == Vector3(0, 1, 0) or norm == Vector3(0, -1, 0):
-			look_at(norm, Vector3(1,0,0))
-		else:
-			look_at(norm, Vector3(0,1,0))
+		look_at(global_position + norm, Vector3.UP)
+		rotate(norm, randf_range(0, 2*PI))
 		floor_aligned = true

@@ -25,5 +25,5 @@ func physics_update(delta):
 	dir = entity.global_position.direction_to(target_position)
 	#entity.velocity = dir * entity.SPEED_RUN
 	entity.DESIRED_ROTATION = entity.get_desired_angle(target_position)
-	entity.velocity = lerp(entity.velocity, entity.stats.SPEED_RUN * Vector3(dir.x, 0, dir.z) , 0.5)
+	entity.velocity = lerp(entity.velocity, entity.stats.SPEED_RUN * Vector3(dir.x, 0, dir.z) , 0.1)
 	

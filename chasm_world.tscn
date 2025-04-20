@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dyadpt7uelmry" path="res://light_box.tscn" id="3_aelfs"]
 [ext_resource type="PackedScene" uid="uid://oxuqm85gh1fj" path="res://objects/pot_plant.tscn" id="4_24xx0"]
 [ext_resource type="PackedScene" uid="uid://c5x5ts8o8bhuw" path="res://rifle.tscn" id="5_e6sei"]
-[ext_resource type="PackedScene" uid="uid://jnt6md3uefvc" path="res://items/weapons/9mm/9_mm.tscn" id="6_rp12w"]
+[ext_resource type="PackedScene" uid="uid://jnt6md3uefvc" path="res://items/weapons/9mm/9mm.tscn" id="6_rp12w"]
 [ext_resource type="PackedScene" uid="uid://c8yi1xw757huf" path="res://items/weapons/flashlight.tscn" id="7_eygad"]
 [ext_resource type="PackedScene" uid="uid://blvsvrljqnsuh" path="res://items/weapons/revolver/revolver.tscn" id="8_bdq8k"]
 [ext_resource type="PackedScene" uid="uid://bsyy4m63uj1g4" path="res://entities/blade_cyborg/blade_cyborg.tscn" id="9_owgab"]

@@ -9,7 +9,11 @@ enum element {kinetic, thermal, shock, holy}
 @export var animation_set: animation_sets = 4
 @export var damage: int = 0
 @export var elemental_type: element = 0
-@export var firing_rpm: int = 200
+@export var melee_damage: int = 20
+@export var melee_elemental_type: element = 0
+@export var melee_stagger_damage: int = 0
+#@export var firing_rpm: int = 200
+@export var melee_rpm: int = 200
 @export var stagger_damage: int = 0
 @export var has_animations = false
 @export var swings_num = 3

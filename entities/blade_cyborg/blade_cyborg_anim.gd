@@ -112,6 +112,7 @@ func update_parameters(delta: float):
 func die():
 	death_blend(true)
 	#print("i'm dying :)")
+	set("parameters/death_oneshot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
 	set("parameters/death_oneshot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	
 
