@@ -182,6 +182,7 @@ func shoot_projectile():
 	projectile_instance.initial_position = current_firing_location
 	projectile_instance.direction = current_firing_location.global_position.direction_to(biped.shoot_ray.get_collision_point())
 	projectile_instance.gun = self
+	projectile_instance.colour = tracer_colour
 	#projectile_instance.direction = Vector3(0, 0, -1).rotated(Vector3(1, 0, 0), biped.x_val).rotated(Vector3(0, 1, 0), biped.y_val)
 	GAME.WORLD.PROJECTILES.add_child(projectile_instance)
 	
