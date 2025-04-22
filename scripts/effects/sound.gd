@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 
 func emit_sound():
 	var hits = audio_hitbox.get_overlapping_bodies()
-	print("we out here")
+	#print("we out here")
 	for i in hits:
 		if i.has(i.stats) == 8:
 			if i.stats.is_player:

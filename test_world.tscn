@@ -1,4 +1,4 @@
-[gd_scene load_steps=863 format=4 uid="uid://b8pvm4fxeh64g"]
+[gd_scene load_steps=864 format=4 uid="uid://b8pvm4fxeh64g"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_23a3n"]
 [ext_resource type="Script" path="res://mission.gd" id="2_te3nk"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c7o7ux3c5nsha" path="res://void.tscn" id="8_lm1oo"]
 [ext_resource type="Texture2D" uid="uid://bhhg7x22bo3l2" path="res://assets/textures/sprites/earth.png" id="8_n6mlt"]
 [ext_resource type="Script" path="res://environment.gd" id="8_vx5o5"]
+[ext_resource type="PackedScene" uid="uid://drv0vlm41jpff" path="res://items/weapons/laser_test.tscn" id="9_yc5sb"]
 [ext_resource type="Shader" path="res://stylized_sky.gdshader" id="11_o0oyt"]
 [ext_resource type="Material" uid="uid://bs4no3ka0a57w" path="res://assets/textures/orbital/floor_tile.tres" id="13_6t7f0"]
 [ext_resource type="Material" uid="uid://cpfadrkqgqvpt" path="res://assets/textures/special/person_test.tres" id="13_sul3r"]
@@ -2780,6 +2781,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8455, 2.86592, 18.501)
 
 [node name="dagger" parent="ITEMS" instance=ExtResource("5_i02pd")]
 transform = Transform3D(0.855708, -0.51746, 0, 0.51746, 0.855708, 0, 0, 0, 1, 10.0825, 1.97592, 16.6964)
+
+[node name="laser_test" parent="ITEMS" instance=ExtResource("9_yc5sb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.60866, 0.688113, 0)
 
 [node name="ENTITIES" type="Node" parent="."]
 

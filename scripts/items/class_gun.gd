@@ -7,29 +7,65 @@ enum element {kinetic, thermal, shock, holy}
 
 @export_subgroup("Weapon Parameters")
 @export var animation_set: animation_sets = 0
+
+
+
+
+
+
+
+
+
+
+
+#gun behaviour
+@export_subgroup("Firing Parameters")
 @export var damage: int = 0
-@export var melee_damage: int = 0
-@export var elemental_type: element = 0
-@export var melee_elemental_type: element = 0
-@export var stagger_damage: int = 0
-@export var melee_stagger_damage: int = 0
 @export var firing_rpm: int = 200
-@export var melee_rpm: int = 60
+@export var stagger_damage: int = 0
+@export var elemental_type: element = 0
 @export var is_automatic: bool = false
 @export var burst_amount: int = 1 #the amount fired per trigger pull.
 @export var burst_time: float = 0.1 #the amount of time between burst shots
 @export var magazine_size: int = 8 #how many bullets in a magazine
 @export var ammo_name: String = "bullets" #the name of the ammo type, will check inventory for it.
-@export var is_projectile: bool
+
+@export_subgroup("Melee Parameters")
+#melee settings
+@export var melee_damage: int = 0
+@export var melee_stagger_damage: int = 0
+@export var melee_rpm: int = 60
+@export var melee_elemental_type: element = 0
+@export var swings_num = 1 # the amount of melee swing anims
+
+#tracer settings
+@export_subgroup("Tracer Parameters")
 @export var tracer_colour: Color = Color("ffff00") #default is yellow for physical
-@export var firing_location: Node3D
-@export var swings_num = 1
 
-var burst_counter: int
+@export_subgroup("Projectile Parameters")
+#projectile settings
+@export var is_projectile: bool = false #sets whether to use hitscan or projectile code
+@export var projectile: PackedScene #set a custom projectile.
 
-var current_firing_location:Node3D
-#weapon variables
+#firing visuals
+@export_subgroup("Visuals")
+@export var tracer: PackedScene #customise the beam
+@export var flash: PackedScene #customise the muzzle flash
+@export var ricochet: PackedScene
+@export var bullet_hole: PackedScene
+
+@export_subgroup("Sounds")
+#firing sounds
+@export var sound: PackedScene
+#@export var firing_sound: PackedScene
+#@export var ricochet_sound: PackedScene
+
+#functional variables
+var burst_counter: int #counts shots in burst
 var current_ammo = 0
+
+
+
 
 #independant variables
 #var damage
@@ -37,7 +73,10 @@ var balance #analogous to stability
 var weight #analogous to handling
 
 #damage_ray for melee
+@export_subgroup("Weapon Nodes")
 @export var damage_ray: RayCast3D
+@export var firing_location: Node3D
+var current_firing_location:Node3D
 
 #dependant variables
 @export var recoil_amount: int = 100 #the amount of recoil (stablity)
@@ -50,12 +89,9 @@ func update_stats():
 
 @export var has_animations = false
 var model_anim
-@export var tracer: PackedScene
-@export var flash: PackedScene
-@export var ricochet: PackedScene
-@export var bullet_hole: PackedScene
-@export var sound: PackedScene
-@export var projectile: PackedScene
+
+
+
 
 func weapon_ready():
 	if has_animations:
@@ -144,7 +180,9 @@ func shoot_projectile():
 	shoot_muzzle_flash()
 	var projectile_instance = projectile.instantiate()
 	projectile_instance.initial_position = current_firing_location
-	projectile_instance.direction = Vector3(0, 0, -1).rotated(Vector3(1, 0, 0), biped.x_val).rotated(Vector3(0, 1, 0), biped.y_val)
+	projectile_instance.direction = current_firing_location.global_position.direction_to(biped.shoot_ray.get_collision_point())
+	projectile_instance.gun = self
+	#projectile_instance.direction = Vector3(0, 0, -1).rotated(Vector3(1, 0, 0), biped.x_val).rotated(Vector3(0, 1, 0), biped.y_val)
 	GAME.WORLD.PROJECTILES.add_child(projectile_instance)
 	
 
@@ -165,7 +203,10 @@ func secondary_fire():
 
 func fire():
 	if current_ammo > 0:
-		shoot_hitscan()
+		if !is_projectile:
+			shoot_hitscan()
+		else:
+			shoot_projectile()
 		current_ammo -= 1
 	#weapon kickback
 	

@@ -180,6 +180,8 @@ func check_view():
 			var angle_to_target = rad_to_deg(Vector3(0, 0, -1).rotated(Vector3(0, 1, 0), global_rotation.y).angle_to(global_position.direction_to(i.global_position)) )
 			#print("angle_to_target" + str(angle_to_target))
 			view_ray.look_at(i.global_position)
+			#if view_ray.global_position.cross(Vector3.UP) == Vector3(0,0,0):
+				#print("test")
 			#print("view_ray.get_collider()" + str(view_ray.get_collider()))
 			#print("i" + str((i)))
 			if view_ray.is_colliding() and view_ray.get_collider() == i:

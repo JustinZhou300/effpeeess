@@ -244,7 +244,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_aucdg")
 
-[node name="laser_pistol" type="RigidBody3D" node_paths=PackedStringArray("overheat_effect_pos", "firing_location", "damage_ray")]
+[node name="laser_pistol" type="RigidBody3D" node_paths=PackedStringArray("overheat_effect_pos", "damage_ray")]
 script = ExtResource("1_nchxh")
 heat_disipation = 25.0
 heat_amount = 50.0
@@ -252,10 +252,9 @@ overheat_effect_pos = NodePath("model/cylinder")
 damage = 20
 elemental_type = 1
 tracer_colour = Color(1, 0, 0, 1)
-firing_location = NodePath("model/firing_loc")
+sound = ExtResource("2_jnysb")
 damage_ray = NodePath("melee_ray")
 recoil_amount = 0
-sound = ExtResource("2_jnysb")
 is_gun = true
 
 [node name="collider" type="CollisionShape3D" parent="."]

@@ -43,7 +43,10 @@ func primary_fire():
 
 func fire():
 	heat += heat_amount
-	shoot_hitscan()
+	if !is_projectile:
+		shoot_hitscan()
+	else:
+		shoot_projectile()
 	battery -= battery_usage
 
 func secondary_fire():

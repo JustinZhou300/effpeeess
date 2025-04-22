@@ -11,9 +11,9 @@ func exit():
 
 func update(delta):
 	print("lamp")
-	if lamp.lamp_mode == 2:
-		print("transitioning to flickering")
-		transition_to_state("lamp_flickering")
+	#if lamp.lamp_mode == 2:
+		#print("transitioning to flickering")
+		#transition_to_state("lamp_flickering")
 	
 	
 func physics_update(delta):

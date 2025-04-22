@@ -511,15 +511,14 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_rv4dx"]
 size = Vector3(0.08, 0.191, 0.366)
 
-[node name="revolver" type="RigidBody3D" node_paths=PackedStringArray("firing_location", "damage_ray")]
+[node name="revolver" type="RigidBody3D" node_paths=PackedStringArray("damage_ray")]
 script = ExtResource("1_a4yam")
 animation_set = 2
 damage = 50
-stagger_damage = 100
-melee_stagger_damage = 100
 firing_rpm = 140
+stagger_damage = 100
 magazine_size = 7
-firing_location = NodePath("model/Node/gun/barrel/firing_loc")
+melee_stagger_damage = 100
 damage_ray = NodePath("melee_ray")
 recoil_amount = 400
 stow_speed = 0.7

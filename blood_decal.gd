@@ -24,9 +24,9 @@ func _process(delta: float) -> void:
 	if size != Vector3(end_size, 0.1, end_size):
 		size = lerp(size, Vector3(end_size, 0.1, end_size), 0.1)
 		
-	print("norm is: " + str(norm))
+	#print("norm is: " + str(norm))
 	if !floor_aligned and norm != null:
-		print("code run")
+		#print("code run")
 		look_at(global_position + norm, Vector3.UP)
 		rotate(norm, randf_range(0, 2*PI))
 		floor_aligned = true

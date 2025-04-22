@@ -29,9 +29,9 @@ func _physics_process(delta: float) -> void:
 	#print("blood vel: " + str(velocity))
 	#
 	#print("colliding at: " + str(blood_ray.get_collision_point()))
-	velocity.y += -(gravity * delta) / 4
-	blood_ray.global_position += velocity
-	blood_ray.target_position = velocity
+	velocity.y += -(gravity * delta)
+	blood_ray.global_position += velocity / 4
+	blood_ray.target_position = velocity / 4
 	if blood_ray.is_colliding():
 		if make_blood:
 			blood_decal = load("res://blood_decal.tscn").instantiate()
